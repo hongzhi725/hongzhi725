@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui,user-scalable=no" />
+<title>Welcome to My Space</title>
+
+<!--可无视-->
+<link rel="stylesheet" type="text/css" href="css/default.css">
+
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+
+<div class="demo">
+	<div class="demo__close-menu"></div>
+	<div class="demo__section demo__section-1" data-section="1">
+		<div class="demo__menu-btn"></div>
+		<h2 class="demo__section-heading">Contact</h2>
+		<br />
+		<h4 class="demo__section-words">My Phone：</h4><br />
+		<h6 class="demo__section-words">185-2048-0725</h6><br />
+		<h4 class="demo__section-words">My Wechat：</h4><br />
+		<h6 class="demo__section-words">lhz725</h6><br />
+	</div>
+	<div class="demo__section demo__section-2 active" data-section="2">
+		<div class="demo__menu-btn"></div>
+		<h2 class="demo__section-heading">About</h2>
+		<br />
+		<h4 class="demo__section-words">Welcome To My Space</h4>
+		<br />
+		<h5 class="demo__section-words">My Projects：</h5>
+		<br />
+		<ul>
+			<li><h5 class="demo__section-words"><a href="../bmschool/">《扑到手册》</a></h5></li>
+			<li><h5 class="demo__section-words"><a href="../schooltest/">《百团大战》</a></h5></li>
+			<li><h5 class="demo__section-words"><a href="../Bt-school/">《百团大战2》</a></h5></li>
+		</ul>
+	</div>
+	<div class="demo__section demo__section-3 inactive" data-section="3">
+		<div class="demo__menu-btn"></div>
+		<h2 class="demo__section-heading">Team</h2>
+	</div>
+	<div class="demo__section demo__section-4 inactive" data-section="4">
+		<div class="demo__menu-btn"></div>
+		<h2 class="demo__section-heading">Projects</h2>
+	</div>
+	
+	
+</div>
+<div class="footer">
+	(c) Copyright 2016 Cookie. All Rights Reserved.
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259952522'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1259952522%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<!--<div>
+	
+</div>-->
+
+<script type="text/javascript" src='js/stopExecutionOnTimeout.js?t=1'></script>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	var $demo = $('.demo');
+	var numOfSections = $('.demo__section').length;
+	$(document).on('click', '.demo__menu-btn', function () {
+		$demo.addClass('menu-active');
+	});
+	$(document).on('click', '.demo__close-menu', function () {
+		$demo.removeClass('menu-active');
+	});
+	$(document).on('click', '.demo.menu-active .demo__section', function () {
+		var $section = $(this);
+		var index = +$section.data('section');
+		$('.demo__section.active').removeClass('active');
+		$('.demo__section.inactive').removeClass('inactive');
+		$section.addClass('active');
+		$demo.removeClass('menu-active');
+		for (var i = index + 1; i <= numOfSections; i++) {
+			if (window.CP.shouldStopExecution(1)) {
+				break;
+			}
+			$('.demo__section[data-section=' + i + ']').addClass('inactive');
+		}
+		window.CP.exitedLoop(1);
+	});
+});
+</script>
+
+</body>
+</html>

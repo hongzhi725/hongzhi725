@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>你老了吗</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!--<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?565c47b131817ebe92562b765f228add";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>-->
+</head>
+<body>
+
+<!-- loading start -->
+<div class="loading-wrap loading bg" id="J_Loading">
+    <div class="loading-img-w"></div>
+    <div class="progress_bar"><b></b><span></span></div>
+    <div class="progress"><span>0%</span></div>
+</div>
+<!-- loading end -->
+
+<!-- 题目 start -->
+<div class="sal-box box1" id="J_SalIndex">
+    <div class="sec1"></div>
+    <div class="sec2">
+        <div class="item1"></div>
+        <div class="item2">
+            <div class="i1"></div>
+            <div class="i2"></div>
+        </div>
+        <div class="item3"></div>
+    </div>
+    <div class="sec3"></div>
+    <div class="sec4" id="J_Btn1"></div>
+    <div class="logo"></div>
+</div>
+
+<div class="sal-box box2 bg subject1" id="J_SalBox1">
+    <div class="sec1"></div>
+    <div class="sec2">
+        <div class="sec-pic01"></div>
+        <div class="sec-pic02"></div>
+        <div class="sec-pic03"></div>
+        <div class="sec-pic04"></div>
+        <div class="sec-pic05"></div>
+        <div class="sec-pic06"></div>
+        <div class="sec-pic07"></div>
+        <div class="sec-pic14"></div>
+    </div>
+    <div class="sec3">
+        <div class="btns">
+            <div class="btn btn1" data-score="0">
+                <div class="sec-pic08"></div>
+                <div class="sec-pic09 sec-animate1"></div>
+            </div>
+            <div class="btn btn2" data-score="10">
+                <div class="sec-pic10"></div>
+                <div class="sec-pic11 sec-animate2"></div>
+            </div>
+            <div class="btn btn3" data-score="20">
+                <div class="sec-pic12"></div>
+                <div class="sec-pic13 sec-animate3"></div>
+            </div>
+        </div>
+        <div class="next-btn J_NextBtn"></div>
+    </div>
+</div>
+
+<div class="sal-box box2 bg subject2" id="J_SalBox2">
+    <div class="sec1"></div>
+    <div class="sec2">
+        <div class="sec-pic01"></div>
+        <div class="sec-pic02"></div>
+        <div class="sec-pic03"></div>
+        <div class="sec-pic04"></div>
+        <div class="sec-pic05"></div>
+        <div class="sec-pic06"></div>
+        <div class="sec-pic07"></div>
+        <div class="sec-pic08"></div>
+        <div class="sec-pic09"></div>
+        <div class="sec-pic10"></div>
+    </div>
+    <div class="sec3">
+        <div class="btns">
+            <div class="btn btn1" data-score="20">
+                <div class="sec-pic11"></div>
+                <div class="sec-pic12 sec-animate1"></div>
+            </div>
+            <div class="btn btn2" data-score="10">
+                <div class="sec-pic13"></div>
+                <div class="sec-pic14 sec-animate2"></div>
+            </div>
+            <div class="btn btn3" data-score="0">
+                <div class="sec-pic15"></div>
+                <div class="sec-pic16 sec-animate3"></div>
+            </div>
+        </div>
+        <div class="next-btn J_NextBtn"></div>
+    </div>
+</div>
+
+<div class="sal-box box2 bg subject3" id="J_SalBox3">
+    <div class="sec1"></div>
+    <div class="sec2">
+        <div class="sec-pic01"></div>
+        <div class="sec-pic02"></div>
+        <div class="sec-pic03"></div>
+        <div class="sec-pic04"></div>
+    </div>
+    <div class="sec3">
+        <div class="btns">
+            <div class="btn btn1" data-score="10">
+                <div class="sec-pic05"></div>
+                <div class="sec-pic06 sec-animate1"></div>
+            </div>
+            <div class="btn btn2" data-score="20">
+                <div class="sec-pic07"></div>
+                <div class="sec-pic08 sec-animate2"></div>
+            </div>
+            <div class="btn btn3" data-score="0">
+                <div class="sec-pic09"></div>
+                <div class="sec-pic10 sec-animate3"></div>
+            </div>
+        </div>
+        <div class="next-btn J_NextBtn"></div>
+    </div>
+</div>
+
+<div class="sal-box box2 bg subject4" id="J_SalBox4">
+    <div class="sec1"></div>
+    <div class="sec2">
+        <div class="sec-pic01"></div>
+        <div class="sec-pic02"></div>
+        <div class="sec-pic03"></div>
+        <div class="sec-pic04"></div>
+        <div class="sec-pic05"></div>
+        <div class="sec-pic06"></div>
+        <div class="sec-pic07"></div>
+        <div class="sec-pic08"></div>
+        <div class="sec-pic09"></div>
+    </div>
+    <div class="sec3">
+        <div class="btns">
+            <div class="btn btn1" data-score="20">
+                <div class="sec-pic10"></div>
+                <div class="sec-pic11 sec-animate1"></div>
+            </div>
+            <div class="btn btn2" data-score="0">
+                <div class="sec-pic12"></div>
+                <div class="sec-pic13 sec-animate2"></div>
+            </div>
+            <div class="btn btn3" data-score="10">
+                <div class="sec-pic14"></div>
+                <div class="sec-pic15 sec-animate3"></div>
+            </div>
+        </div>
+        <div class="next-btn J_NextBtn"></div>
+    </div>
+</div>
+
+<div class="sal-box box2 bg subject5" id="J_SalBox5">
+    <div class="sec1"></div>
+    <div class="sec2">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+    </div>
+    <div class="sec3">
+        <div class="btns">
+            <div class="btn btn1" data-score="0">
+                <span></span>
+                <b></b>
+            </div>
+            <div class="btn btn2" data-score="10">
+                <span></span>
+                <b></b>
+            </div>
+            <div class="btn btn3" data-score="20">
+                <span></span>
+                <b></b>
+            </div>
+        </div>
+        <div class="next-btn J_NextBtn"></div>
+    </div>
+</div>
+
+<div class="sal-box box2 bg subject6" id="J_SalBox6">
+    <div class="sec1"></div>
+    <div class="sec2">
+        <div class="item1"></div>
+        <div class="item2 animated shake"></div>
+        <div class="item3"></div>
+        <div class="item4 animated fadeIn"></div>
+        <div class="item5 animated fadeIn"></div>
+        <div class="item6"></div>
+    </div>
+    <div class="sec3">
+        <div class="btns">
+            <div class="btn btn1" data-score="20">
+                <span></span>
+                <b></b>
+            </div>
+            <div class="btn btn2" data-score="0">
+                <span></span>
+                <b></b>
+            </div>
+            <div class="btn btn3" data-score="10">
+                <span></span>
+                <b></b>
+            </div>
+        </div>
+        <div class="next-btn J_NextBtn"></div>
+    </div>
+</div>
+
+<div class="sal-box box2 bg subject7" id="J_SalBox7">
+    <div class="sec1"></div>
+    <div class="sec2">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3 animated rotate"></div>
+        <div class="item4 animated pulse"></div>
+        <div class="item5"></div>
+        <div class="item6"></div>
+    </div>
+    <div class="sec3">
+        <div class="btns">
+            <div class="btn btn1" data-score="20">
+                <span></span>
+                <b></b>
+            </div>
+            <div class="btn btn2" data-score="10">
+                <span></span>
+                <b></b>
+            </div>
+            <div class="btn btn3" data-score="0">
+                <span></span>
+                <b></b>
+            </div>
+        </div>
+        <div class="next-btn J_NextBtn"></div>
+    </div>
+</div>
+
+<div class="sal-box box2 bg subject8" id="J_SalBox8">
+    <div class="sec1"></div>
+    <div class="sec2">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+        <div class="item6"></div>
+    </div>
+    <div class="sec3">
+        <div class="btns">
+            <div class="btn btn1" data-score="20">
+                <span></span>
+                <b></b>
+            </div>
+            <div class="btn btn2" data-score="0">
+                <span></span>
+                <b></b>
+            </div>
+            <div class="btn btn3" data-score="10">
+                <span></span>
+                <b></b>
+            </div>
+        </div>
+        <div class="next-btn J_NextBtn"></div>
+    </div>
+</div>
+<!-- 题目 end -->
+
+<!-- 每一步后的解析 start -->
+<div class="overlay sub-over-item" id="J_OverLay">
+    <div class="over-wrap">
+        <div class="over-con over-con8"  id="J_SubOverItem8">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4"></div>
+            <div class="item item5"></div>
+        </div>
+        <div class="over-con over-con7"  id="J_SubOverItem7">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4"></div>
+        </div>
+        <div class="over-con over-con6"  id="J_SubOverItem6">
+            <div class="item item1"></div>
+            <div class="item item2 animated shake"></div>
+            <div class="item item3"></div>
+        </div>
+        <div class="over-con over-con5"  id="J_SubOverItem5">
+            <div class="item item1"></div>
+            <div class="item item2 animated shake"></div>
+            <div class="item item3"></div>
+        </div>
+        <div class="over-con over-con4"  id="J_SubOverItem4">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4"></div>
+            <div class="item item5"></div>
+            <div class="item item6"></div>
+            <div class="item item7 animated shake"></div>
+        </div>
+        <div class="over-con over-con3"  id="J_SubOverItem3">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4"></div>
+            <div class="item item5"></div>
+        </div>
+        <div class="over-con over-con2"  id="J_SubOverItem2">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4 animated rotate"></div>
+        </div>
+        <div class="over-con over-con1"  id="J_SubOverItem1">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4"></div>
+            <div class="item item5"></div>
+            <div class="item item6"></div>
+            <div class="item item7"></div>
+            <div class="item item8"></div>
+        </div>
+
+        <a class="over-btn" href="javascript:;" id="J_OverBtn"></a>
+    </div>
+</div>
+<!-- 每一步后的解析 end -->
+
+
+<!-- 改卷中 start-->
+<div class="paper-inspection bg" id="J_paperInspection">
+    <div class="pi-01">
+        <div class="line1"><i></i></div>
+        <div class="line2"><i></i></div>
+        <div class="line3"><i></i></div>
+        <div class="line4"><i></i></div>
+    </div>
+    <div class="pi-02"></div>
+</div>
+<!-- 改卷中 end-->
+
+<!-- 结果 start-->
+<div class="result bg" id="J_Result">
+    <!--0-19-->
+    <div class="result-item result-01" id="J_Result_01">
+        <div class="top1"></div>
+        <div class="box">
+            <div class="text"></div>
+            <div class="item1"></div>
+            <div class="item2 animated shake"></div>
+            <div class="item3"></div>
+        </div>
+    </div>
+    <!--20-39 -->
+    <div class="result-item result-02" id="J_Result_02">
+        <div class="top1"></div>
+        <div class="box">
+            <div class="text"></div>
+            <div class="item1"></div>
+            <div class="item2 animated shake"></div>
+            <div class="item3"></div>
+        </div>
+    </div>
+    <!--40-59 -->
+    <div class="result-item result-03" id="J_Result_03">
+        <div class="top1"></div>
+        <div class="box">
+            <div class="text"></div>
+            <div class="pic"></div>
+            <div class="item1"></div>
+            <div class="item2 animated fadeIn"></div>
+            <div class="item3 animated shake"></div>
+        </div>
+    </div>
+    <!--60-69 -->
+    <div class="result-item result-04" id="J_Result_04">
+        <div class="top2"></div>
+        <div class="box">
+            <div class="text"></div>
+            <div class="pic"></div>
+        </div>
+    </div>
+    <!--70-79 -->
+    <div class="result-item result-05" id="J_Result_05">
+        <div class="top2"></div>
+        <div class="box">
+            <div class="text"></div>
+            <div class="pic"></div>
+            <div class="item1"></div>
+            <div class="item2 animated fadeIn"></div>
+            <div class="item3 animated shake"></div>
+        </div>
+    </div>
+    <!--80-89 -->
+    <div class="result-item result-06" id="J_Result_06">
+        <div class="top2"></div>
+        <div class="box">
+            <div class="text"></div>
+            <div class="pic"></div>
+        </div>
+    </div>
+    <!--90-100 -->
+    <div class="result-item result-07" id="J_Result_07">
+        <div class="top2"></div>
+        <div class="box">
+            <div class="text"></div>
+            <div class="pic"></div>
+            <div class="item1"></div>
+            <div class="item2"></div>
+            <div class="item3"></div>
+            <div class="item4"></div>
+        </div>
+    </div>
+    <div class="result-btns">
+        <a href="javascript:void(0);" class="btn1" id="J_ShareTipBtn"></a>
+        <a href="http://m.dodoh5.com/0DO7JCV6/index.html?from=groupmessage&isappinstalled=0" class="btn2"></a>
+    </div>
+</div>
+<!-- 结果 end-->
+
+<div class="shareTip" id="J_ShareTip"><span></span></div>
+
+<!--<audio src="http://s.flyfinger.com/nice/check/images/bg.mp3" autoplay="autoplay" loop="loop" preload="auto" id="J_BgAudio"></audio>-->
+
+
+<script type="text/javascript" charset="utf-8" src="js/zepto.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/imageload.js"></script>
+<script>
+    var loadImgArr = [
+        'http://s.flyfinger.com/nice/check/./images/bg_23775d4.jpg',
+        'http://s.flyfinger.com/nice/check/./images/btn1_4835328.png',
+        'http://s.flyfinger.com/nice/check/./images/btn1_v_b4a62c5.png',
+        'http://s.flyfinger.com/nice/check/./images/btn2_f1ca824.png',
+        'http://s.flyfinger.com/nice/check/./images/btn2_v_6469d45.png',
+        'http://s.flyfinger.com/nice/check/./images/btn3_0143bd5.png',
+        'http://s.flyfinger.com/nice/check/./images/btn4_71e3ae3.png',
+        'http://s.flyfinger.com/nice/check/./images/btn5_2c29589.png',
+        'http://s.flyfinger.com/nice/check/./images/btn5_v_6ab6453.png',
+        'http://s.flyfinger.com/nice/check/./images/img1_3a4469a.png',
+        'http://s.flyfinger.com/nice/check/./images/img2_f84e243.png',
+        'http://s.flyfinger.com/nice/check/./images/img3_23bd631.png',
+        'http://s.flyfinger.com/nice/check/./images/img4_ccd2b52.png',
+        'http://s.flyfinger.com/nice/check/./images/img5_0cfaab8.png',
+        'http://s.flyfinger.com/nice/check/./images/img6_75edcd5.png',
+        'http://s.flyfinger.com/nice/check/./images/img7_3e7c6d8.png',
+        'http://s.flyfinger.com/nice/check/./images/img8_b104371.png',
+        'http://s.flyfinger.com/nice/check/./images/img9_2d6df82.png',
+        'http://s.flyfinger.com/nice/check/./images/img10_7c39acf.png',
+        'http://s.flyfinger.com/nice/check/./images/l1_bddf239.png',
+        'http://s.flyfinger.com/nice/check/./images/l2_f92492f.png',
+        'http://s.flyfinger.com/nice/check/./images/logo_822e42a.png',
+        'http://s.flyfinger.com/nice/check/./images/over1-01_0df1a20.png',
+        'http://s.flyfinger.com/nice/check/./images/over1-02_b9b053f.png',
+        'http://s.flyfinger.com/nice/check/./images/over1-03_035932c.png',
+        'http://s.flyfinger.com/nice/check/./images/over1-04_5d516df.png',
+        'http://s.flyfinger.com/nice/check/./images/over1-05_b5d13be.png',
+        'http://s.flyfinger.com/nice/check/./images/over1-06_adb6d76.png',
+        'http://s.flyfinger.com/nice/check/./images/over1-07_a0e8c88.png',
+        'http://s.flyfinger.com/nice/check/./images/over1-08_719a39b.png',
+        'http://s.flyfinger.com/nice/check/./images/over2-01_92761e8.png',
+        'http://s.flyfinger.com/nice/check/./images/over2-02_ca05d3b.png',
+        'http://s.flyfinger.com/nice/check/./images/over2-03_20b5eb2.png',
+        'http://s.flyfinger.com/nice/check/./images/over2-04_0ee9df0.png',
+        'http://s.flyfinger.com/nice/check/./images/over3-01_0493841.png',
+        'http://s.flyfinger.com/nice/check/./images/over3-02_9d17a26.png',
+        'http://s.flyfinger.com/nice/check/./images/over3-03_f023292.png',
+        'http://s.flyfinger.com/nice/check/./images/over3-04_0f6ed91.png',
+        'http://s.flyfinger.com/nice/check/./images/over3-05_7560b93.png',
+        'http://s.flyfinger.com/nice/check/./images/over4-01_7836639.png',
+        'http://s.flyfinger.com/nice/check/./images/over4-02_0d377df.png',
+        'http://s.flyfinger.com/nice/check/./images/over4-03_7e9698e.png',
+        'http://s.flyfinger.com/nice/check/./images/over4-04_ed8c42f.png',
+        'http://s.flyfinger.com/nice/check/./images/over4-05_380995a.png',
+        'http://s.flyfinger.com/nice/check/./images/over4-06_540bbde.png',
+        'http://s.flyfinger.com/nice/check/./images/over4-07_840a113.png',
+        'http://s.flyfinger.com/nice/check/./images/over5-01_685fd46.png',
+        'http://s.flyfinger.com/nice/check/./images/over5-01_685fd46.png',
+        'http://s.flyfinger.com/nice/check/./images/over5-01_685fd46.png',
+        'http://s.flyfinger.com/nice/check/./images/over5-02_09ebac6.png',
+        'http://s.flyfinger.com/nice/check/./images/over5-03_7f1f901.png',
+        'http://s.flyfinger.com/nice/check/./images/over6-01_f829bef.png',
+        'http://s.flyfinger.com/nice/check/./images/over6-01_f829bef.png',
+        'http://s.flyfinger.com/nice/check/./images/over6-02_7364d96.png',
+        'http://s.flyfinger.com/nice/check/./images/over6-03_984a935.png',
+        'http://s.flyfinger.com/nice/check/./images/over7-01_7fe26c4.png',
+        'http://s.flyfinger.com/nice/check/./images/over7-02_1c3b51d.png',
+        'http://s.flyfinger.com/nice/check/./images/over7-03_1530d12.png',
+        'http://s.flyfinger.com/nice/check/./images/over7-04_c57f24e.png',
+        'http://s.flyfinger.com/nice/check/./images/over8-01_7b71341.png',
+        'http://s.flyfinger.com/nice/check/./images/over8-02_7172fdf.png',
+        'http://s.flyfinger.com/nice/check/./images/over8-03_10f6727.png',
+        'http://s.flyfinger.com/nice/check/./images/over8-04_28f98e9.png',
+        'http://s.flyfinger.com/nice/check/./images/over8-05_5a58aed.png',
+        'http://s.flyfinger.com/nice/check/./images/overBg_d9aec85.png',
+        'http://s.flyfinger.com/nice/check/./images/pi-01_6678378.png',
+        'http://s.flyfinger.com/nice/check/./images/pi-02_f06f3eb.png',
+        'http://s.flyfinger.com/nice/check/./images/pi-line1_477dfce.png',
+        'http://s.flyfinger.com/nice/check/./images/pi-line2_5baeaac.png',
+        'http://s.flyfinger.com/nice/check/./images/pi-line3_c3d6386.png',
+        'http://s.flyfinger.com/nice/check/./images/pi-line4_6e3eeb0.png',
+        'http://s.flyfinger.com/nice/check/./images/result-01_677429e.png',
+        'http://s.flyfinger.com/nice/check/./images/result-01-t1_7452ef1.png',
+        'http://s.flyfinger.com/nice/check/./images/result-01-t2_2240bd0.png',
+        'http://s.flyfinger.com/nice/check/./images/result-02_97b07e1.png',
+        'http://s.flyfinger.com/nice/check/./images/result-02-t1_4e9bd0b.png',
+        'http://s.flyfinger.com/nice/check/./images/result-02-t2_334d3ac.png',
+        'http://s.flyfinger.com/nice/check/./images/result-03_61db031.png',
+        'http://s.flyfinger.com/nice/check/./images/result-03-t1_0cb22a2.png',
+        'http://s.flyfinger.com/nice/check/./images/result-03-t2_8926a17.png',
+        'http://s.flyfinger.com/nice/check/./images/result-04_6fd1403.png',
+        'http://s.flyfinger.com/nice/check/./images/result-04-t1_8a99840.png',
+        'http://s.flyfinger.com/nice/check/./images/result-btn1_308e1fd.png',
+        'http://s.flyfinger.com/nice/check/./images/result-btn2_b85128b.png',
+        'http://s.flyfinger.com/nice/check/./images/result-main_7602801.png',
+        'http://s.flyfinger.com/nice/check/./images/result-top_efbf57b.png',
+        'http://s.flyfinger.com/nice/check/./images/result-top1_ef81986.png',
+        'http://s.flyfinger.com/nice/check/./images/shareImg_7f45c8b.jpg',
+        'http://s.flyfinger.com/nice/check/./images/subject1-01_ff7a01e.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-02_0a71a6d.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-03_e500cf2.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-04_f5206f2.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-05_7907efe.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-06_5b3d19b.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-07_ecc9d25.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-08_6d413f3.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-09_bb5c05e.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-10_bfe6c9b.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-11_81fe0d0.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-12_a6eb8ae.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-13_55362e0.png',
+        'http://s.flyfinger.com/nice/check/./images/subject1-14_1aafd75.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-01_42eb90d.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-02_4bb6acd.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-03_a9028f1.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-04_2894b2b.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-05_df5a4cc.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-06_b093c4a.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-06-1_f3faf8b.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-06-2_640dce8.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-07_5ddf549.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-08_1d83fe3.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-09_7dfc4e8.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-10_a9f2d56.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-11_c121532.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-12_c824055.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-13_c6689d7.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-14_226abf8.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-15_a2c0c62.png',
+        'http://s.flyfinger.com/nice/check/./images/subject2-16_af029fb.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-01_1fb260f.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-02_0065edd.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-02-1_c531951.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-03_d58a024.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-04_d4c9a71.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-04-1_d161e82.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-04-2_614ac7b.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-05_db68b97.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-06_34cb7d5.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-07_dc5a07e.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-08_1f6ba7a.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-09_8965570.png',
+        'http://s.flyfinger.com/nice/check/./images/subject3-10_c3c38c5.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-01_c59d138.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-02_b8e2b5c.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-03_b8483c8.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-04_771a02e.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-05_48f4ebe.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-06_a11b333.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-07_c48da54.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-08_55c3b02.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-09_b2f8c2c.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-09-1_7d509fb.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-09-2_04e8548.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-09-3_a09e7ff.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-10_3809261.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-11_66d8f76.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-12_d7364c9.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-13_404dcff.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-14_cc4cda7.png',
+        'http://s.flyfinger.com/nice/check/./images/subject4-15_6545a3c.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-01_69ca7dd.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-02_365ff0f.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-03_f2ac14a.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-04_64237e4.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-05_0d35b88.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-06_ff9b6a1.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-07_b1ef4c5.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-08_7d842e8.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-09_20f70f3.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-10_bd09908.png',
+        'http://s.flyfinger.com/nice/check/./images/subject5-11_51499a6.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-01_f7f54ef.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-02_9de9c28.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-03_76ecf56.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-04_376ef4e.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-05_8b7d4b2.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-06_95ff7e2.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-07_821d6c0.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-08_f179e26.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-09_2efc2c5.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-10_1c06032.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-11_554f44f.png',
+        'http://s.flyfinger.com/nice/check/./images/subject6-12_aadc3e6.png',
+        'http://s.flyfinger.com/nice/check/./images/subject7-01_efcf83e.png',
+        'http://s.flyfinger.com/nice/check/./images/subject7-02_519a52d.png',
+        'http://s.flyfinger.com/nice/check/./images/subject7-03_bd7b345.png',
+        'http://s.flyfinger.com/nice/check/./images/subject7-04_9416305.png',
+        'http://s.flyfinger.com/nice/check/./images/subject7-05_9eaa1d3.png',
+        'http://s.flyfinger.com/nice/check/./images/subject7-06_d29776f.png',
+        'http://s.flyfinger.com/nice/check/./images/subject7-07_ab851a8.png',
+        'http://s.flyfinger.com/nice/check/./images/subject7-08_e250840.png',
+        'http://s.flyfinger.com/nice/check/./images/subject7-09_dedbeed.png',
+        'http://s.flyfinger.com/nice/check/./images/subject7-10_fcec494.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-01_0beb6b6.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-02_a7d8c8c.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-03_6cf8c84.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-04_957a350.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-05_6a55b46.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-06_c48da54.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-07_f464157.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-08_91c3dfc.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-09_8efdfd3.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-10_8691cc8.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-11_40d661c.png',
+        'http://s.flyfinger.com/nice/check/./images/subject8-12_ad312af.png',
+        'http://s.flyfinger.com/nice/check/./images/txt1_dd73cbf.png',
+        'http://s.flyfinger.com/nice/check/./images/txt2_a494464.png'
+    ];
+</script>
+<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/loading.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/dialog.js"></script>
+<!--分享相关 start-->
+<script src="http://app.flyfinger.com/api/js/wx.js"></script>
+<script src="http://app.flyfinger.com/api/js/share.js"></script>
+<script>
+    //先定义分享参数对象,全参数为（可按需配置 ）：
+    var options={
+        'id':'nice-check',
+        'title':'90后的生活方式大放送！',
+        'desc':'90后生活方式小秘密大放送反正你这个60后跟你说了你也不懂然并卵大测试',
+        'link':'http://h5.flyfinger.com/nice/check/index.html',
+        'imgUrl':'http://h5.flyfinger.com/nice/check/images/shareImg_7f45c8b.jpg'
+    };
+    //后定义实例(注：实例名不能为关键字和'wx')：
+    var _wx_share = new WxShare(options);
+    //如要在中途重置分享到朋友圈，调用setTimeLineOptions方法：
+    _wx_share.setTimeLineOptions({
+        'title':'90后生活方式小秘密大放送反正你这个60后跟你说了你也不懂然并卵大测试'
+    });
+</script>
+<!--分享相关 start-->
+</body>
+</html>
