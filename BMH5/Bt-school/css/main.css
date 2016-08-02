@@ -523,8 +523,14 @@ body,html {
 	display: none;
 	width: 100%;
 }
-
-.rightA {
+.game2>img{
+	display: none;
+	width: 100%;
+}
+/*备注：找到answer不显示原因。例如：有一结构，div下有p，p下有span，你选择隐藏div下的p，那么在显示的时候，你就不能直接显示p下的span，
+ * 要把隐藏的p显示出来，才有效。你藏起来一个装有婚戒的可乐瓶子，你不能直接把婚戒显示出来，要把可乐瓶子显示出来，
+ * 因为你隐藏的是可乐瓶子，而不是里面的婚戒。这是结构问题。css*/
+.rightA,.Answertips{
 	position: absolute;
 	top: 76.5%;
 	left: 9%;

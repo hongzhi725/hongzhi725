@@ -104,12 +104,23 @@ function init() {
 			animating = false;
 		}, 1200);
 		if (gameNum.length > 0) {
+			var choice=$(this).attr('data-num');
 			if (answer[nowNum] == $(this).attr('data-num')) {
 				$(this).addClass('answerRight');
 				credit += 1;
 				setTimeout(function() {
 					next();
 				}, 600);
+				//答对：+分，并显示对应选项提示：
+//				credit += 1;
+//				$('.errorBox').show();
+//				$(this).parent().children('.answer').hide();
+//				console.log('choice is '+choice);
+//				$(this).parent().children('.answer').eq(choice).show().addClass('answerTop');
+//				setTimeout(function() {
+//					console.log('序号：'+nowNum);
+//					$('.rightB').children('div').eq(0).fadeIn(300);
+//					console.log($('.rightB').children('div').eq(0));
 			} else {
 				$('.errorBox').show();
 				if (fristError) {
@@ -124,7 +135,9 @@ function init() {
 				$(this).parent().children('.answer').hide();
 				$(this).parent().children('.answer').eq(answer[nowNum]).show().addClass('answerTop');
 				setTimeout(function() {
-					$('.rightA').children('div').eq(nowNum).fadeIn(300);
+					console.log('nowNum[题号]:'+nowNum+' [tips：从0开始，记得加1]');
+					console.log('choice[选择]:'+choice+' [tips：从0开始，记得加1]');
+					$('.Answertips').children('div').eq(nowNum).children('img').eq(choice).fadeIn(300);
 				}, 300);
 			}
 		} else {
@@ -195,6 +208,10 @@ function init() {
 		$('.answer').show();
 		$('.answerRight').removeClass('answerRight');
 		$('.rightA').children('div').hide();
+		//
+//		$('.Answertips').children('div').hide();
+		
+		//
 		$('.page3').addClass('page_fade');
 		$('.answerTop').removeClass('answerTop');
 		$('.text').children('div').hide();
