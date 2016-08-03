@@ -245,9 +245,9 @@ html {
 .wheel {
 	position: absolute;
 	top: 7.6%;
-	left: 14%;
+	left: 17.5%;
 	z-index: 9;
-	width: 72%;
+	width: 65%;
 	-webkit-animation: shun360 20s linear infinite;
 	-moz-animation: shun360 20s linear infinite;
 	-o-animation: shun360 20s linear infinite;
@@ -256,7 +256,7 @@ html {
 
 .p1_title {
 	position: absolute;
-	top: 21%;
+	top: 11%;
 	left: 6%;
 	z-index: 10;
 	width: 88%
