@@ -21,6 +21,7 @@ My Space
 ```
 
 ## Contact Me
-<ol>
-<li><b>Tel</b> ：185-2048-0725</li>
-<li><b>Wechat</b> ：185-2048-0725</li>
+*  <b>Tel</b> ：185-2048-0725
+*  <b>Wechat</b> ：185-2048-0725
+*  <b>E-mail</b>① ：hongzhi725@163.com
+*  <b>E-mail</b>② ：liuhongzhi@bluemoon.com.cn
