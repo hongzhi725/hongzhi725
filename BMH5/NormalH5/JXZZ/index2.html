@@ -8,8 +8,7 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" type="text/css" href="css/loading.css"/>
     <link rel="stylesheet" href="../dist/css/swiper.css">
-	<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/main.js"></script>
+	
     <!-- Demo styles -->
     <style>
     html, body {
@@ -54,10 +53,17 @@
     </style>
 </head>
 <body>
+	<div class="loading" style="position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:10000;">
+	<div class="load">
+		<div class="bounce1"></div>
+		<div class="bounce2"></div>
+		<div class="bounce3"></div>
+	</div>
+</div>
     <!-- Swiper -->
     <div class="swiper-container page1">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/1.png" style="height: 100%;"/></div>
+            <div class="swiper-slide"><input type="button" id="button" value="按钮"/> <img src="img/1.png" style="height: 100%;"/></div>
             <div class="swiper-slide"><img src="img/2.png" style="height: 100%;"/></div>
             <div class="swiper-slide"><img src="img/3.png" style="height: 100%;"/></div>
             <div class="swiper-slide"><img src="img/4.png" style="height: 100%;"/></div>
@@ -86,9 +92,33 @@
     });
     </script>
     <script type="text/javascript">
+
+/*****当页面加载完后隐藏loading********/
+document.onreadystatechange = loading;
+ function loading(){
+	//调整i4样式
+  	var iheight = window.screen.height;
+	if(iheight == 667||iheight==736){
+		//i6尺寸
+		$('.page_img img').css('height','100%');
+	}else if(iheight == 480){
+		//i4尺寸
+
+	}
+
+	if(document.readyState == "complete") { 
+	//加载完成
+		$(".loading").hide();
+	}
+
+};
+</script>
+<!--<script type="text/javascript">
 	    window.onload = function () {  
             alert("页面加载完毕");  
-    }
-</script>
+    }  
+</script>-->
+<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

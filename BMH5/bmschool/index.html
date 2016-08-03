@@ -22,22 +22,21 @@
 			http://p3.ifengimg.com/cdd6fabc89d70f7b/2016/21/625280528467772635.jpg
 		</div>
 		<div id="ifeng_share_title" style="display:none">
-			扑到手册
+			《大学浓缩升级配方》
 		</div>
 		<div id="ifeng_share_description" style="display:none">
-			少年，我看你骨骼惊奇！这本“扑到手册”就赠予与你。
+			少年，我看你骨骼惊奇！这本“《大学浓缩升级配方》”就赠予与你。
 		</div>
-		<div id="ifeng_share_url" style="display:none">
-			http://www.hongzhi725.top/pdsc/
-		</div>
+		<!--<div id="ifeng_share_url" style="display:none">
+			http://www.hongzhi725.top/
+		</div>-->
 		<div id="mainBox" ondragstart="return false;">
 			<!--微信分享自定义图片 part1 此图片建议大于300*300-->
 			<img id="imgForShare" src="http://p3.ifengimg.com/cdd6fabc89d70f7b/2016/21/625280528467772635.jpg" style="position:fixed;left: -1000%;" />
 			<!--loading begin-->
 			<div class="loadMask"></div>
 			<div id="loading">
-				<div class="icon inco-move">
-					<!--特效LOADING-->
+				<!--<div class="icon inco-move">
 					<div class="circle-loader">
 						<div class="circle circle-0"></div>
 						<div class="circle circle-1"></div>
@@ -45,8 +44,8 @@
 						<div class="circle circle-3"></div>
 						<div class="circle circle-4"></div>
 					</div>
-					<!--<img src="img/loadings/loading.png" width="100%" />-->
-				</div>
+				</div>-->
+				<div class="cssload-loader" style="position: absolute;top: 30%;">BLUEMOON</div>
 				<p>拼命加载中：<span>0</span>%</p>
 				<p style="top: 95%;">(c) Copyright 2016 Cookie. All Rights Reserved. </p>
 			</div>
@@ -376,7 +375,7 @@
 					if(!isOk) {
 						location.reload();
 					}
-				}, 10000);
+				}, 15000);
 			});
 			
 			function loadingF() {
@@ -389,16 +388,16 @@
 			}
 
 			function changeTitle(e) {
-				var share_title = '南海大冒险！测一测你能否在风高浪急、虎狼环饲的南海平安归来';
+				var share_title = '上大学，要浓缩！别跟我说你还没玩过！';
 				switch(e) {
 					case 0:
-						share_title = '我被越南海警抓走了……测一测你能否从虎狼环饲的南海平安归来';
+						share_title = '我在浓缩升级宝典里失败而终，看看你能不能玩通关它！';
 						break;
 					case 1:
-						share_title = '解放军救了我！测一测你能否从虎狼环饲的南海平安归来';
+						share_title = '机智如我~我竟然在大学浓缩宝典里大获全胜~！要走到了人生了巅峰！';
 						break;
 					case 2:
-						share_title = '南海大冒险！测一测你能否从虎狼环饲的南海平安归来';
+						share_title = '上大学，要浓缩！别跟我说你还没玩过！';
 						break;
 				}
 				document.title = share_title;
