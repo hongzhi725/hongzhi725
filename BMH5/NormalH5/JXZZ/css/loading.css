@@ -1,325 +1,126 @@
-@charset "utf-8";
 
-#loading {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 10000;
-	display: -webkit-box;
-	width: 100%;
-	height: 100%;
-	background: black;
-	background-size: cover;
-	-webkit-box-align: center;
-	-webkit-box-pack: center
-}
-#loading .icon {
-	position: absolute;
-	top: 30%;
-	left: 50%;
-	margin-top: -50px;
-	margin-left: -50px;
-	width: 100px;
-	height: 100px;
-	-webkit-animation: shun360 2s linear infinite;
-	-moz-animation: shun360 2s linear infinite;
-	-o-animation: shun360 2s linear infinite;
-	animation: shun360 2s linear infinite
-}
-#loading p {
-	position: absolute;
-	top: 44%;
-	left: 0;
-	width: 100%;
-	color: whitesmoke;
+.cssload-loader {
+	width: 244px;
+	height: 49px;
+	line-height: 49px;
 	text-align: center;
-	font-size: 1rem
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+	font-family: helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size:18px;
+	color: rgb(255,255,255);
+	letter-spacing: 0.2em;
 }
-@-webkit-keyframes rotate-animation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.cssload-loader::before, .cssload-loader::after {
+	content: "";
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: rgb(255,255,255);
+	position: absolute;
+	animation: cssload-load 1.44s infinite alternate ease-in-out;
+		-o-animation: cssload-load 1.44s infinite alternate ease-in-out;
+		-ms-animation: cssload-load 1.44s infinite alternate ease-in-out;
+		-webkit-animation: cssload-load 1.44s infinite alternate ease-in-out;
+		-moz-animation: cssload-load 1.44s infinite alternate ease-in-out;
 }
-@keyframes rotate-animation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.cssload-loader::before {
+	top: 0;
 }
-.circle-loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 8em;
-  height: 8em;
-  margin-left: -4em;
-  margin-top: -4em;
-}
-
-.circle {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -0.25em;
-  -webkit-transform-origin: 0 4em;
-          transform-origin: 0 4em;
-  -webkit-animation: rotate-animation 2.5s infinite;
-          animation: rotate-animation 2.5s infinite;
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 0.25em;
-  background-color: #CCFFCC;
-  box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
+.cssload-loader::after {
+	bottom: 0;
 }
 
-.circle-0 {
-  -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
-          animation-timing-function: cubic-bezier(0, 0, 1, 1);
+
+
+@keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
 }
 
-.circle-1 {
-  -webkit-animation-timing-function: cubic-bezier(0.1625, 0, 0.8375, 1);
-          animation-timing-function: cubic-bezier(0.1625, 0, 0.8375, 1);
+@-o-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
 }
 
-.circle-2 {
-  -webkit-animation-timing-function: cubic-bezier(0.325, 0, 0.675, 1);
-          animation-timing-function: cubic-bezier(0.325, 0, 0.675, 1);
+@-ms-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
 }
 
-.circle-3 {
-  -webkit-animation-timing-function: cubic-bezier(0.4875, 0, 0.5125, 1);
-          animation-timing-function: cubic-bezier(0.4875, 0, 0.5125, 1);
+@-webkit-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
 }
 
-.circle-4 {
-  -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
-          animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
-}
-/*第二个特效*/
-@-webkit-keyframes fade1 {
-  0% {
-    background: #2980b9;
-  }
-}
-
-@keyframes fade1 {
-  0% {
-    background: #2980b9;
-  }
-}
-@-webkit-keyframes fade2 {
-  33% {
-    background: #2980b9;
-  }
-}
-@keyframes fade2 {
-  33% {
-    background: #2980b9;
-  }
-}
-@-webkit-keyframes fade3 {
-  66% {
-    background: #2980b9;
-  }
-}
-@keyframes fade3 {
-  66% {
-    background: #2980b9;
-  }
-}
-.loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  height: 25px;
-  width: 10px;
-  border-radius: 10%;
-  background: #2c3e50;
-  border-top-color: #2980b9;
-  -webkit-animation: fade2 1s infinite;
-          animation: fade2 1s infinite;
-  -webkit-transition: background .2s;
-  transition: background .2s;
-}
-.loading:after, body .loading:before {
-  content: '';
-  position: absolute;
-  display: block;
-  height: 20px;
-  width: 10px;
-  background: #2c3e50;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: -15px;
-  border-radius: 10%;
-  -webkit-animation: fade1 1s infinite;
-          animation: fade1 1s infinite;
-  -webkit-transition: background .2s;
-  transition: background .2s;
-}
-.loading:before {
-  left: 15px;
-  -webkit-animation: fade3 1s infinite;
-          animation: fade3 1s infinite;
-}
-/*第三种loading特效*/
-#floatingCirclesG{
-position:relative;
-width:128px;
-height:128px;
--webkit-transform:scale(0.6);
--moz-transform:scale(0.6);
--o-transform:scale(0.6);
--ms-transform:scale(0.6);
-}
-
-.f_circleG{
-position:absolute;
-background-color:#FFFFFF;
-height:23px;
-width:23px;
--moz-border-radius:12px;
--webkit-border-radius:12px;
-border-radius:12px;
--webkit-animation-name:f_fadeG;
--webkit-animation-duration:1.6s;
--webkit-animation-iteration-count:infinite;
--webkit-animation-direction:linear;
--moz-animation-name:f_fadeG;
--moz-animation-duration:1.6s;
--moz-animation-iteration-count:infinite;
--moz-animation-direction:linear;
--o-animation-name:f_fadeG;
--o-animation-duration:1.6s;
--o-animation-iteration-count:infinite;
--o-animation-direction:linear;
--ms-animation-name:f_fadeG;
--ms-animation-duration:1.6s;
--ms-animation-iteration-count:infinite;
--ms-animation-direction:linear;
-}
-
-#frotateG_01{
-left:0;
-top:52px;
--webkit-animation-delay:0.6s;
--moz-animation-delay:0.6s;
--o-animation-delay:0.6s;
--ms-animation-delay:0.6s}
-
-#frotateG_02{
-left:15px;
-top:15px;
--webkit-animation-delay:0.8s;
--moz-animation-delay:0.8s;
--o-animation-delay:0.8s;
--ms-animation-delay:0.8s}
-
-#frotateG_03{
-left:52px;
-top:0;
--webkit-animation-delay:1s;
--moz-animation-delay:1s;
--o-animation-delay:1s;
--ms-animation-delay:1s;
-}
-
-#frotateG_04{
-right:15px;
-top:15px;
--webkit-animation-delay:1.2s;
--moz-animation-delay:1.2s;
--o-animation-delay:1.2s;
--ms-animation-delay:1.2s;
-}
-
-#frotateG_05{
-right:0;
-top:52px;
--webkit-animation-delay:1.4s;
--moz-animation-delay:1.4s;
--o-animation-delay:1.4s;
--ms-animation-delay:1.4s;
-}
-
-#frotateG_06{
-right:15px;
-bottom:15px;
--webkit-animation-delay:1.6s;
--moz-animation-delay:1.6s;
--o-animation-delay:1.6s;
--ms-animation-delay:1.6s;
-}
-
-#frotateG_07{
-left:52px;
-bottom:0;
--webkit-animation-delay:1.8s;
--moz-animation-delay:1.8s}
-
-#frotateG_08{
-left:15px;
-bottom:15px;
--webkit-animation-delay:2s;
--moz-animation-delay:2s;
--o-animation-delay:1.8s;
--ms-animation-delay:1.8s;
-}
-
-#frotateG_08{
-left:15px;
-bottom:15px;
--webkit-animation-delay:2s;
--moz-animation-delay:2s;
--o-animation-delay:2s;
--ms-animation-delay:2s;
-}
-
-@-webkit-keyframes f_fadeG{
-0%{
-background-color:#000000}
-
-100%{
-background-color:#FFFFFF}
-
-}
-
-@-moz-keyframes f_fadeG{
-0%{
-background-color:#000000}
-
-100%{
-background-color:#FFFFFF}
-
-}
-
-@-o-keyframes f_fadeG{
-0%{
-background-color:#000000}
-
-100%{
-background-color:#FFFFFF}
-
-}
-
-@-ms-keyframes f_fadeG{
-0%{
-background-color:#000000}
-
-100%{
-background-color:#FFFFFF}
-
+@-moz-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
 }
