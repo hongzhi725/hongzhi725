@@ -640,9 +640,12 @@ html {
 	}
 	100% {
 		opacity: 0;
+		/*阿海调试翻页
 		-webkit-transform: rotateY(-60deg) skewY(-20deg)
-		/*--以下为竖直翻页特效*/
-		/*-webkit-transform: rotateX(-60deg) translateZ(-150px)*/ 
+		--以下为竖直翻页特效
+		-webkit-transform: rotateX(-60deg) translateZ(-150px)
+		最终翻页特效*/
+		-webkit-transform:rotateY(-60deg) skewY(-20deg) translateZ(20px)
 	}
 }
 
@@ -656,7 +659,7 @@ html {
 	}
 	100% {
 		opacity: 0;
-		-moz-transform: rotateY(-60deg) skewY(-20deg)
+		-moz-transform: rotateY(-60deg) skewY(-20deg) translateZ(20px)
 	}
 }
 
@@ -670,7 +673,7 @@ html {
 	}
 	100% {
 		opacity: 0;
-		-o-transform: rotateY(-60deg) skewY(-20deg)
+		-o-transform: rotateY(-60deg) skewY(-20deg) translateZ(20px)
 	}
 }
 
@@ -683,7 +686,7 @@ html {
 	}
 	100% {
 		opacity: 0;
-		transform: rotateY(-60deg) skewY(-20deg)
+		transform: rotateY(-60deg) skewY(-20deg) translateZ(20px)
 	}
 }
 .book_Move2 {
