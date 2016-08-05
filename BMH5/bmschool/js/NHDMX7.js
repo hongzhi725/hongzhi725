@@ -46,7 +46,7 @@ function resizeNew() {
 }
 function init() {
 	var a = [
-		['原来翻开《扑倒手册》的人都将获得一次撩到真爱的机会，在这次即将到来的奇特邂逅中。<br/>你希望自己遇到一个： '],
+		['原来翻开《大学浓缩升级配方》的人都将获得一次撩到真爱的机会，在这次即将到来的奇特邂逅中。<br/>你希望自己遇到一个： '],
 		['你被窗外耀眼的阳光晃清醒，在图书馆里虎躯一震，低头看着桌面，你手里居然拿着一本《母猪多胎高产关键技术》？你不是来当学霸的吗？一脸懵逼的你 正襟危坐，决定认真学习。'],
 		['你转着小笔戴着耳机沉浸在学霸的世界，小笔一甩，突然泼出墨水来，墨水在天空划出一条完美的弧线，然后落在了前排小姑娘的衣服后背。这时你会'],
 		['女生似乎觉察到什么，微微转过身，你的心提到嗓子眼，默念着“什么都没发现什么都没发现”，女生转过身后又继续学习'],
@@ -93,7 +93,7 @@ function init() {
 			$('.book').hide();
 			$('.text_bk').fadeIn(300);
 			$("#text").html(a[25]).fadeIn(300);
-			$("#img").find('img').eq(19).fadeIn(300);
+			$("#img").find('img').eq(25).fadeIn(300);
 			$(".people").children('img').eq(0).fadeIn(300);
 			$('#button0').fadeIn(300);
 			setTimeout(function() {
@@ -129,7 +129,7 @@ function init() {
 			$('#button4').fadeIn(300);
 			break;
 		case 3:
-			now_people = 2;
+			now_people = 0;
 			nextPage(3);
 			magnifier.delay(300).fadeIn(300).css({
 				'left': '60%',
@@ -138,7 +138,7 @@ function init() {
 			$('#button13').fadeIn(300);
 			break;
 		case 4:
-			now_people = 1;
+			now_people = 0;
 			nextPage(4);
 			magnifier.delay(300).fadeIn(300).css({
 				'left': '60%',
@@ -335,10 +335,12 @@ function init() {
 		if (e >= 0) b = e;
 		else return false;
 		$("#text").fadeOut(300);
-		if (b != 8) $("#img").find('img').fadeOut(300);
+//		if (b != 8) $("#img").find('img').fadeOut(300);
+		$("#img").find('img').fadeOut(300);
 		setTimeout(function() {
 			$("#text").html(a[b][0]).fadeIn(300);
-			if (b != 8) $("#img").find('img').eq(b).fadeIn(300);
+//			if (b != 8) $("#img").find('img').eq(b).fadeIn(300);
+			$("#img").find('img').eq(e).fadeIn(300);
 			if (old_people != now_people) {
 				$(".people").children('img').eq(now_people).fadeIn(300)
 			}
@@ -362,7 +364,7 @@ function init() {
 			$('.book').removeClass('book_Move2');
 			isAnimating = false
 		}, 1200);
-		nextPage(0)
+		nextPage(25)
 	}
 	if (!isPC()) {
 		$('.page1').on('touchend', function() {

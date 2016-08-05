@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../dist/css/animate.css"/>
+		<!--<link rel="stylesheet" href="http://s.mlcdn.co/animate.css">-->
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<!--<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+	<style type="text/css">
+	body{
+		background: darkgray;
+	}
+	.slidef {
+		position: absolute;
+	-webkit-animation: slidef 5s linear infinite;
+	-moz-animation: slidef 5s linear infinite;
+	-o-animation: slidef 5s linear infinite;
+	animation: slidef 5s linear infinite;
+}
+		@-webkit-keyframes slidef {
+			0%{
+				left: 100%;
+			}
+			100% {
+				left: 0%;
+			}
+		}
+		@-moz-keyframes slidef {
+			0%{
+				left: 100%;
+			}
+			100% {
+				left: 0%;
+			}
+		}
+		@-o-keyframes slidef {
+			0%{
+				left: 100%;
+			}
+			100% {
+				left: 0%;
+			}
+		}
+		@keyframes slidef {
+			0%{
+				left: 100%;
+			}
+			100% {
+				left: 0%;
+			}
+		}
+		#new4 {
+			/*动画持续时间*/
+   			animate-duration: 1s;
+		    -webkit-animation-duration: 1s;
+		    -moz-animation-duration: 1s;
+		    /*动画延迟时间*/
+		    animate-delay: 0s;
+		    -webkit-animation-delay:0s ;
+		    -moz-animation-delay:0s ;
+		    /*动画执行次数*/
+		    animate-iteration-count: 1;
+		    -webkit-animation-iteration-count:1 ;
+		    -moz-animation-iteration-count:1 ;
+		}
+	</style>
+	<body>
+		<div class="slidef" >
+			<img src="img/cloud.png" style="position:fixed;width: 150px;top: 5%;opacity: 0.5;" />
+		</div>
+		<h1 id="new4" class="animated fadeInDown infinite" style="position:absolute;top: 30%;left: 30%;">Example</h1>
+		<!--<h2 id="new1">Your favoriteYour favoriteYour favoriteYour favoriteYour favorite</h2>-->
+		<!--<h3 id="new2">My NAME</h3>-->
+		<script type="text/javascript">
+			$('#new1').addClass('animated infinite flash');
+			$('#new4').click(function(){
+//				alert('You click the word!');
+			});
+//			$('#new1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
+//			$('#new2').animateCss('bounce');
+		</script>
+	</body>
+</html>
