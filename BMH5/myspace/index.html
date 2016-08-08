@@ -1,100 +1,293 @@
-<!DOCTYPE HTML>
-<html lang="zh">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-<meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui,user-scalable=no" />
-<title>Welcome to My Space</title>
+<!DOCTYPE html>
+<html>
 
-<!--可无视-->
-<link rel="stylesheet" type="text/css" href="css/default.css">
-
-<!--必要样式-->
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-
-</head>
-<body>
-
-<div class="demo">
-	<div class="demo__close-menu"></div>
-	<div class="demo__section demo__section-1" data-section="1">
-		<div class="demo__menu-btn"></div>
-		<h2 class="demo__section-heading">Contact</h2>
-		<br />
-		<h4 class="demo__section-words">My Phone：</h4><br />
-		<h6 class="demo__section-words">185-2048-0725</h6><br />
-		<h4 class="demo__section-words">My Wechat：</h4><br />
-		<h6 class="demo__section-words">lhz725</h6><br />
-		<h4 class="demo__section-words">E-mail：</h4><br />
-		<h6 class="demo__section-words">liuhongzhi@bluemoon.com.cn</h6><br />
-	</div>
-	<div class="demo__section demo__section-2 active" data-section="2">
-		<div class="demo__menu-btn"></div>
-		<h2 class="demo__section-heading">About</h2>
-		<br />
-		<h4 class="demo__section-words">Welcome To My Space</h4>
-		<br />
-		<h5 class="demo__section-words">My Projects：</h5>
-		<br />
-		<ul>
-			<li><h4 class="demo__section-words"><a href="../bmschool/index.html">《大学浓缩升级配方》</a></h4></li>
-			<!--<li><h5 class="demo__section-words"><a href="../schooltest/">《百团大战》</a></h5></li>-->
-			<li><h4 class="demo__section-words"><a href="../Bt-school/index.html">《百团大战》</a></h4></li>
-			<li><h4 class="demo__section-words"><a href="../NormalH5/index.html">《图文H5》</a></h4></li>
-		</ul>
-		<h5 class="demo__section-words">Bluemoon：</h5>
-		<ul>
-			<li><h4 class="demo__section-words"><a href="../NormalH5/JXZZ">《机洗至尊》</a></h4></li>
-		</ul>
-	</div>
-	<div class="demo__section demo__section-3 inactive" data-section="3">
-		<div class="demo__menu-btn"></div>
-		<h2 class="demo__section-heading">Team</h2>
-	</div>
-	<div class="demo__section demo__section-4 inactive" data-section="4">
-		<div class="demo__menu-btn"></div>
-		<h2 class="demo__section-heading">Projects</h2>
-	</div>
-	
-	
-</div>
-<div class="footer">
-	(c) Copyright 2016 Cookie. All Rights Reserved.
-	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259952522'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1259952522%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-</div>
-<!--<div>
-	
-</div>-->
-
-<script type="text/javascript" src='js/stopExecutionOnTimeout.js?t=1'></script>
-<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
-	var $demo = $('.demo');
-	var numOfSections = $('.demo__section').length;
-	$(document).on('click', '.demo__menu-btn', function () {
-		$demo.addClass('menu-active');
-	});
-	$(document).on('click', '.demo__close-menu', function () {
-		$demo.removeClass('menu-active');
-	});
-	$(document).on('click', '.demo.menu-active .demo__section', function () {
-		var $section = $(this);
-		var index = +$section.data('section');
-		$('.demo__section.active').removeClass('active');
-		$('.demo__section.inactive').removeClass('inactive');
-		$section.addClass('active');
-		$demo.removeClass('menu-active');
-		for (var i = index + 1; i <= numOfSections; i++) {
-			if (window.CP.shouldStopExecution(1)) {
-				break;
+	<head>
+		<meta charset="utf-8">
+		<title>刘鸿志</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<style>
+			
+			.title{
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
 			}
-			$('.demo__section[data-section=' + i + ']').addClass('inactive');
-		}
-		window.CP.exitedLoop(1);
-	});
-});
-</script>
+			
+			.oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+	
+			.oa-contact-avatar {
+				width: 75px;
+			}
+			.oa-contact-avatar img {
+				border-radius: 50%;
+			}
+			.oa-contact-content {
+				width: 100%;
+			}
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			.oa-contact-name, oa-contact-position {
+				float: left;
+			}
+		</style>
+	</head>
 
-</body>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+			<a class="mui-icon mui-icon-bars mui-pull-left mui-plus-visible"></a>
+			<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>
+			<h1 class="mui-title" id="Ttitle"><b>Welcome</b></h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="#tabbar" id="T1">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat" id="T2">
+				<span class="mui-icon mui-icon-email"><!--<span class="mui-badge">9</span>--></span>
+				<span class="mui-tab-label">简历</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact" id="T3">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">通讯录</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map" id="T4">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="tabbar" class="mui-control-content mui-active">
+				<div class="mui-content-padded">
+						<!--<h2>My Projects:</h2>-->
+						<ul>
+							<li>My name is Cookie.</li>
+							<li>欢迎品尝以下项目：</li>
+						</ul>
+				</div>
+				<!---->
+                <ul class="mui-table-view">
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right" href="../bmschool/index.html">
+                            	★《大学浓缩升级配方》
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right" href="../Bt-school/index.html">
+                        		★《百团大战》
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right" href="../NormalH5/JXZZ">
+                            	★《机洗至尊》
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right" href="../NormalH5/index.html">
+                            	★《图文H5》
+                            </a>
+                        </li>
+                    </ul>
+			</div>
+			<!--第二个页面：消息页面-->
+			<div id="tabbar-with-chat" class="mui-control-content">
+				<div class="title">人生履历</div>
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell"><a  class="mui-navigate-right">1992.07.25</a></li>
+					<li class="mui-table-view-cell"><a  class="mui-navigate-right">2005.09-2008.06</a></li>
+					<li class="mui-table-view-cell"><a  class="mui-navigate-right">2008.09-2011.06</a></li>
+					<li class="mui-table-view-cell"><a  class="mui-navigate-right">2011.09-2015.06</a></li>
+					<li class="mui-table-view-cell"><a  class="mui-navigate-right">2015.05.18-至今</a></li>
+				</ul>
+				<div class="title">Let's chat!</div>
+					<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell"><a href="vip/chat.html" class="mui-navigate-right">Touch To Chat</a></li>
+				</ul>
+			</div>
+			
+			<div id="tabbar-with-contact" class="mui-control-content">
+				<!--<div class="title">团队成员展示</div>-->
+				<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<!--<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="images/chenying1.jpg" width="80%" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">陈英</h4>
+									<span class="oa-contact-position mui-h6">产品经理</span>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									chenying1@bluemoon.com.cn
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>-->
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="images/liuhongzhi.jpg" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">刘鸿志</h4>
+									<span class="oa-contact-position mui-h6">产品专员 & 前端开发工程师</span>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									liuhongzhi@bluemoon.com.cn
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				
+				<!--<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="images/zhoulinhai.jpg" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">周林海</h4>
+									<span class="oa-contact-position mui-h6">交互设计师</span>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									zhoulinhai@bluemoon.com.cn
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>-->
+				</div>
+			<div id="tabbar-with-map" class="mui-control-content">
+				<!--<div class="title">设置页面</div>-->
+				<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" open-type="common" href="feedback.html">
+						问题反馈 
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						新消息通知
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						隐私
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						通用
+					</a>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui.init({
+			gestureConfig:{
+			tap: true, //默认为true
+			doubletap: true, //默认为false
+			longtap: true, //默认为false
+			swipe: true, //默认为true
+			drag: true, //默认为true
+			hold:false,//默认为false，不监听
+			release:false,//默认为false，不监听
+			swipeBack:true //启用右滑关闭功能 
+		  }
+		});
+			//处理右上角关于图标的点击事件；
+			var subWebview = null,
+				template = null;
+			document.getElementById('info').addEventListener('tap', function() {
+				if (!mui.os.plus) {
+					mui.openWindow({
+						url: "vip/info.html",
+						id: "info",
+						show: {
+							aniShow: 'zoom-fade-out',
+							duration: 300
+						}
+					});
+					return;
+				}
+				if (subWebview == null) {
+					//获取共用父窗体
+					template = plus.webview.getWebviewById("default-main");
+				}
+				if (template) {
+					subWebview = template.children()[0];
+					subWebview.loadURL('vip/info.html');
+					//修改共用父模板的标题
+					mui.fire(template, 'updateHeader', {
+						title: '关于',
+						showMenu: false
+					});
+					template.show('slide-in-right', 150);
+				}
+				//				mui.openWindow({
+				//					url:"examples/info.html",
+				//					id:"info",
+				//					show:{
+				//						aniShow:'zoom-fade-out',
+				//						duration:300
+				//					}
+				//				});
+			});
+			//首页返回键处理
+			//1、若侧滑菜单显示，则关闭侧滑菜单
+			//2、否则，执行mui框架默认的关闭首页功能
+			var _back = mui.back;
+			mui.back = function() {
+				if (showMenu) {
+					closeMenu();
+				} else {
+					_back();
+				}
+			};
+			function change(){
+				document.getElementById('T1').addEventListener('tap',function(){
+					var a = document.getElementById("Ttitle");
+			        a.innerHTML = '主页';
+				});
+				document.getElementById('T2').addEventListener('tap',function(){
+					var a = document.getElementById("Ttitle");
+			        a.innerHTML = '简历';
+				});
+				document.getElementById('T3').addEventListener('tap',function(){
+					var a = document.getElementById("Ttitle");
+			        a.innerHTML = '通讯录';
+				});
+				document.getElementById('T4').addEventListener('tap',function(){
+					var a = document.getElementById("Ttitle");
+			        a.innerHTML = '设置';
+				});
+			};
+			change();
+	</script>
 </html>

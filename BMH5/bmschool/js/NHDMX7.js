@@ -192,7 +192,7 @@ function init() {
 			$('#button18').fadeIn(300);
 			break;
 		case 10:
-			now_people = 2;
+			now_people = 0;
 //			$('.map').find('img').eq(2).show();
 			nextPage(10);
 //			magnifier.delay(300).fadeIn(300).css({
@@ -213,13 +213,13 @@ function init() {
 			$('#button6').fadeIn(300);
 			break;
 		case 12:
-			now_people = 5;
+			now_people = 0;
 //			$('.map').find('img').eq(0).show();
 			nextPage(12);
 			$('#button20').fadeIn(300);
 			break;
 		case 13:
-			now_people = 3;
+			now_people = 0;
 //			$('.map').find('img').eq(0).show();
 			nextPage(13);
 //			magnifier.delay(300).fadeIn(300).css({
@@ -235,7 +235,7 @@ function init() {
 			$('#button22').fadeIn(300);
 			break;
 		case 15:
-			now_people = 4;
+			now_people = 1;
 //			$('.map').find('img').eq(1).show();
 			nextPage(15);
 //			magnifier.delay(300).fadeIn(300).css({
@@ -245,7 +245,7 @@ function init() {
 			$('#button23').fadeIn(300);
 			break;
 		case 16:
-			now_people = 0;
+			now_people = 1;
 //			$('.map').find('img').eq(1).show();
 			nextPage(16);
 //			magnifier.delay(300).fadeIn(300).css({
@@ -255,13 +255,13 @@ function init() {
 			$('#button24').fadeIn(300);
 			break;
 		case 17:
-			now_people = 0;
+			now_people = 1;
 			nextPage(17);
 			$('#button8').fadeIn(300);
 			$('#button9').fadeIn(300);
 			break;
 		case 18:
-			now_people = 4;
+			now_people = 1;
 //			$('.map').find('img').eq(1).show();
 			nextPage(18);
 //			magnifier.delay(300).fadeIn(300).css({
@@ -271,33 +271,33 @@ function init() {
 			$('#button18').fadeIn(300);
 			break;
 		case 19:
-			now_people = 0;
+			now_people = 1;
 			nextPage(19);
 			$('#button25').fadeIn(300);
 			break;
 		case 20:
-			now_people = 0;
+			now_people = 1;
 			nextPage(20);
 			$('#button10').fadeIn(300);
 			$('#button11').fadeIn(300);
 			break;
 		case 21:
-			now_people = 0;
+			now_people = 1;
 			nextPage(21);
 			$('#button18').fadeIn(300);
 			break;
 		case 22:
-			now_people = 0;
+			now_people = 1;
 			nextPage(22);
 			$('#button26').fadeIn(300);
 			break;
 		case 23:
-			now_people = 0;
+			now_people = 1;
 			nextPage(23);
 			$('#button27').fadeIn(300);
 			break;
 		case 24:
-			now_people = 0;
+			now_people = 1;
 			nextPage(24);
 			$('#button22').fadeIn(300);
 			break;	

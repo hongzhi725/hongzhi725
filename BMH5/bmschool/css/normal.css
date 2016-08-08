@@ -340,7 +340,7 @@ html {
 	height: 22%;
 	color: #fff;
 	font-size: 12px;
-	line-height: 1.4rem
+	line-height: 1.4rem;
 }
 
 #img {
@@ -545,7 +545,7 @@ html {
 
 .people {
 	position: absolute;
-	bottom: 33%;
+	bottom: 33.5%;
 	left: 5%;
 	z-index: 99;
 	width: 44%
