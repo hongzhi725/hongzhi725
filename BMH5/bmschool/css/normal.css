@@ -550,6 +550,13 @@ html {
 	z-index: 99;
 	width: 44%
 }
+.peopleright{
+	position: absolute;
+	bottom: 2%;
+	left: 113%;
+	z-index: 99;
+	width: 44%
+}
 
 .people img {
 	display: none;

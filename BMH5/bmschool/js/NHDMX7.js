@@ -94,7 +94,7 @@ function init() {
 			$('.text_bk').fadeIn(300);
 			$("#text").html(a[25]).fadeIn(300);
 			$("#img").find('img').eq(25).fadeIn(300);
-			$(".people").children('img').eq(0).fadeIn(300);
+//			$(".people").children('img').eq(0).fadeIn(300);
 			$('#button0').fadeIn(300);
 			setTimeout(function() {
 				$('.book').removeClass('book_Move');
@@ -108,12 +108,19 @@ function init() {
 		$('.popup').hide();
 		switch (e) {
 		case 0:
-			now_people = 0;
+//			now_people = 0;
+			$('#girl').fadeIn(300);
+//			$('#boy').removeClass('people').addClass('peopleright').fadeIn(300);
+			$('#boy').removeClass('people').addClass('peopleright').fadeIn(300);
 			nextPage(0);
 			$('#button1').fadeIn(300);
 			$('#button2').fadeIn(300);
 			break;
 		case 1:
+			$(".people").children('img').fadeOut(300);
+			setTimeout(function(){
+				$(".people").children('img').eq(0).removeClass('peopleright').addClass('people').fadeIn(300);
+			},300);
 			now_people = 0;
 			nextPage(1);
 			magnifier.delay(300).fadeIn(300).css({
