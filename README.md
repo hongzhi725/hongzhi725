@@ -11,13 +11,13 @@
 ## Catalog
 ```
 My Space
-|-- BMH5        # H5页面目录
-|-- images      # MySpace图库
-|-- javascripts # 首页JS
-|-- stylesheets # 首页CSS
-|-- index.html  # 首页html
-|-- params.json # xx文档
-`-- README.md   # 介绍
+|-- BMH5          --> H5页面目录
+|-- images        --> MySpace图库
+|-- javascripts   --> 首页JS
+|-- stylesheets   --> 首页CSS
+|-- index.html    --> 首页html
+|-- params.json   --> xx文档
+`-- README.md     --> 介绍
 ```
 
 ## Contact Me
