@@ -1,12 +1,201 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
 	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<meta http-equiv="refresh" content="0;url='BMH5/myspace/index.html" />
-		<title>跳来跳去</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ECharts</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	</head>
+
 	<body>
-		努力跳转ing
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+							<a class="navbar-brand" href="#">Welcome</a>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li class="active">
+									<a href="#">主页</a>
+								</li>
+								<li>
+									<a href="BMH5/myspace/index.html">你的</a>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">你想知道</a>
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											<a href="BMH5/myspace/index.html">关于我的</a>
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											<a href="#">什么？</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+
+						</div>
+					</nav>
+				</div>
+			</div>
+			<br />
+			<br />
+			<br />
+			<br />
+			<div class="jumbotron well">
+				<div class="container ">
+					<h1>My name is Cookie</h1>
+					<p>Welcome to My Space</p>
+					<h5>我的Github地址：<a class="btn btn-primary btn-xs" href="https://github.com/hongzhi725/hongzhi725" role="button">Touch Me</a></h5>
+				</div>
+			</div>
+			<br />
+			<div class="row clearfix">
+				<div class="col-md-8 column">
+					<table class="table table-condensed table-hover table-striped">
+						<thead>
+							<tr>
+								<th>
+									项目
+								</th>
+								<th>
+									开始时间
+								</th>
+								<th>
+									状态
+								</th>
+								<th>
+									传送门
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									Github Demo
+								</td>
+								<td>
+									07/25/2016
+								</td>
+								<td>
+									运行
+								</td>
+								<td>
+									<button type="button" class="btn btn-primary btn-xs">Touch Me</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									大学浓缩升级配方
+								</td>
+								<td>
+									07/25/2016
+								</td>
+								<td>
+									优化
+								</td>
+								<td>
+									<button type="button" class="btn btn-primary btn-xs">Touch Me</button>
+								</td>
+							</tr>
+							<tr class="success">
+								<td>
+									百团大战
+								</td>
+								<td>
+									07/25/2016
+								</td>
+								<td>
+									策划
+								</td>
+								<td>
+									<button type="button" class="btn btn-primary btn-xs">Touch Me</button>
+								</td>
+							</tr>
+							<tr class="error">
+								<td>
+									机洗至尊
+								</td>
+								<td>
+									07/25/2016
+								</td>
+								<td>
+									运营
+								</td>
+								<td>
+									<button type="button" class="btn btn-primary btn-xs">Touch Me</button>
+								</td>
+							</tr>
+							<tr class="warning">
+								<td>
+									《H5模板-个人封装》
+								</td>
+								<td>
+									07/25/2016
+								</td>
+								<td>
+									优化
+								</td>
+								<td>
+									<button type="button" class="btn btn-primary btn-xs">Touch Me</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-md-4 column">
+					<img alt="140x140" src="images/me.jpg" class="img-circle" style="width: 30%;" />
+					<dl>
+						<dt>
+					关于我
+				</dt>
+						<dd>
+							一个年轻、爱折腾的小职员
+						</dd>
+						<dt>
+					个人简介
+				</dt>
+						<dd>
+							目前就职于：蓝月亮（中国）有限公司-应用设计中心-产品专员
+						</dd>
+						<dd>
+							北京师范大学珠海分校-统计学专业
+						</dd>
+						<dt>
+					电话
+				</dt>
+						<dd>
+							185-2048-0725
+						</dd>
+						<dt>
+					邮箱
+				</dt>
+						<dd>
+							liuhongzhi@bluemoon.com.cn
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
