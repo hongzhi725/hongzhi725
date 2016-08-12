@@ -1,9 +1,109 @@
+var loadingImage = new Image();
+loadingImage.src = "http://p0.ifengimg.com/cdd6fabc89d70f7b/2016/23/300x300.png";
+loadingImage.onload = function() {
+	resizeNew();
+	$('.loadMask').hide();
+};
+setTimeout(function() {
+	resizeNew();
+	$('.loadMask').hide();
+}, 500);
+var isOk = false;
+$(function() {
+	var imgList = ['http://p3.ifengimg.com/l/2016/21/ca1c0b2b216759c/bk2.png'];
+	var cantPush = false;
+	$('img').each(function() {
+		if($(this).attr('data-src')) {
+			cantPush = false;
+			for(var j = 0; j < imgList.length; j++) {
+				if(imgList[j] == $(this).attr('data-src')) {
+					cantPush = true;
+					break;
+				}
+			}
+			var d = new Date().getTime();
+			if(!cantPush) imgList.push($(this).attr('data-src'));
+			$(this).attr('src', $(this).attr('data-src'));
+		}
+	});
+	var imgNum = imgList.length;
+	var MaxImgNum = imgList.length;
+	var timer = setInterval(function() {
+		for(var i = 0; i < imgList.length; i++) {
+			var loadImg = new Image();
+			loadImg.src = imgList[i];
+			loadImg.onload = function() {
+				loadImg.complete = true;
+			};
+			if(loadImg.complete) {
+				imgList.splice(i, 1);
+				imgNum--;
+				$('#loading').find('p').find('span').html(parseInt((MaxImgNum - imgNum) / MaxImgNum * 100));
+				$('.loadingInner').animate({
+					'width': parseInt((MaxImgNum - imgNum) / MaxImgNum * 84) + '%'
+				}, 10);
+				$('.rocketBox').animate({
+					'left': parseInt((MaxImgNum - imgNum) / MaxImgNum * 40) + 20 + '%'
+				}, 10);
+			}
+		}
+		if(imgNum <= 0) {
+			clearInterval(timer);
+			setTimeout(function() {
+				loadingF();
+			}, 100);
+		}
+	}, 50);
+	setTimeout(function() {
+		if(!isOk) {
+			location.reload();
+		}
+	}, 10000);
+//	for (i=1;i<=100;i++) {
+//		var aa=document.$('span').TEXT();
+//		console.log(aa);
+//	}
+	
+});
+
+function loadingF() {
+	if(isOk) return false;
+	isOk = true;
+	$('.page1').show();
+	$('#loading').fadeOut(300);
+	init();
+	changeTitle(2);
+}
+
+function changeTitle(e) {
+	var share_title = '上大学，要浓缩！别跟我说你还没玩过！';
+	switch(e) {
+		case 0:
+			share_title = '我在浓缩升级宝典里失败而终，看看你能不能玩通关它！';
+			break;
+		case 1:
+			share_title = '机智如我~我竟然在大学浓缩宝典里大获全胜~！要走到了人生了巅峰！';
+			break;
+		case 2:
+			share_title = '上大学，要浓缩！别跟我说你还没玩过！';
+			break;
+	}
+	document.title = share_title;
+}
+
+if(!isPC()) {
+	document.write('<style>*{ cursor: default !important;}.share_code{ display: none;}</style>');
+}
+if(isPC()) {
+	document.write('<style>.share_icon{ display: none;}</style>');
+}
+
 function isPC() {
 	var a = navigator.userAgent;
 	var b = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod", "MiuiBrowser"];
 	var c = true;
-	for (var v = 0; v < b.length; v++) {
-		if (a.indexOf(b[v]) > 0) {
+	for(var v = 0; v < b.length; v++) {
+		if(a.indexOf(b[v]) > 0) {
 			c = false;
 			break;
 		}
@@ -16,7 +116,7 @@ document.addEventListener("touchmove", function(n) {
 window.onresize = resizeNew;
 
 function resizeNew() {
-	if (document.documentElement.clientWidth / document.documentElement.clientHeight < 640 / 1024) {
+	if(document.documentElement.clientWidth / document.documentElement.clientHeight < 640 / 1024) {
 		$('#mainBox').css({
 			"width": document.documentElement.clientWidth + "px",
 			"height": document.documentElement.clientWidth / 640 * 1024 + "px",
@@ -44,6 +144,7 @@ function resizeNew() {
 		})
 	}
 }
+
 function init() {
 	var a = [
 		['原来翻开《大学浓缩升级配方》的人都将获得一次撩到真爱的机会，在这次即将到来的奇特邂逅中。<br/>你希望自己遇到一个： '],
@@ -80,7 +181,7 @@ function init() {
 		magnifier = $('#magnifier');
 
 	function page1() {
-		if (isAnimating) return false;
+		if(isAnimating) return false;
 		isAnimating = true;
 		$('.book').addClass('book_Move');
 		$('.button').hide();
@@ -94,7 +195,7 @@ function init() {
 			$('.text_bk').fadeIn(300);
 			$("#text").html(a[25]).fadeIn(300);
 			$("#img").find('img').eq(25).fadeIn(300);
-//			$(".people").children('img').eq(0).fadeIn(300);
+			//			$(".people").children('img').eq(0).fadeIn(300);
 			$('#button0').fadeIn(300);
 			setTimeout(function() {
 				$('.book').removeClass('book_Move');
@@ -102,225 +203,227 @@ function init() {
 			}, 600)
 		}, 1200)
 	}
+
 	function buttonF(e) {
 		magnifier.hide();
 		$('.map').find('img').hide();
 		$('.popup').hide();
-		switch (e) {
-		case 0:
-//			now_people = 0;
-			$('#girl').fadeIn(300);
-//			$('#boy').removeClass('people').addClass('peopleright').fadeIn(300);
-			$('#boy').removeClass('people').addClass('peopleright').fadeIn(300);
-			nextPage(0);
-			$('#button1').fadeIn(300);
-			$('#button2').fadeIn(300);
-			break;
-		case 1:
-			$(".people").children('img').fadeOut(300);
-			setTimeout(function(){
-				$(".people").children('img').eq(0).removeClass('peopleright').addClass('people').fadeIn(300);
-			},300);
-			now_people = 0;
-			nextPage(1);
-			magnifier.delay(300).fadeIn(300).css({
-				'left': '65%',
-				'top': '30%'
-			}).attr('data-num', 0);
-			$('#button12').delay(300).fadeIn(300);
-			break;
-		case 2:
-			now_people = 0;
-			nextPage(2);
-			$('#button3').fadeIn(300);
-			$('#button4').fadeIn(300);
-			break;
-		case 3:
-			now_people = 0;
-			nextPage(3);
-			magnifier.delay(300).fadeIn(300).css({
-				'left': '60%',
-				'top': '45%'
-			}).attr('data-num', 3);
-			$('#button13').fadeIn(300);
-			break;
-		case 4:
-			now_people = 0;
-			nextPage(4);
-			magnifier.delay(300).fadeIn(300).css({
-				'left': '60%',
-				'top': '45%'
-			}).attr('data-num', 4);
-			$('#button14').fadeIn(300);
-			break;
-		case 5:
-			now_people = 0;
-			nextPage(5);
-			$('#button15').fadeIn(300);
-			break;
-		case 6:
-//			now_people = 0;
-//			b = 6;
-//			enDing(0);
-//			break;
-			now_people = 0;
-			nextPage(6);
-			$('#button5').fadeIn(300);
-			$('#button6').fadeIn(300);
-			break;
-		case 7:
-			now_people = 0;
-//			$('.map').find('img').eq(3).show();
-			nextPage(7);
-//			magnifier.delay(300).fadeIn(300).css({
-//				'left': '58%',
-//				'top': '15%'
-//			}).attr('data-num', 1);
-			$('#button16').fadeIn(300);
-			break;
-		case 8:
-			now_people = 0;
-//			$('.map').find('img').eq(3).show();
-			nextPage(8);
-//			magnifier.delay(300).fadeIn(300).css({
-//				'left': '63%',
-//				'top': '44%'
-//			}).attr('data-num', 2);
-			$('#button17').fadeIn(300);
-			break;
-		case 9:
-			now_people = 0;
-//			$('.map').find('img').eq(2).show();
-			nextPage(9);
-//			magnifier.delay(300).fadeIn(300).css({
-//				'left': '78%',
-//				'top': '50%'
-//			}).attr('data-num', 5);
-			$('#button18').fadeIn(300);
-			break;
-		case 10:
-			now_people = 0;
-//			$('.map').find('img').eq(2).show();
-			nextPage(10);
-//			magnifier.delay(300).fadeIn(300).css({
-//				'left': '42%',
-//				'top': '35%'
-//			}).attr('data-num', 6);
-			$('#button19').fadeIn(300);
-			break;
-		case 11:
-			now_people = 0;
-//			$('.map').find('img').eq(0).show();
-			nextPage(11);
-//			magnifier.delay(300).fadeIn(300).css({
-//				'left': '70%',
-//				'top': '45%'
-//			}).attr('data-num', 7);
-			$('#button7').fadeIn(300);
-			$('#button6').fadeIn(300);
-			break;
-		case 12:
-			now_people = 0;
-//			$('.map').find('img').eq(0).show();
-			nextPage(12);
-			$('#button20').fadeIn(300);
-			break;
-		case 13:
-			now_people = 0;
-//			$('.map').find('img').eq(0).show();
-			nextPage(13);
-//			magnifier.delay(300).fadeIn(300).css({
-//				'left': '65%',
-//				'top': '30%'
-//			}).attr('data-num', 8);
-			$('#button21').fadeIn(300);
-			break;
-		case 14:
-			now_people = 0;
-//			$('.map').find('img').eq(1).show();
-			nextPage(14);
-			$('#button22').fadeIn(300);
-			break;
-		case 15:
-			now_people = 1;
-//			$('.map').find('img').eq(1).show();
-			nextPage(15);
-//			magnifier.delay(300).fadeIn(300).css({
-//				'left': '60%',
-//				'top': '25%'
-//			}).attr('data-num', 9);
-			$('#button23').fadeIn(300);
-			break;
-		case 16:
-			now_people = 1;
-//			$('.map').find('img').eq(1).show();
-			nextPage(16);
-//			magnifier.delay(300).fadeIn(300).css({
-//				'left': '30%',
-//				'top': '25%'
-//			}).attr('data-num', 10);
-			$('#button24').fadeIn(300);
-			break;
-		case 17:
-			now_people = 1;
-			nextPage(17);
-			$('#button8').fadeIn(300);
-			$('#button9').fadeIn(300);
-			break;
-		case 18:
-			now_people = 1;
-//			$('.map').find('img').eq(1).show();
-			nextPage(18);
-//			magnifier.delay(300).fadeIn(300).css({
-//				'left': '60%',
-//				'top': '25%'
-//			}).attr('data-num', 9);
-			$('#button18').fadeIn(300);
-			break;
-		case 19:
-			now_people = 1;
-			nextPage(19);
-			$('#button25').fadeIn(300);
-			break;
-		case 20:
-			now_people = 1;
-			nextPage(20);
-			$('#button10').fadeIn(300);
-			$('#button11').fadeIn(300);
-			break;
-		case 21:
-			now_people = 1;
-			nextPage(21);
-			$('#button18').fadeIn(300);
-			break;
-		case 22:
-			now_people = 1;
-			nextPage(22);
-			$('#button26').fadeIn(300);
-			break;
-		case 23:
-			now_people = 1;
-			nextPage(23);
-			$('#button27').fadeIn(300);
-			break;
-		case 24:
-			now_people = 1;
-			nextPage(24);
-			$('#button22').fadeIn(300);
-			break;	
-		//结束的2个case：
-		case 90:
-			now_people = 0;
-			b = 90;
-			enDing(0);
-			break;
-		case 91:
-			now_people = 0;
-			b = 91;
-			enDing(1);
-			break;	
+		switch(e) {
+			case 0:
+				//			now_people = 0;
+				$('#girl').fadeIn(300);
+				//			$('#boy').removeClass('people').addClass('peopleright').fadeIn(300);
+				$('#boy').removeClass('people').addClass('peopleright').fadeIn(300);
+				nextPage(0);
+				$('#button1').fadeIn(300);
+				$('#button2').fadeIn(300);
+				break;
+			case 1:
+				$(".people").children('img').fadeOut(300);
+				setTimeout(function() {
+					$(".people").children('img').eq(0).removeClass('peopleright').addClass('people').fadeIn(300);
+				}, 300);
+				now_people = 0;
+				nextPage(1);
+				magnifier.delay(300).fadeIn(300).css({
+					'left': '65%',
+					'top': '30%'
+				}).attr('data-num', 0);
+				$('#button12').delay(300).fadeIn(300);
+				break;
+			case 2:
+				now_people = 0;
+				nextPage(2);
+				$('#button3').fadeIn(300);
+				$('#button4').fadeIn(300);
+				break;
+			case 3:
+				now_people = 0;
+				nextPage(3);
+				magnifier.delay(300).fadeIn(300).css({
+					'left': '60%',
+					'top': '45%'
+				}).attr('data-num', 3);
+				$('#button13').fadeIn(300);
+				break;
+			case 4:
+				now_people = 0;
+				nextPage(4);
+				magnifier.delay(300).fadeIn(300).css({
+					'left': '60%',
+					'top': '45%'
+				}).attr('data-num', 4);
+				$('#button14').fadeIn(300);
+				break;
+			case 5:
+				now_people = 0;
+				nextPage(5);
+				$('#button15').fadeIn(300);
+				break;
+			case 6:
+				//			now_people = 0;
+				//			b = 6;
+				//			enDing(0);
+				//			break;
+				now_people = 0;
+				nextPage(6);
+				$('#button5').fadeIn(300);
+				$('#button6').fadeIn(300);
+				break;
+			case 7:
+				now_people = 0;
+				//			$('.map').find('img').eq(3).show();
+				nextPage(7);
+				//			magnifier.delay(300).fadeIn(300).css({
+				//				'left': '58%',
+				//				'top': '15%'
+				//			}).attr('data-num', 1);
+				$('#button16').fadeIn(300);
+				break;
+			case 8:
+				now_people = 0;
+				//			$('.map').find('img').eq(3).show();
+				nextPage(8);
+				//			magnifier.delay(300).fadeIn(300).css({
+				//				'left': '63%',
+				//				'top': '44%'
+				//			}).attr('data-num', 2);
+				$('#button17').fadeIn(300);
+				break;
+			case 9:
+				now_people = 0;
+				//			$('.map').find('img').eq(2).show();
+				nextPage(9);
+				//			magnifier.delay(300).fadeIn(300).css({
+				//				'left': '78%',
+				//				'top': '50%'
+				//			}).attr('data-num', 5);
+				$('#button18').fadeIn(300);
+				break;
+			case 10:
+				now_people = 0;
+				//			$('.map').find('img').eq(2).show();
+				nextPage(10);
+				//			magnifier.delay(300).fadeIn(300).css({
+				//				'left': '42%',
+				//				'top': '35%'
+				//			}).attr('data-num', 6);
+				$('#button19').fadeIn(300);
+				break;
+			case 11:
+				now_people = 0;
+				//			$('.map').find('img').eq(0).show();
+				nextPage(11);
+				//			magnifier.delay(300).fadeIn(300).css({
+				//				'left': '70%',
+				//				'top': '45%'
+				//			}).attr('data-num', 7);
+				$('#button7').fadeIn(300);
+				$('#button6').fadeIn(300);
+				break;
+			case 12:
+				now_people = 0;
+				//			$('.map').find('img').eq(0).show();
+				nextPage(12);
+				$('#button20').fadeIn(300);
+				break;
+			case 13:
+				now_people = 0;
+				//			$('.map').find('img').eq(0).show();
+				nextPage(13);
+				//			magnifier.delay(300).fadeIn(300).css({
+				//				'left': '65%',
+				//				'top': '30%'
+				//			}).attr('data-num', 8);
+				$('#button21').fadeIn(300);
+				break;
+			case 14:
+				now_people = 0;
+				//			$('.map').find('img').eq(1).show();
+				nextPage(14);
+				$('#button22').fadeIn(300);
+				break;
+			case 15:
+				now_people = 1;
+				//			$('.map').find('img').eq(1).show();
+				nextPage(15);
+				//			magnifier.delay(300).fadeIn(300).css({
+				//				'left': '60%',
+				//				'top': '25%'
+				//			}).attr('data-num', 9);
+				$('#button23').fadeIn(300);
+				break;
+			case 16:
+				now_people = 1;
+				//			$('.map').find('img').eq(1).show();
+				nextPage(16);
+				//			magnifier.delay(300).fadeIn(300).css({
+				//				'left': '30%',
+				//				'top': '25%'
+				//			}).attr('data-num', 10);
+				$('#button24').fadeIn(300);
+				break;
+			case 17:
+				now_people = 1;
+				nextPage(17);
+				$('#button8').fadeIn(300);
+				$('#button9').fadeIn(300);
+				break;
+			case 18:
+				now_people = 1;
+				//			$('.map').find('img').eq(1).show();
+				nextPage(18);
+				//			magnifier.delay(300).fadeIn(300).css({
+				//				'left': '60%',
+				//				'top': '25%'
+				//			}).attr('data-num', 9);
+				$('#button18').fadeIn(300);
+				break;
+			case 19:
+				now_people = 1;
+				nextPage(19);
+				$('#button25').fadeIn(300);
+				break;
+			case 20:
+				now_people = 1;
+				nextPage(20);
+				$('#button10').fadeIn(300);
+				$('#button11').fadeIn(300);
+				break;
+			case 21:
+				now_people = 1;
+				nextPage(21);
+				$('#button18').fadeIn(300);
+				break;
+			case 22:
+				now_people = 1;
+				nextPage(22);
+				$('#button26').fadeIn(300);
+				break;
+			case 23:
+				now_people = 1;
+				nextPage(23);
+				$('#button27').fadeIn(300);
+				break;
+			case 24:
+				now_people = 1;
+				nextPage(24);
+				$('#button22').fadeIn(300);
+				break;
+				//结束的2个case：
+			case 90:
+				now_people = 0;
+				b = 90;
+				enDing(0);
+				break;
+			case 91:
+				now_people = 0;
+				b = 91;
+				enDing(1);
+				break;
 		}
 	}
+
 	function enDing(e) {
 		changeTitle(e);
 		$(".end_text").find('img').hide();
@@ -334,33 +437,36 @@ function init() {
 			$('.page2').fadeOut(300)
 		}, 300)
 	}
+
 	function nextPage(e) {
 		$('.button').fadeOut(300);
-		if (old_people != now_people) {
+		if(old_people != now_people) {
 			$(".people").children('img').fadeOut(300)
 		}
-		if (e >= 0) b = e;
+		if(e >= 0) b = e;
 		else return false;
 		$("#text").fadeOut(300);
-//		if (b != 8) $("#img").find('img').fadeOut(300);
+		//		if (b != 8) $("#img").find('img').fadeOut(300);
 		$("#img").find('img').fadeOut(300);
 		setTimeout(function() {
 			$("#text").html(a[b][0]).fadeIn(300);
-//			if (b != 8) $("#img").find('img').eq(b).fadeIn(300);
+			//			if (b != 8) $("#img").find('img').eq(b).fadeIn(300);
 			$("#img").find('img').eq(e).fadeIn(300);
-			if (old_people != now_people) {
+			if(old_people != now_people) {
 				$(".people").children('img').eq(now_people).fadeIn(300)
 			}
 			old_people = now_people
 		}, 300)
 	}
+
 	function magnifierF(e) {
 		$('.popup_text').hide();
 		$('.popup_text').eq(e).show();
 		$('.popup').show()
 	}
+
 	function returnF() {
-		if (isAnimating) return false;
+		if(isAnimating) return false;
 		isAnimating = true;
 		$('.page1').fadeIn(300);
 		$('.page3').fadeOut(300);
@@ -373,12 +479,12 @@ function init() {
 		}, 1200);
 		nextPage(25)
 	}
-	if (!isPC()) {
+	if(!isPC()) {
 		$('.page1').on('touchend', function() {
 			page1()
 		});
 		$('.button').on('touchend', function() {
-			if (isAnimating) return false;
+			if(isAnimating) return false;
 			else {
 				isAnimating = true;
 				$('.button').hide();
@@ -403,7 +509,7 @@ function init() {
 		$('.map_button').find('img').on('touchend', function() {
 			$(".map_box").show();
 			$(".map_mask").children('img').hide();
-			if ($(this).attr('data-num')) {
+			if($(this).attr('data-num')) {
 				$(".map_mask").children('img').eq($(this).attr('data-num')).show()
 			}
 		});
@@ -426,7 +532,7 @@ function init() {
 			page1()
 		});
 		$('.button').on('mouseup', function() {
-			if (isAnimating) return false;
+			if(isAnimating) return false;
 			else {
 				isAnimating = true;
 				$('.button').hide();
@@ -451,7 +557,7 @@ function init() {
 		$('.map_button').find('img').on('mouseup', function() {
 			$(".map_box").show();
 			$(".map_mask").children('img').hide();
-			if ($(this).attr('data-num')) {
+			if($(this).attr('data-num')) {
 				$(".map_mask").children('img').eq($(this).attr('data-num')).show()
 			}
 		});
