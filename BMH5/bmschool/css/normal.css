@@ -5,6 +5,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	-webkit-appearance: none;
+	-webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
 }
 
 a,
@@ -173,8 +174,6 @@ html {
 	left: 50%;
 	margin-top: -150px;
 	margin-left: -150px;
-	width: 300px;
-	height: 300px
 }
 
 .page {

@@ -57,6 +57,7 @@ $(function() {
 	setTimeout(function() {
 		if(!isOk) {
 			location.reload();
+//			location.href='index.html';
 		}
 	}, 10000);
 //	for (i=1;i<=100;i++) {
