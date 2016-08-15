@@ -570,7 +570,8 @@ html {
 	display: none;
 	width: 100%;
 	height: 100%;
-	background-image: url(http://p3.ifengimg.com/l/2016/21/ca1c0b2b216759c/bk2.png);
+	/*background-image: url(http://p3.ifengimg.com/l/2016/21/ca1c0b2b216759c/bk2.png);*/
+	background-image: url(../img/books/tips/tips-bg.png);
 	cursor: pointer
 }
 

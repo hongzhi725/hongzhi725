@@ -10,7 +10,7 @@ setTimeout(function() {
 }, 500);
 var isOk = false;
 $(function() {
-	var imgList = ['http://p3.ifengimg.com/l/2016/21/ca1c0b2b216759c/bk2.png'];
+	var imgList = ['img/books/tips/tips-bg.png'];
 	var cantPush = false;
 	$('img').each(function() {
 		if($(this).attr('data-src')) {
@@ -226,15 +226,19 @@ function init() {
 				}, 300);
 				now_people = 0;
 				nextPage(1);
-				magnifier.delay(300).fadeIn(300).css({
-					'left': '65%',
-					'top': '30%'
-				}).attr('data-num', 0);
+//				magnifier.delay(300).fadeIn(300).css({
+//					'left': '65%',
+//					'top': '30%'
+//				}).attr('data-num', 0);
 				$('#button12').delay(300).fadeIn(300);
 				break;
 			case 2:
 				now_people = 0;
 				nextPage(2);
+				magnifier.delay(300).fadeIn(300).css({
+					'left': '55%',
+					'top': '40%'
+				}).attr('data-num', 0);
 				$('#button3').fadeIn(300);
 				$('#button4').fadeIn(300);
 				break;
@@ -275,10 +279,10 @@ function init() {
 				now_people = 0;
 				//			$('.map').find('img').eq(3).show();
 				nextPage(7);
-				//			magnifier.delay(300).fadeIn(300).css({
-				//				'left': '58%',
-				//				'top': '15%'
-				//			}).attr('data-num', 1);
+				magnifier.delay(300).fadeIn(300).css({
+					'left': '42%',
+					'top': '40%'
+				}).attr('data-num', 1);
 				$('#button16').fadeIn(300);
 				break;
 			case 8:
@@ -348,10 +352,10 @@ function init() {
 				now_people = 1;
 				//			$('.map').find('img').eq(1).show();
 				nextPage(15);
-				//			magnifier.delay(300).fadeIn(300).css({
-				//				'left': '60%',
-				//				'top': '25%'
-				//			}).attr('data-num', 9);
+				magnifier.delay(300).fadeIn(300).css({
+					'left': '65%',
+					'top': '30%'
+				}).attr('data-num', 2);
 				$('#button23').fadeIn(300);
 				break;
 			case 16:
