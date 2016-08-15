@@ -57,14 +57,9 @@ $(function() {
 	setTimeout(function() {
 		if(!isOk) {
 			location.reload();
-//			location.href='index.html';
+			//			location.href='index.html';
 		}
-	}, 10000);
-//	for (i=1;i<=100;i++) {
-//		var aa=document.$('span').TEXT();
-//		console.log(aa);
-//	}
-	
+	}, 15000);
 });
 
 function loadingF() {
@@ -226,10 +221,6 @@ function init() {
 				}, 300);
 				now_people = 0;
 				nextPage(1);
-//				magnifier.delay(300).fadeIn(300).css({
-//					'left': '65%',
-//					'top': '30%'
-//				}).attr('data-num', 0);
 				$('#button12').delay(300).fadeIn(300);
 				break;
 			case 2:
@@ -245,19 +236,11 @@ function init() {
 			case 3:
 				now_people = 0;
 				nextPage(3);
-				magnifier.delay(300).fadeIn(300).css({
-					'left': '60%',
-					'top': '45%'
-				}).attr('data-num', 3);
 				$('#button13').fadeIn(300);
 				break;
 			case 4:
 				now_people = 0;
 				nextPage(4);
-				magnifier.delay(300).fadeIn(300).css({
-					'left': '60%',
-					'top': '45%'
-				}).attr('data-num', 4);
 				$('#button14').fadeIn(300);
 				break;
 			case 5:
@@ -289,40 +272,32 @@ function init() {
 				now_people = 0;
 				//			$('.map').find('img').eq(3).show();
 				nextPage(8);
-				//			magnifier.delay(300).fadeIn(300).css({
-				//				'left': '63%',
-				//				'top': '44%'
-				//			}).attr('data-num', 2);
+				magnifier.delay(300).fadeIn(300).css({
+					'left': '42%',
+					'top': '40%'
+				}).attr('data-num', 2);
 				$('#button17').fadeIn(300);
 				break;
 			case 9:
 				now_people = 0;
 				//			$('.map').find('img').eq(2).show();
 				nextPage(9);
-				//			magnifier.delay(300).fadeIn(300).css({
-				//				'left': '78%',
-				//				'top': '50%'
-				//			}).attr('data-num', 5);
+				magnifier.delay(300).fadeIn(300).css({
+					'left': '42%',
+					'top': '40%'
+				}).attr('data-num', 3);
 				$('#button18').fadeIn(300);
 				break;
 			case 10:
 				now_people = 0;
 				//			$('.map').find('img').eq(2).show();
 				nextPage(10);
-				//			magnifier.delay(300).fadeIn(300).css({
-				//				'left': '42%',
-				//				'top': '35%'
-				//			}).attr('data-num', 6);
 				$('#button19').fadeIn(300);
 				break;
 			case 11:
 				now_people = 0;
 				//			$('.map').find('img').eq(0).show();
 				nextPage(11);
-				//			magnifier.delay(300).fadeIn(300).css({
-				//				'left': '70%',
-				//				'top': '45%'
-				//			}).attr('data-num', 7);
 				$('#button7').fadeIn(300);
 				$('#button6').fadeIn(300);
 				break;
@@ -336,10 +311,6 @@ function init() {
 				now_people = 0;
 				//			$('.map').find('img').eq(0).show();
 				nextPage(13);
-				//			magnifier.delay(300).fadeIn(300).css({
-				//				'left': '65%',
-				//				'top': '30%'
-				//			}).attr('data-num', 8);
 				$('#button21').fadeIn(300);
 				break;
 			case 14:
@@ -355,17 +326,13 @@ function init() {
 				magnifier.delay(300).fadeIn(300).css({
 					'left': '65%',
 					'top': '30%'
-				}).attr('data-num', 2);
+				}).attr('data-num', 4);
 				$('#button23').fadeIn(300);
 				break;
 			case 16:
 				now_people = 1;
 				//			$('.map').find('img').eq(1).show();
 				nextPage(16);
-				//			magnifier.delay(300).fadeIn(300).css({
-				//				'left': '30%',
-				//				'top': '25%'
-				//			}).attr('data-num', 10);
 				$('#button24').fadeIn(300);
 				break;
 			case 17:
@@ -378,10 +345,6 @@ function init() {
 				now_people = 1;
 				//			$('.map').find('img').eq(1).show();
 				nextPage(18);
-				//			magnifier.delay(300).fadeIn(300).css({
-				//				'left': '60%',
-				//				'top': '25%'
-				//			}).attr('data-num', 9);
 				$('#button18').fadeIn(300);
 				break;
 			case 19:
