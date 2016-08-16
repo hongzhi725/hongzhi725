@@ -1,5 +1,5 @@
 var loadingImage = new Image();
-loadingImage.src = "http://p0.ifengimg.com/cdd6fabc89d70f7b/2016/23/300x300.png";
+loadingImage.src = "img/books/bm-logo-white.png";
 loadingImage.onload = function() {
 	resizeNew();
 	$('.loadMask').hide();
