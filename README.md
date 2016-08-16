@@ -5,7 +5,6 @@
 ## Demo
 *   Github-Demo首页：<a href="https://hongzhi725.github.io/hongzhi725/">Touch Me</a>
 *   《大学浓缩升级配方》：<a href="https://hongzhi725.github.io/hongzhi725/BMH5/bmschool/">Touch Me</a>
-*   《百团大战》：<a href="https://hongzhi725.github.io/hongzhi725/BMH5/Bt-school/">Touch Me</a>
 *   《机洗至尊》：<a href="https://hongzhi725.github.io/hongzhi725/BMH5/NormalH5/JXZZ/">Touch Me</a>
 *   《H5图文模板-个人封装》:<a href="https://hongzhi725.github.io/hongzhi725/BMH5/Template-LHZ/">Touch Me</a>
 
