@@ -19,18 +19,6 @@
 	</head>
 
 	<body>
-		<!--<div id="ifeng_share_thumbnail" style="display:none">
-			http://p3.ifengimg.com/cdd6fabc89d70f7b/2016/21/625280528467772635.jpg
-		</div>
-		<div id="ifeng_share_title" style="display:none">
-			《大学浓缩升级配方》
-		</div>
-		<div id="ifeng_share_description" style="display:none">
-			少年，我看你骨骼惊奇！这本“《大学浓缩升级配方》”就赠予与你。
-		</div>-->
-		<!--<div id="ifeng_share_url" style="display:none">
-			http://www.hongzhi725.top/
-		</div>-->
 		<div id="mainBox" ondragstart="return false;">
 			<!--微信分享自定义图片 part1 此图片建议大于300*300-->
 			<img id="imgForShare" src="img/loadings/300-300.jpg" style="position:fixed;left: -1000%;" />
@@ -221,12 +209,12 @@
 					<img src="img/abc.png" data-src="img/books/pages/boy.png" id="boy" />
 					<img src="img/abc.png" data-src="img/books/pages/girl.png" id="girl" />
 				</div>
-				<div class="map map_button">
-					<!--<img src="img/abc.png" data-src="http://p3.ifengimg.com/l/2016/28/0a6eedc4a755ecb/map1.jpg" />
+				<!--<div class="map map_button">-->
+				<!--<img src="img/abc.png" data-src="http://p3.ifengimg.com/l/2016/28/0a6eedc4a755ecb/map1.jpg" />
 					<img data-num="0" src="img/abc.png" data-src="http://p1.ifengimg.com/l/2016/28/0a6eedc4a755ecb/map2.jpg" />
 					<img data-num="1" src="img/abc.png" data-src="http://p2.ifengimg.com/l/2016/28/0a6eedc4a755ecb/map3.jpg" />
 					<img data-num="2" src="img/abc.png" data-src="http://p0.ifengimg.com/cdd6fabc89d70f7b/2016/21/map4.jpg" />-->
-				</div>
+				<!--</div>-->
 				<!--Tips-->
 				<div class="popup">
 					<div class="popup_text">
@@ -249,7 +237,6 @@
 					</div>
 				</div>
 			</section>
-			<!--尾页结局-->
 			<section class="page page3">
 				<div class="mask"></div>
 				<div class="end_img">
@@ -282,24 +269,114 @@
 				<img src="img/abc.png" data-src="img/books/bk.jpg" />
 				<img src="img/abc.png" data-src="img/books/page2.png" />
 				<img src="img/abc.png" data-src="img/books/tips/ME.png" />
-				<!--<img src="img/abc.png" data-src="http://p2.ifengimg.com/l/2016/28/0a6eedc4a755ecb/map.png" />-->
-				<!--<div class="map_mask">-->
+				<div class="map_mask">
 					<!--<img src="img/abc.png" data-src="http://p3.ifengimg.com/cdd6fabc89d70f7b/2016/21/mask2.png" />
 					<img src="img/abc.png" data-src="http://p3.ifengimg.com/cdd6fabc89d70f7b/2016/21/mask1.png" />
 					<img src="img/abc.png" data-src="http://p0.ifengimg.com/cdd6fabc89d70f7b/2016/21/mask3.png" />-->
-				<!--</div>-->
+				</div>
 			</div>
 		</div>
 		<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-		<!--<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>-->
 		<script type="text/javascript" src="js/main.js"></script>
-//		<script type="text/javascript">
-//			function getspan(){
-//				var aa=document.getElementsByTagName('span');
-//				console.log(aa.innerHTML);
-//			}
-//			getspan();
-//		</script>
+		<script type="text/javascript">
+			var loadingImage = new Image();
+			loadingImage.src = "img/loadings/300-300.jpg";
+			loadingImage.onload = function() {
+				resizeNew();
+				$('.loadMask').hide();
+			};
+			setTimeout(function() {
+				resizeNew();
+				$('.loadMask').hide();
+			}, 500);
+			var isOk = false;
+			$(function() {
+				var imgList = ['img/books/tips/tips-bg.png'];
+				var cantPush = false;
+				$('img').each(function() {
+					if($(this).attr('data-src')) {
+						cantPush = false;
+						for(var j = 0; j < imgList.length; j++) {
+							if(imgList[j] == $(this).attr('data-src')) {
+								cantPush = true;
+								break;
+							}
+						}
+						var d = new Date().getTime();
+						if(!cantPush) imgList.push($(this).attr('data-src'));
+						$(this).attr('src', $(this).attr('data-src'));
+					}
+				});
+				var imgNum = imgList.length;
+				var MaxImgNum = imgList.length;
+				var timer = setInterval(function() {
+					for(var i = 0; i < imgList.length; i++) {
+						var loadImg = new Image();
+						loadImg.src = imgList[i];
+						loadImg.onload = function() {
+							loadImg.complete = true;
+						};
+						if(loadImg.complete) {
+							imgList.splice(i, 1);
+							imgNum--;
+							$('#loading').find('p').find('span').html(parseInt((MaxImgNum - imgNum) / MaxImgNum * 100));
+							$('.loadingInner').animate({
+								'width': parseInt((MaxImgNum - imgNum) / MaxImgNum * 84) + '%'
+							}, 10);
+							$('.rocketBox').animate({
+								'left': parseInt((MaxImgNum - imgNum) / MaxImgNum * 40) + 20 + '%'
+							}, 10);
+						}
+					}
+					if(imgNum <= 0) {
+						clearInterval(timer);
+						setTimeout(function() {
+							loadingF();
+						}, 100);
+					}
+				}, 50);
+				setTimeout(function() {
+					if(!isOk) {
+						location.reload();
+					}
+				}, 10000);
+			});
+
+			function loadingF() {
+				if(isOk) return false;
+				isOk = true;
+				$('.page1').show();
+				$('#loading').fadeOut(300);
+				init();
+				changeTitle(2);
+			}
+
+			function changeTitle(e) {
+				var share_title = '上大学，要浓缩！别跟我说你还没玩过！';
+				switch(e) {
+					case 0:
+						share_title = '我在浓缩升级宝典里失败而终，看看你能不能玩通关它！';
+						break;
+					case 1:
+						share_title = '机智如我~我竟然在大学浓缩宝典里大获全胜~！要走到了人生了巅峰！';
+						break;
+					case 2:
+						share_title = '上大学，要浓缩！别跟我说你还没玩过！';
+						break;
+				}
+				document.title = share_title;
+			}
+
+			if(!isPC()) {
+				document.write('<style>*{ cursor: default !important;}.share_code{ display: none;}</style>');
+			}
+			if(isPC()) {
+				document.write('<style>.share_icon{ display: none;}</style>');
+			}
+		</script>
+		<script type="text/javascript">
+			document.write('<div id="ifeng_da_le" style="width:1px;height:1px"><script src="http://m0.ifengimg.com/ifeng/sources/120331-iImpression.js"><\/script></div>');
+		</script>
 		<!-- 页尾通栏  -->
 	</body>
 

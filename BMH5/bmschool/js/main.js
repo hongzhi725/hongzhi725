@@ -1,99 +1,3 @@
-var loadingImage = new Image();
-loadingImage.src = "img/books/bm-logo-white.png";
-loadingImage.onload = function() {
-	resizeNew();
-	$('.loadMask').hide();
-};
-setTimeout(function() {
-	resizeNew();
-	$('.loadMask').hide();
-}, 500);
-var isOk = false;
-$(function() {
-	var imgList = ['img/books/tips/tips-bg.png'];
-	var cantPush = false;
-	$('img').each(function() {
-		if($(this).attr('data-src')) {
-			cantPush = false;
-			for(var j = 0; j < imgList.length; j++) {
-				if(imgList[j] == $(this).attr('data-src')) {
-					cantPush = true;
-					break;
-				}
-			}
-			var d = new Date().getTime();
-			if(!cantPush) imgList.push($(this).attr('data-src'));
-			$(this).attr('src', $(this).attr('data-src'));
-		}
-	});
-	var imgNum = imgList.length;
-	var MaxImgNum = imgList.length;
-	var timer = setInterval(function() {
-		for(var i = 0; i < imgList.length; i++) {
-			var loadImg = new Image();
-			loadImg.src = imgList[i];
-			loadImg.onload = function() {
-				loadImg.complete = true;
-			};
-			if(loadImg.complete) {
-				imgList.splice(i, 1);
-				imgNum--;
-				$('#loading').find('p').find('span').html(parseInt((MaxImgNum - imgNum) / MaxImgNum * 100));
-				$('.loadingInner').animate({
-					'width': parseInt((MaxImgNum - imgNum) / MaxImgNum * 84) + '%'
-				}, 10);
-				$('.rocketBox').animate({
-					'left': parseInt((MaxImgNum - imgNum) / MaxImgNum * 40) + 20 + '%'
-				}, 10);
-			}
-		}
-		if(imgNum <= 0) {
-			clearInterval(timer);
-			setTimeout(function() {
-				loadingF();
-			}, 100);
-		}
-	}, 50);
-	setTimeout(function() {
-		if(!isOk) {
-			location.reload();
-			//			location.href='index.html';
-		}
-	}, 15000);
-});
-
-function loadingF() {
-	if(isOk) return false;
-	isOk = true;
-	$('.page1').show();
-	$('#loading').fadeOut(300);
-	init();
-	changeTitle(2);
-}
-
-function changeTitle(e) {
-	var share_title = '上大学，要浓缩！别跟我说你还没玩过！';
-	switch(e) {
-		case 0:
-			share_title = '我在浓缩升级宝典里失败而终，看看你能不能玩通关它！';
-			break;
-		case 1:
-			share_title = '机智如我~我竟然在大学浓缩宝典里大获全胜~！要走到了人生了巅峰！';
-			break;
-		case 2:
-			share_title = '上大学，要浓缩！别跟我说你还没玩过！';
-			break;
-	}
-	document.title = share_title;
-}
-
-if(!isPC()) {
-	document.write('<style>*{ cursor: default !important;}.share_code{ display: none;}</style>');
-}
-if(isPC()) {
-	document.write('<style>.share_icon{ display: none;}</style>');
-}
-
 function isPC() {
 	var a = navigator.userAgent;
 	var b = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod", "MiuiBrowser"];
@@ -474,13 +378,13 @@ function init() {
 		$('.return_button').on('touchend', function() {
 			returnF()
 		});
-		$('.map_button').find('img').on('touchend', function() {
-			$(".map_box").show();
-			$(".map_mask").children('img').hide();
-			if($(this).attr('data-num')) {
-				$(".map_mask").children('img').eq($(this).attr('data-num')).show()
-			}
-		});
+//		$('.map_button').find('img').on('touchend', function() {
+//			$(".map_box").show();
+//			$(".map_mask").children('img').hide();
+//			if($(this).attr('data-num')) {
+//				$(".map_mask").children('img').eq($(this).attr('data-num')).show()
+//			}
+//		});
 		$('.map_show').on('touchend', function() {
 			$(".map_box").show();
 			$(".map_mask").children('img').hide()
@@ -522,13 +426,13 @@ function init() {
 		$('.return_button').on('mouseup', function() {
 			returnF()
 		});
-		$('.map_button').find('img').on('mouseup', function() {
-			$(".map_box").show();
-			$(".map_mask").children('img').hide();
-			if($(this).attr('data-num')) {
-				$(".map_mask").children('img').eq($(this).attr('data-num')).show()
-			}
-		});
+//		$('.map_button').find('img').on('mouseup', function() {
+//			$(".map_box").show();
+//			$(".map_mask").children('img').hide();
+//			if($(this).attr('data-num')) {
+//				$(".map_mask").children('img').eq($(this).attr('data-num')).show()
+//			}
+//		});
 		$('.map_show').on('mouseup', function() {
 			$(".map_box").show();
 			$(".map_mask").children('img').hide()
