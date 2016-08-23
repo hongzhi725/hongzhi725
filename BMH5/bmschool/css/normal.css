@@ -333,6 +333,7 @@ html {
 	top: 68%;
 	left: 15%;
 	z-index: 20;
+	text-indent: 2em;
 	display: none;
 	overflow: hidden;
 	width: 70%;
