@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui,user-scalable=no" />
@@ -16,12 +15,20 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" type="text/css" href="css/normal.css" />
 		<link rel="stylesheet" type="text/css" href="css/loading.css" />
+		<!--百度统计代码-->
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "//hm.baidu.com/hm.js?b9c32cea649844f9a9375e0cee0fbe0f";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
 	</head>
-
 	<body>
 		<div id="mainBox" ondragstart="return false;">
-			<!--微信分享自定义图片 part1 此图片建议大于300*300-->
-			<img id="imgForShare" src="img/loadings/300-300.jpg" style="position:fixed;left: -1000%;" />
+			<!--微信分享自定义图片 part1 此图片建议大于300*300--><img id="imgForShare" src="img/loadings/300-300.jpg" style="position:fixed;left: -1000%;" />
 			<!--loading begin-->
 			<div class="loadMask"></div>
 			<div id="loading">
@@ -31,184 +38,55 @@
 			</div>
 			<!--loading end-->
 			<!--mask begin-->
-			<div class="share_mask" style="display: none;">
-				<img class="share_icon" src="img/abc.png" data-src="img/loadings/share.png" />
-				<img class="share_code" src="img/abc.png" data-src="img/loadings/me-2w.jpg" />
-			</div>
-			<!--mask end-->
-			<img class="bk" src="img/abc.png" data-src="img/books/bk.jpg" />
-			<img class="paper bk" src="img/abc.png" data-src="img/books/books.png" />
-			<img class="paper2 bk" src="img/abc.png" data-src="img/books/page2.png" />
+			<div class="share_mask" style="display: none;"> <img class="share_icon" src="img/abc.png" data-src="img/loadings/share.png" /> <img class="share_code" src="img/abc.png" data-src="img/loadings/me-2w.jpg" /> </div>
+			<!--mask end--><img class="bk" src="img/abc.png" data-src="img/books/bk.jpg" /> <img class="paper bk" src="img/abc.png" data-src="img/books/books.png" /> <img class="paper2 bk" src="img/abc.png" data-src="img/books/page2.png" />
 			<section class="page page1">
 				<div class="mask"></div>
-				<div class="book bk">
-					<img class="bk" src="img/abc.png" data-src="img/books/cover3.png" />
+				<div class="book bk"> <img class="bk" src="img/abc.png" data-src="img/books/cover3.png" />
 					<!--<img class="wheel" data-src="img/books/wheel.png"/>-->
-					<div class="p1_title">
-						<img src="img/abc.png" data-src="img/books/title.png" />
-					</div>
+					<div class="p1_title"> <img src="img/abc.png" data-src="img/books/title.png" /> </div>
 				</div>
-				<!--位置：封面底部LOGO-->
-				<img class="zxLogo" src="img/books/bm-logo-white.png" style="height: 3.5%;width: 15%;left: 43%;top: 92.5%;" />
-			</section>
+				<!--位置：封面底部LOGO--><img class="zxLogo" src="img/books/bm-logo-white.png" style="height: 3.5%;width: 15%;left: 43%;top: 92.5%;" /> </section>
 			<section class="page page2">
 				<!--<div class="mask"></div>-->
-				<!--素材：对话框、背景图-->
-				<img class="text_bk" src="img/abc.png" data-src="img/books/text_bg.png" />
-				<div id="img">
-					<img src="img/abc.png" data-src="img/abc.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P1.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P2.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P3.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P4.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P5.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P6.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P7.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P8.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P9.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P10.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P11.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P12.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P13.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P14.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P15.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P16.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P17.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P18.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P19.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P20.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P21.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P22.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P23.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P24.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P-START.png" />
-				</div>
+				<!--素材：对话框、背景图--><img class="text_bk" src="img/abc.png" data-src="img/books/text_bg.png" />
+				<div id="img"> <img src="img/abc.png" data-src="img/abc.png" /> <img src="img/abc.png" data-src="img/books/pages/P1.png" /> <img src="img/abc.png" data-src="img/books/pages/P2.png" /> <img src="img/abc.png" data-src="img/books/pages/P3.png" /> <img src="img/abc.png" data-src="img/books/pages/P4.png" /> <img src="img/abc.png" data-src="img/books/pages/P5.png" /> <img src="img/abc.png" data-src="img/books/pages/P6.png" /> <img src="img/abc.png" data-src="img/books/pages/P7.png" /> <img src="img/abc.png" data-src="img/books/pages/P8.png" /> <img src="img/abc.png" data-src="img/books/pages/P9.png" /> <img src="img/abc.png" data-src="img/books/pages/P10.png" /> <img src="img/abc.png" data-src="img/books/pages/P11.png" /> <img src="img/abc.png" data-src="img/books/pages/P12.png" /> <img src="img/abc.png" data-src="img/books/pages/P13.png" /> <img src="img/abc.png" data-src="img/books/pages/P14.png" /> <img src="img/abc.png" data-src="img/books/pages/P15.png" /> <img src="img/abc.png" data-src="img/books/pages/P16.png" /> <img src="img/abc.png" data-src="img/books/pages/P17.png" /> <img src="img/abc.png" data-src="img/books/pages/P18.png" /> <img src="img/abc.png" data-src="img/books/pages/P19.png" /> <img src="img/abc.png" data-src="img/books/pages/P20.png" /> <img src="img/abc.png" data-src="img/books/pages/P21.png" /> <img src="img/abc.png" data-src="img/books/pages/P22.png" /> <img src="img/abc.png" data-src="img/books/pages/P23.png" /> <img src="img/abc.png" data-src="img/books/pages/P24.png" /> <img src="img/abc.png" data-src="img/books/pages/P-START.png" /> </div>
 				<div id="text"></div>
 				<!--放大镜素材-->
-				<div id="magnifier" class="magnifier">
-					<img src="img/abc.png" data-src="img/button/magnifier.png" />
-					<img src="img/abc.png" data-src="img/button/magnifier2.png" />
-				</div>
+				<div id="magnifier" class="magnifier"> <img src="img/abc.png" data-src="img/button/magnifier.png" /> <img src="img/abc.png" data-src="img/button/magnifier2.png" /> </div>
 				<!--按钮素材-->
 				<div class="button_box">
 					<!--按钮素材-->
-					<div id="button0" class="button1 button" style="display: none;" data-num="0">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button1" class="button2 button" style="display: none;" data-num="1">
-						<img src="img/abc.png" data-src="img/button/meizhi.png" />
-						<img src="img/abc.png" data-src="img/button/meizhi-A.png" />
-					</div>
-					<div id="button2" class="button3 button" style="display: none;" data-num="15">
-						<img src="img/abc.png" data-src="img/button/nanshen.png" />
-						<img src="img/abc.png" data-src="img/button/nanshen-A.png" />
-					</div>
-					<div id="button3" class="button2 button" style="display: none;" data-num="3">
-						<img src="img/abc.png" data-src="img/button/zhuanglengtouqing.png" />
-						<img src="img/abc.png" data-src="img/button/zhuanglengtouqing-A.png" />
-					</div>
-					<div id="button4" class="button3 button" style="display: none;" data-num="5">
-						<img src="img/abc.png" data-src="img/button/fujingqingzui.png" />
-						<img src="img/abc.png" data-src="img/button/fujingqingzui-A.png" />
-					</div>
-					<div id="button5" class="button2 button" style="display: none;" data-num="10">
-						<img src="img/abc.png" data-src="img/button/qumaichide.png" />
-						<img src="img/abc.png" data-src="img/button/qumaichide-A.png" />
-					</div>
-					<div id="button6" class="button3 button" style="display: none;" data-num="7">
-						<img src="img/abc.png" data-src="img/button/huiqushuijiao.png" />
-						<img src="img/abc.png" data-src="img/button/huiqushuijiao-A.png" />
-					</div>
-					<div id="button7" class="button2 button" style="display: none;" data-num="12">
-						<img src="img/abc.png" data-src="img/button/jixudengdai.png" />
-						<img src="img/abc.png" data-src="img/button/jixudengdai-A.png" />
-					</div>
-					<div id="button8" class="button2 button" style="display: none;" data-num="18">
-						<img src="img/abc.png" data-src="img/button/fangqilikai.png" />
-						<img src="img/abc.png" data-src="img/button/fangqilikai-A.png" />
-					</div>
-					<div id="button9" class="button3 button" style="display: none;" data-num="19">
-						<img src="img/abc.png" data-src="img/button/huiqishualai.png" />
-						<img src="img/abc.png" data-src="img/button/huiqishualai-A.png" />
-					</div>
-					<div id="button10" class="button2 button" style="display: none;" data-num="21">
-						<img src="img/abc.png" data-src="img/button/buyaolianjixu.png" />
-						<img src="img/abc.png" data-src="img/button/buyaolianjixu-A.png" />
-					</div>
-					<div id="button11" class="button3 button" style="display: none;" data-num="22">
-						<img src="img/abc.png" data-src="img/button/sixiahaojiechu.png" />
-						<img src="img/abc.png" data-src="img/button/sixiahaojiechu-A.png" />
-					</div>
-					<div id="button12" class="button1 button" style="display: none;" data-num="2">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button13" class="button1 button" style="display: none;" data-num="4">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button14" class="button1 button" style="display: none;" data-num="91">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button15" class="button1 button" style="display: none;" data-num="6">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button16" class="button1 button" style="display: none;" data-num="8">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button17" class="button1 button" style="display: none;" data-num="9">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button18" class="button1 button" style="display: none;" data-num="91">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button19" class="button1 button" style="display: none;" data-num="11">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button20" class="button1 button" style="display: none;" data-num="13">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button21" class="button1 button" style="display: none;" data-num="14">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button22" class="button1 button" style="display: none;" data-num="90">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button23" class="button1 button" style="display: none;" data-num="16">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button24" class="button1 button" style="display: none;" data-num="17">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button25" class="button1 button" style="display: none;" data-num="20">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button26" class="button1 button" style="display: none;" data-num="23">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
-					<div id="button27" class="button1 button" style="display: none;" data-num="24">
-						<img src="img/abc.png" data-src="img/button/xiayiye.png" />
-						<img src="img/abc.png" data-src="img/button/xiayiye-A.png" />
-					</div>
+					<div id="button0" class="button1 button" style="display: none;" data-num="0"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button1" class="button2 button" style="display: none;" data-num="1"> <img src="img/abc.png" data-src="img/button/meizhi.png" /> <img src="img/abc.png" data-src="img/button/meizhi-A.png" /> </div>
+					<div id="button2" class="button3 button" style="display: none;" data-num="15"> <img src="img/abc.png" data-src="img/button/nanshen.png" /> <img src="img/abc.png" data-src="img/button/nanshen-A.png" /> </div>
+					<div id="button3" class="button2 button" style="display: none;" data-num="3"> <img src="img/abc.png" data-src="img/button/zhuanglengtouqing.png" /> <img src="img/abc.png" data-src="img/button/zhuanglengtouqing-A.png" /> </div>
+					<div id="button4" class="button3 button" style="display: none;" data-num="5"> <img src="img/abc.png" data-src="img/button/fujingqingzui.png" /> <img src="img/abc.png" data-src="img/button/fujingqingzui-A.png" /> </div>
+					<div id="button5" class="button2 button" style="display: none;" data-num="10"> <img src="img/abc.png" data-src="img/button/qumaichide.png" /> <img src="img/abc.png" data-src="img/button/qumaichide-A.png" /> </div>
+					<div id="button6" class="button3 button" style="display: none;" data-num="7"> <img src="img/abc.png" data-src="img/button/huiqushuijiao.png" /> <img src="img/abc.png" data-src="img/button/huiqushuijiao-A.png" /> </div>
+					<div id="button7" class="button2 button" style="display: none;" data-num="12"> <img src="img/abc.png" data-src="img/button/jixudengdai.png" /> <img src="img/abc.png" data-src="img/button/jixudengdai-A.png" /> </div>
+					<div id="button8" class="button2 button" style="display: none;" data-num="18"> <img src="img/abc.png" data-src="img/button/fangqilikai.png" /> <img src="img/abc.png" data-src="img/button/fangqilikai-A.png" /> </div>
+					<div id="button9" class="button3 button" style="display: none;" data-num="19"> <img src="img/abc.png" data-src="img/button/huiqishualai.png" /> <img src="img/abc.png" data-src="img/button/huiqishualai-A.png" /> </div>
+					<div id="button10" class="button2 button" style="display: none;" data-num="21"> <img src="img/abc.png" data-src="img/button/buyaolianjixu.png" /> <img src="img/abc.png" data-src="img/button/buyaolianjixu-A.png" /> </div>
+					<div id="button11" class="button3 button" style="display: none;" data-num="22"> <img src="img/abc.png" data-src="img/button/sixiahaojiechu.png" /> <img src="img/abc.png" data-src="img/button/sixiahaojiechu-A.png" /> </div>
+					<div id="button12" class="button1 button" style="display: none;" data-num="2"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button13" class="button1 button" style="display: none;" data-num="4"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button14" class="button1 button" style="display: none;" data-num="91"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button15" class="button1 button" style="display: none;" data-num="6"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button16" class="button1 button" style="display: none;" data-num="8"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button17" class="button1 button" style="display: none;" data-num="9"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button18" class="button1 button" style="display: none;" data-num="91"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button19" class="button1 button" style="display: none;" data-num="11"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button20" class="button1 button" style="display: none;" data-num="13"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button21" class="button1 button" style="display: none;" data-num="14"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button22" class="button1 button" style="display: none;" data-num="90"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button23" class="button1 button" style="display: none;" data-num="16"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button24" class="button1 button" style="display: none;" data-num="17"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button25" class="button1 button" style="display: none;" data-num="20"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button26" class="button1 button" style="display: none;" data-num="23"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
+					<div id="button27" class="button1 button" style="display: none;" data-num="24"> <img src="img/abc.png" data-src="img/button/xiayiye.png" /> <img src="img/abc.png" data-src="img/button/xiayiye-A.png" /> </div>
 				</div>
-				<div class="people">
-					<img src="img/abc.png" data-src="img/books/pages/boy.png" id="boy" />
-					<img src="img/abc.png" data-src="img/books/pages/girl.png" id="girl" />
-				</div>
+				<div class="people"> <img src="img/abc.png" data-src="img/books/pages/boy.png" id="boy" /> <img src="img/abc.png" data-src="img/books/pages/girl.png" id="girl" /> </div>
 				<!--<div class="map map_button">-->
 				<!--<img src="img/abc.png" data-src="http://p3.ifengimg.com/l/2016/28/0a6eedc4a755ecb/map1.jpg" />
 					<img data-num="0" src="img/abc.png" data-src="http://p1.ifengimg.com/l/2016/28/0a6eedc4a755ecb/map2.jpg" />
@@ -217,63 +95,34 @@
 				<!--</div>-->
 				<!--Tips-->
 				<div class="popup">
-					<div class="popup_text">
-						<img src="img/abc.png" data-src="img/books/tips/T-P2.png" />
-					</div>
-					<div class="popup_text">
-						<img src="img/abc.png" data-src="img/books/tips/T-P7.png" />
-					</div>
-					<div class="popup_text">
-						<img src="img/abc.png" data-src="img/books/tips/T-P8.png" />
-					</div>
-					<div class="popup_text">
-						<img src="img/abc.png" data-src="img/books/tips/T-P9.png" />
-					</div>
-					<div class="popup_text">
-						<img src="img/abc.png" data-src="img/books/tips/T-P15.png" />
-					</div>
-					<div class="popup_text">
-						<img src="img/abc.png" data-src="img/books/tips/EXAMPLE.png" />
-					</div>
+					<div class="popup_text"> <img src="img/abc.png" data-src="img/books/tips/T-P2.png" /> </div>
+					<div class="popup_text"> <img src="img/abc.png" data-src="img/books/tips/T-P7.png" /> </div>
+					<div class="popup_text"> <img src="img/abc.png" data-src="img/books/tips/T-P8.png" /> </div>
+					<div class="popup_text"> <img src="img/abc.png" data-src="img/books/tips/T-P9.png" /> </div>
+					<div class="popup_text"> <img src="img/abc.png" data-src="img/books/tips/T-P15.png" /> </div>
+					<div class="popup_text"> <img src="img/abc.png" data-src="img/books/tips/T-END.png" /> </div>
 				</div>
 			</section>
 			<section class="page page3">
 				<div class="mask"></div>
-				<div class="end_img">
-					<img src="img/abc.png" data-src="img/books/pages/P-END.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P-END.png" />
-				</div>
-				<div class="end_text">
-					<img src="img/abc.png" data-src="img/books/pages/P-END-0.png" />
-					<img src="img/abc.png" data-src="img/books/pages/P-END-1.png" />
-				</div>
-				<div class="return_button buttonF">
-					<img src="img/abc.png" data-src="img/button/congtouzailai.png" />
-					<img src="img/abc.png" data-src="img/button/congtouzailai-A.png" />
-				</div>
-				<div class="share_button buttonF">
-					<img src="img/abc.png" data-src="img/button/zhangyifenxiang.png" />
-					<img src="img/abc.png" data-src="img/button/zhangyifenxiang-A.png" />
-				</div>
-				<!--尾页LOGO-->
-				<img class="author" src="img/abc.png" data-src="img/icon/logo-last.png" />
+				<div class="end_img"> <img src="img/abc.png" data-src="img/books/pages/P-END.png" /> <img src="img/abc.png" data-src="img/books/pages/P-END.png" /> </div>
+				<div class="end_text"> <img src="img/abc.png" data-src="img/books/pages/P-END-0.png" /> <img src="img/abc.png" data-src="img/books/pages/P-END-1.png" /> </div>
+				<div class="return_button buttonF"> <img src="img/abc.png" data-src="img/button/congtouzailai.png" /> <img src="img/abc.png" data-src="img/button/congtouzailai-A.png" /> </div>
+				<div class="share_button buttonF"> <img src="img/abc.png" data-src="img/button/zhangyifenxiang.png" /> <img src="img/abc.png" data-src="img/button/zhangyifenxiang-A.png" /> </div>
+				<!--尾页LOGO--><img class="author" src="img/abc.png" data-src="img/icon/logo-last.png" />
 				<div class="map_show">
-					<div style="display: block; left: 30%; top: 20%;" class="magnifier">
-						<img src="img/abc.png" data-src="img/button/magnifier.png" />
-						<img src="img/abc.png" data-src="img/button/magnifier2.png" />
-					</div>
+					<div style="display: block; left: 30%; top: 20%;" class="magnifier"> <img src="img/abc.png" data-src="img/button/magnifier.png" /> <img src="img/abc.png" data-src="img/button/magnifier2.png" /> </div>
 				</div>
 			</section>
 			<!--自定义map-->
-			<div class="map_box bk">
-				<img src="img/abc.png" data-src="img/books/bk.jpg" />
-				<img src="img/abc.png" data-src="img/books/page2.png" />
-				<img src="img/abc.png" data-src="img/loadings/share2.jpg" />
+			<div class="map_box bk"> 
+				<img src="img/abc.png" data-src="img/books/bk.jpg" /> 
+				<img src="img/abc.png" data-src="img/books/page2.png" /> 
+				<img src="img/abc.png" data-src="img/books/tips/T-END.png" />
 				<div class="map_mask">
 					<!--<img src="img/abc.png" data-src="http://p3.ifengimg.com/cdd6fabc89d70f7b/2016/21/mask2.png" />
 					<img src="img/abc.png" data-src="http://p3.ifengimg.com/cdd6fabc89d70f7b/2016/21/mask1.png" />
-					<img src="img/abc.png" data-src="http://p0.ifengimg.com/cdd6fabc89d70f7b/2016/21/mask3.png" />-->
-				</div>
+					<img src="img/abc.png" data-src="http://p0.ifengimg.com/cdd6fabc89d70f7b/2016/21/mask3.png" />--></div>
 			</div>
 		</div>
 		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
@@ -320,8 +169,8 @@
 							imgList.splice(i, 1);
 							imgNum--;
 							$('#loading').find('p').find('span').html(parseInt((MaxImgNum - imgNum) / MaxImgNum * 100));
-//							var aaa=parseInt((MaxImgNum - imgNum) / MaxImgNum * 100);
-//							console.log(aaa);
+							//							var aaa=parseInt((MaxImgNum - imgNum) / MaxImgNum * 100);
+							//							console.log(aaa);
 							$('.loadingInner').animate({
 								'width': parseInt((MaxImgNum - imgNum) / MaxImgNum * 84) + '%'
 							}, 10);
@@ -368,7 +217,6 @@
 				}
 				document.title = share_title;
 			}
-
 			if(!isPC()) {
 				document.write('<style>*{ cursor: default !important;}.share_code{ display: none;}</style>');
 			}
