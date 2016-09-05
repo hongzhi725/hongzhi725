@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -488,14 +486,13 @@ body{ font-size: 12px; overflow-x: hidden; background-color: black; max-width: 6
 .bgm-btn{ position:absolute; top: 16px; right:16px; width: 30px; height: 30px; background-size: 100%; background-image: url("http://s3img.city.sina.com.cn/activity/common/large/9f9acca088ab3e67f12eb612bdd12c07.png"); z-index: 1; -webkit-animation: myrotate 5s linear 0s infinite normal;}
 .bgm-btn.mut{ background-position: 0px -30px; -webkit-animation: none;}
 
-@-webkit-keyframes myrotate /*Safari and Chrome*/
-{
-0% { -webkit-transform:rotate(0deg);}
-25% { -webkit-transform:rotate(-90deg);}	
-50% { -webkit-transform:rotate(-180deg);}
-75% { -webkit-transform:rotate(-270deg);}
-100% { -webkit-transform:rotate(-360deg);}
-}
+@-webkit-keyframes myrotate{
+	0% { -webkit-transform:rotate(0deg);}
+	25% { -webkit-transform:rotate(-90deg);}	
+	50% { -webkit-transform:rotate(-180deg);}
+	75% { -webkit-transform:rotate(-270deg);}
+	100% { -webkit-transform:rotate(-360deg);}
+	}
 
 </style>
 <div class="bgm-btn"></div>

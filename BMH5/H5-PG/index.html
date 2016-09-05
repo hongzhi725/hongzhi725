@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>蓝月亮·H5产品组</title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {
+				background: url(dist/img/bg01.jpg);
+				height: 100%;
+				width: 100%;
+			}
+			.title {
+				position: relative;
+				text-align: center;
+				margin: 80px;
+				color: #EAFFEA;
+				font-family: "微软雅黑";
+				font-size: 32px;
+			}
+			
+			.main {
+				position: absolute;
+				top: 30%;
+				left: 30%;
+				color: #EAFFEA;
+				font-family: "微软雅黑";
+				font-size: 32px;
+			}
+			
+			#button {
+				position: absolute;
+				top: 60%;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="title">
+			<h1 id="title">H5·产品组</h1>
+			
+		</div>
+		<a href="https://hongzhi725.github.io/hongzhi725/"><button type="button" class="btn btn-success btn-block" id="button">点击了解最新产品</button></a>
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$('#title').hide();
+			$('#button').hide();
+			setTimeout(function() {
+				$('#title').fadeIn(500)
+				setTimeout(function() {
+					$('#button').fadeIn(300);
+				}, 500)
+			}, 750)
+		</script>
+	</body>
+</html>
