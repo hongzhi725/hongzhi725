@@ -35,7 +35,7 @@
         text-align: center;
         font-size: 18px;
         background: #FF6347;
-
+		position: relative;
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -79,6 +79,21 @@
 	    -webkit-animation-iteration-count:1 ;
 	    -moz-animation-iteration-count:1 ;
 	}
+	.box{
+		height: 100px;
+		width: 100px;
+		background-color: black;
+	}
+	.test{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: 0;
+		padding: 0;
+		margin-left: -50px;
+		margin-top: -50px;
+		
+	}
     </style>
 	</head>
 	<body>
@@ -87,8 +102,11 @@
     		<div class="swiper-wrapper">
     			<!--Slide 1-->
 		        <div class="swiper-slide">
-		        	<h1 class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s">第一页</h1>
-		        	
+		        	<h1 class="ani test" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+		        		<div class="box">
+		        			
+		        		</div>
+		        	</h1>
 		        </div>
 		        <!--Slide 2-->
 		        <div class="swiper-slide">
@@ -117,7 +135,7 @@
 			<i class="icon iconfont">&#xe612;</i>
 		</button>
 		<audio loop id="music">
-		    <source src="audios/background.mp3" type="audio/mpeg"></source>
+		    <!--<source src="audios/background.mp3" type="audio/mpeg"></source>-->
 		</audio>
 
 		<!--JS插件-->
