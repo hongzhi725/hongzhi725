@@ -179,7 +179,9 @@
 				var _top = topMin;
 
 				var moveObj = function(obj) {
-					var _left = $('.d_mask').width() - obj.width();
+//					var _left = $('.d_mask').width() - obj.width() + 100;
+//					var _left = $('.d_mask').width() + obj.width() + 100;
+					var _left = $('.d_mask').width() + 320;
 					_top = _top + 70;
 					if(_top > (topMax - 200)) {
 						_top = topMin;
@@ -191,7 +193,8 @@
 					});
 					var time = 20000 + 10000 * Math.random();
 					obj.animate({
-						left: "-" + _left + "px"
+//						left: "-" + _left + "px"
+						left: - obj.width() - 100
 					}, time, function() {
 						obj.remove();
 					});
