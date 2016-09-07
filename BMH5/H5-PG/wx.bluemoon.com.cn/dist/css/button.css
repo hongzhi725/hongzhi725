@@ -207,8 +207,8 @@
   .button-primary-flat:active,
   .button-primary-flat.active,
   .button-primary-flat.is-active {
-    background-color: #2798eb;
-    border-color: #2798eb;
+    background-color: rgba(180, 190, 197, 0.5);
+    border-color: rgba(180, 190, 197, 0.5);
     color: #0880d7; }
 
 .button-plain,
@@ -482,7 +482,7 @@
     .button-border-thick.button-primary:active,
     .button-border-thick.button-primary.active,
     .button-border-thick.button-primary.is-active {
-      background-color: rgba(39, 152, 235, 0.7);
+      background-color: rgba(189, 196, 202, 0.7);
       color: rgba(255, 255, 255, 0.5);
       opacity: .3; }
   .button-border.button-plain, .button-plain.button-border-thin, .button-plain.button-border-thick,
