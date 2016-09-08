@@ -9,12 +9,22 @@
 		<!-- 新 Bootstrap 核心 CSS 文件 -->
 		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-		
+
 		<!-- Link Swiper's CSS -->
 		<link rel="stylesheet" href="dist/css/swiper.min.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/button.css" />
 		<link rel="stylesheet" type="text/css" href="dist/css/animate.css" />
 		<link rel="stylesheet" type="text/css" href="dist/css/personal.css" />
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "//hm.baidu.com/hm.js?6b251e0efb8afce1f1367dda965badaf";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
 	</head>
 
 	<body>
@@ -33,7 +43,7 @@
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
 						<a class="navbar-brand" href="">Hello,Guys!</a>
 					</div>
-					
+
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li class="active">
@@ -79,16 +89,16 @@
 						<p>宗旨：高效的制作满足业务方需求的Html5页面</p>
 						<p>邮箱：liuhongzhi@bluemoon.com.cn</p>
 					</div>
-					
+
 				</div>
 
 				<div class="swiper-slide">
-					
+
 					<div class="ani title webfont" data-swiper-parallax="-100" swiper-animate-effect="flipInY" swiper-animate-duration="0.8s" swiper-animate-delay="0.2s">
 						H5·产品流程图
 					</div>
 
-					<div class="ani btn-01" data-swiper-parallax="-200"  swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+					<div class="ani btn-01" data-swiper-parallax="-200" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
 						<a href="https://hongzhi725.github.io/hongzhi725/BMH5/H5-PG/bluemoon/" class="button button-glow button-border button-rounded button-primary" style="padding:0px 50px;">详细了解</a>
 					</div>
 
@@ -117,7 +127,7 @@
 
 			</div>
 			<div class="footer">
-				(c) Copyright 2016 <b>Cookie.</b> All Rights Reserved. 
+				(c) Copyright 2016 <b>Cookie.</b> All Rights Reserved.
 			</div>
 			<!-- Add Pagination -->
 			<div class="swiper-pagination swiper-pagination-white"></div>
@@ -179,8 +189,8 @@
 				var _top = topMin;
 
 				var moveObj = function(obj) {
-//					var _left = $('.d_mask').width() - obj.width() + 100;
-//					var _left = $('.d_mask').width() + obj.width() + 100;
+					//					var _left = $('.d_mask').width() - obj.width() + 100;
+					//					var _left = $('.d_mask').width() + obj.width() + 100;
 					var _left = $('.d_mask').width() + 320;
 					_top = _top + 70;
 					if(_top > (topMax - 200)) {
@@ -193,8 +203,8 @@
 					});
 					var time = 20000 + 10000 * Math.random();
 					obj.animate({
-//						left: "-" + _left + "px"
-						left: - obj.width() - 100
+						//						left: "-" + _left + "px"
+						left: -obj.width() - 100
 					}, time, function() {
 						obj.remove();
 					});
@@ -226,19 +236,19 @@
 			var swiper = new Swiper('.swiper-container', {
 				pagination: '.swiper-pagination',
 				paginationClickable: true,
-				mousewheelControl: true,//鼠标控制：true
+				mousewheelControl: true, //鼠标控制：true
 				//      nextButton: '.swiper-button-next',
 				//      prevButton: '.swiper-button-prev',
 				parallax: true,
 				speed: 600,
 				//onInit：
-		   		onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
-			    swiperAnimateCache(swiper); //隐藏动画元素 
-			    swiperAnimate(swiper); //初始化完成开始动画
-			  	}, 
-			 	onSlideChangeEnd: function(swiper){ 
-			  	swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-		 		}
+				onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
+					swiperAnimateCache(swiper); //隐藏动画元素 
+					swiperAnimate(swiper); //初始化完成开始动画
+				},
+				onSlideChangeEnd: function(swiper) {
+					swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+				}
 			});
 		</script>
 		<script type="text/javascript">
