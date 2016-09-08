@@ -163,15 +163,15 @@ body {
 .d_screen {
 	position: absolute;
 	height: 70%;
-	width: 120%;
+	width: 110%;
 	/*background-color: black;*/
 	top: 13%;
-	left: 0%;
+	left: 5%;
 }
 
 .d_mask {
 	position: absolute;
-	width: 100%;
+	width: 80%;
 	height: 500px;
 	opacity: 0.7;
 	/*background-color: green;*/
@@ -183,7 +183,8 @@ body {
 	position: absolute;
 	font-size: 20px;
 	/*line-height: 100%;*/
-	font-weight: 2500;
+	font-weight: 5000;
+	font-style: normal;
 	color: #FFFFFF;
 	/*background-color: green;*/
 	/*left: 0px;
