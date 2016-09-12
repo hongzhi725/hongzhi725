@@ -7,10 +7,10 @@
 		<style type="text/css">
 			#container {
 				margin: 20px;
-				width: 200px;
-				height: 200px;
+				width: 100px;
+				height: 100px;
 				position: relative;
-				
+				font-size: 12px;
 			}
 		</style>
 	</head>
@@ -23,22 +23,22 @@
 			// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
 			var bar = new ProgressBar.Circle(container, {
-				color: '#aaa',
+				color: '#1874CD',
 				// This has to be the same size as the maximum width to
 				// prevent clipping
 				strokeWidth: 4,
 				trailWidth: 1,
 				easing: 'easeInOut',
-				duration: 1400,
+				duration: 1500,
 				text: {
 					autoStyleContainer: false
 				},
 				from: {
-					color: '#aaa',
+					color: '#B23AEE',
 					width: 1
 				},
 				to: {
-					color: '#333',
+					color: '#1C86EE',
 					width: 4
 				},
 				// Set default step function for all animate calls
@@ -56,9 +56,9 @@
 				}
 			});
 			bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-			bar.text.style.fontSize = '4rem';
+			bar.text.style.fontSize = '2rem';
 
-			bar.animate(1.0); // Number from 0.0 to 1.0
+			bar.animate(1); // Number from 0.0 to 1.0
 		</script>
 	</body>
 </html>
