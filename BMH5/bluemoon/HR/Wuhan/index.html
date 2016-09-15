@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--meta标签-->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="keywords" content="关键字,页面关键字,比如,这样" />
+		<meta name="description" content="html的描述" />
+		<title>蓝月亮校园招聘·武汉站</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/personal.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<!--<div id="loading">
+			
+		</div>-->
+		<!--正文-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<!--Slide 1-->
+				<div class="swiper-slide">
+					<h1 class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+		        		
+		        	</h1>
+		        	<div class="p1_main">
+		        			<img src="img/p1/p1_uparc.png" class="p1_uparc">
+		        			<img src="img/p1/p1_crown.png" class="p1_crown">
+		        			<img src="img/p1/p1_lansemengxiang.png" class="p1_lansemengxiang">
+		        			<img src="img/p1/p1_yueliangzhishang.png" class="p1_yueliangzhishang">
+		        			<img src="img/p1/p1_downarc.png" class="p1_downarc">
+		        			<img src="img/p1/p1_triangle2.png" class="p1_triangle2">
+		        			<img src="img/p1/p1_circle.png" class="p1_circle">
+		        			<img src="img/p1/p1_triangle.png" class="p1_triangle">
+		        			<img src="img/p1/p1_line.png" class="p1_line">
+		        			<img src="img/p1/p1_line.png" class="p1_line2">
+		        			<img src="img/p1/p1_line.png" class="p1_line3">
+		        			<img src="img/p1/p1_triangle3.png" class="p1_triangle3">
+		        			<p class="p1_word">2017蓝月亮校园招聘</p>
+		        			<p class="p1_word2">武汉站 GO</p>
+		        	</div>
+				</div>
+				<!--Slide 2-->
+				<div class="swiper-slide">
+					<!--<h2 class="ani" swiper-animate-effect="flip" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">第二页</h2>-->
+					<div class="p2_main">
+						<img src="img/p2/Runway.png" class="Runway">
+						<img src="img/p2/Flag.png" class="flag">
+					</div>
+				</div>
+				<!--Slide 3-->
+				<div class="swiper-slide">
+					<h2 class="ani" swiper-animate-effect="rubberBand" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">第三页</h2>
+				</div>
+			</div>
+			<!-- 如果需要分页器 -->
+			<div class="swiper-pagination"></div>
+			<!-- 滑动提示 -->
+			<!--<img id="array" src="img/web-tip-lhz.png" >-->
+			<!-- 如果需要导航按钮 -->
+			<!--<div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div>-->
+			<!-- 如果需要滚动条 -->
+			<!--<div class="swiper-scrollbar"></div>-->
+		</div>
+
+		<button class="btn-music">
+		    <i class="icon iconfont">&#xe606;</i>
+		</button>
+		<button class="up-arrow">
+			<i class="icon iconfont">&#xe612;</i>
+		</button>
+		<audio loop id="music">
+			<source src="audios/background.mp3" type="audio/mpeg"></source>
+		</audio>
+
+		<!--JS插件-->
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				direction: 'vertical', //滑动方式：竖向
+				//		    loop: true,//循环：true
+				mousewheelControl: true, //鼠标控制：true
+				// 如果需要分页器
+				pagination: '.swiper-pagination',
+				// 设置翻页方式：
+				//		    effect : 'coverflow',
+				//			slidesPerView: 1,
+				//			centeredSlides: true,
+				//			coverflow: {
+				//	            rotate: 50,
+				//	            stretch: 10,
+				//	            depth: 100,
+				//	            modifier: 1.5,
+				//	            slideShadows : true
+				//      	},
+				//onInit：
+				onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
+
+					swiperAnimateCache(swiper); //隐藏动画元素 
+					swiperAnimate(swiper); //初始化完成开始动画
+				},
+				onSlideChangeEnd: function(swiper) {
+					swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+				}
+			})
+		</script>
+		<script type="text/javascript">
+			window.onload = function() {
+				//用来监听按钮触发效果.Start
+				document.body.addEventListener('touchstart', function () { });
+				//用来监听按钮触发效果.End
+				var a = $('audio').get(0);
+				a.play();
+				$('.btn-music').click(function() {
+					//					var a=document.getElementById('music');
+					console.log('you touch the button');
+					if(a.paused) {
+						a.play();
+						$(this).removeClass('paused');
+					} else {
+						a.pause();
+						$(this).addClass('paused');
+					}
+				});
+			}
+		</script>
+		<script type="text/javascript">
+			document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
+		</script>
+	</body>
+</html>
