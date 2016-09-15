@@ -204,4 +204,6 @@ body {
 .p5_8{position: absolute;width: 15%;left: 38%;top: 115%;}
 /*PAGE 6*/
 .p6_1{position: absolute;width: 40%;left: 30%;top: 15%;}
-.p6_word{position: absolute;width: 50%;height: 50%;left: 25%;top: 27%;background-color: black;}
+.p6_word{position: absolute;width: 50%;height: 50%;left: 25%;top: 27%;background-color: darkgray;}
+.p6_word p{font-size: 12px;margin: 8px;}
+.p6_word .p6_2{width: 5%;margin: 0;}
