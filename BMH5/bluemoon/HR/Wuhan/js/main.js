@@ -100,8 +100,7 @@ $(function() {
 		console.log("已加载完毕全部资源");
 		setTimeout(function(){
 			$('#loading').css('display','none')
-		},500)
-		
+		},200);
 	}
 	setupManifest();
 	startPreload();

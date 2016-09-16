@@ -62,7 +62,11 @@ body {
 	-webkit-animation-iteration-count: 1;
 	-moz-animation-iteration-count: 1;
 }
-
+#test2 {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+}
 .p1_main {
 	height: 55%;
 	width: 70%;
@@ -94,7 +98,7 @@ body {
 	font-size:13px;
 	padding: 2px;
 	margin: -65px;
-	font-family: "微软雅黑";
+	font-family: "Helvetica","Arial",sans-serif;
 	font-weight:700;
 }
 .p1_word2{
@@ -107,7 +111,7 @@ body {
 	font-size:13px;
 	padding: 2px;
 	margin: -40px;
-	font-family: "微软雅黑";
+	font-family: "Helvetica","Arial",sans-serif;
 	font-weight:700;
 }
 /*P2 PAGE*/
@@ -128,6 +132,8 @@ body {
 .wuhan_circle{position: absolute;width: 6px;height: 5px;left: -20%;top: 37%;}
 .wuhan_2{position: absolute;width: 17px;height: 7px;left: -28%;top: 60%;}
 .wuhan_3{position: absolute;width: 12px;height: 8px;left: 86%;top: 30%;}
+.guangzhou_word{position: absolute;left: 37%;top: -7%;font-size: 16px;color: deepskyblue;text-align: left;line-height: 1;}
+.wuhan_word{position: absolute;left: 69%;top: 6%;font-size: 16px;color: orange;text-align: left;line-height: 1;}
 /*成都*/
 .chengdu_box{position: absolute;width:75px;height: 50px;/*background-color: yellow;*/top: 30%;left: 15%;}
 .chengdu{position: absolute;width: 75%;left: 0;top: 5%;}
@@ -136,6 +142,10 @@ body {
 .chengdu_circle{position: absolute;width: 3px;height: 3px;left: -20%;top: 37%;}
 .chengdu_4{position: absolute;width: 2px;height: 2px;left: -28%;top: 55%;}
 .chengdu_star2{position: absolute;width: 4px;height: 3px;left: -10%;top: 55%;}
+.changsha_word{position: absolute;left: 9%%;top: 14%;font-size: 16px;color: limegreen;text-align: left;line-height: 1;}
+.xiamen_word{position: absolute;left: 68%;top: 15%;font-size: 16px;color: #FF00FF;text-align: left;line-height: 1;}
+.chengdu_word{position: absolute;left: 40%;top: 34%;font-size: 16px;color: orangered;text-align: left;line-height: 1;}
+
 /*西安'*/
 .xian_box{position: absolute;width:75px;height: 50px;/*background-color: yellow;*/top: 52%;left: 25%;}
 .xian{position: absolute;width: 88%;left: 0;top: 4%;}
@@ -154,47 +164,74 @@ body {
 .shanghai{position: absolute;width: 80%;top: 0;left: 13%;}
 .shanghai_1{position: absolute;width: 13px;height: 18px;top: 65%;left: -5%;}
 .shanghai_2{position: absolute;width: 12px;height: 18px;top: 30%;left: 89%;}
+/*Word*/
+.chongqing_word{position: absolute;font-size: 16px;left: 18%;top: 42%;color: #00e5e6;}
+.xian_word{position: absolute;font-size: 16px;left: 50%;top: 52%;color: #8080ff;}
+.tianjin_word{position: absolute;left: 25%;top:60%;font-size: 16px;color: #99cc00;text-align: left;line-height: 1;}
+.beijing_word{position: absolute;font-size: 16px;left: 31%;top: 70%;color: #b266ff;}
+.wuxi_word{position: absolute;font-size: 16px;left: 29%;top: 78%;color: #1aa3ff;}
+.nanjing_word{position: absolute;font-size: 16px;left: 13%;top: 81%;color: #b2b300;}
+.shanghai_word{position: absolute;font-size: 16px;left: 57%;top: 95%;color: #1aa3ff;}
 /*PAGE 3*/
 .p3_header{position: absolute;width: 90%;height: 10%;left: 5%;top: 5%;}
 .p3_triangle{position: absolute;width: 40px;height: 40px;left: 5%;top: 5%;}
 .p3_2{position: absolute;width: 28px;height: 24px;left: 80%;top: 20%;}
-.p3_words{position: absolute;width: 84%;height: 40%;background-color: black;left: 8%;top: 16%;}
-.p3_lou{position: absolute;width: 30%;height: 30%;left: 50%;top: 55%;}
+.p3_words{position: absolute;width: 84%;height: 40%;left: 8%;top: 13%;}
+.p3_lou{position: absolute;width: 33%;height: 33%;left: 50%;top: 67%;}
 .p3_wuhan{position: absolute;width: 140px;height: 158px;left: 0;top: 0;}
 .p3_1{position: absolute;width: 22.5px;height: 13px;left: 120%;top: 30%;}
 .p3_3{position: absolute;width: 34px;height: 20px;left: -35%;top: 45%;}
 .p3_circle{position: absolute;width: 8px;height: 8px;left: -5%;top: 25%;}
+.p3_words .p3_dec{position: absolute;top: 0;left: 0;font-size: 16px;text-align: left;line-height: 1.6;}
 /*PAGE 4*/
-.p4_header{position: absolute;width: 80%;height: 20%;left: 10%;top: 5%;background-color: gainsboro;}
+.p4_header{position: absolute;width: 80%;height: 20%;left: 10%;top: 5%;}
 .p4_main{position: absolute;width: 84%;height: 60%;left: 8%;top: 28%;}
 .p4_1b{position: absolute;width: 100%;left: 0%;top: -10%;}
 .p4_2b{position: absolute;width: 100%;left: 0%;top: 26%;}
 .p4_3b{position: absolute;width: 100%;left: 0%;top: 55%;}
+.p4_tb{position: absolute;width: 60%;top: 10%;left: 20%;}
 .p4_4{position: absolute;width: 5%;left: 85%;top: 105%;}
 .p4_1{position: absolute;width: 33px;height: 33px;left: 3%;top: 50%;}
-.p4_2{position: absolute;width: 28px;height: 24px;left: 80%;top: 16%;}
-.p4_3{position: absolute;width: 26px;height: 26px;left: 60%;top: 70%;}
+.p4_2{position: absolute;width: 28px;height: 24px;left: 88%;top: 16%;}
+.p4_3{position: absolute;width: 26px;height: 26px;left: 70%;top: 70%;}
 #p4_title{
-	width: 140px;
-	height: 30px;
-	background-color: yellow;
-	transform:rotate(-10deg);
-	-ms-transform:rotate(-10deg); /* IE 9 */
-	-webkit-transform:rotate(-10deg); /* Safari and Chrome */
-	font-size: 15px;
-	font-family: "微软雅黑";
+	width: 150px;
+	height: auto;
+	color: white;
+	font-weight: bolder;
+	/*background-color: yellow;*/
+	transform:rotate(-6deg);
+	-ms-transform:rotate(-6deg); /* IE 9 */
+	-webkit-transform:rotate(-6deg); /* Safari and Chrome */
+	font-size: 20px;
+	font-family: "Helvetica","Arial",sans-serif;
 	position: absolute;
 	left: 50%;
-	top: 30%;
-	margin-left: -70px;
+	top: 35%;
+	margin-left: -75px;
 	margin-top: -15px;
 }
+.p4_main .dec_1{position: absolute;width: 90%;height: 20%;top: 0;left: 5%;
+	transform:rotate(3deg);
+	-ms-transform:rotate(3deg); /* IE 9 */
+	-webkit-transform:rotate(3deg); /* Safari and Chrome */}
+.dec_1 .dec_1w{font-size: 15px;text-align: left;line-height: 1.4;margin:6px 2px;}
+.p4_main .dec_2{position: absolute;width: 98%;height: 20%;top: 32%;left: 5%;
+	transform:rotate(3deg);
+	-ms-transform:rotate(3deg); /* IE 9 */
+	-webkit-transform:rotate(3deg); /* Safari and Chrome */}
+.dec_2 .dec_2w{font-size: 15px;text-align: left;line-height: 1.4;margin:6px 2px;}
+.p4_main .dec_3{position: absolute;width: 90%;height: 20%;top: 63%;left: 5%;
+	transform:rotate(3deg);
+	-ms-transform:rotate(3deg); /* IE 9 */
+	-webkit-transform:rotate(3deg); /* Safari and Chrome */}
+.dec_3 .dec_3w{font-size: 15px;text-align: left;line-height: 1.4;margin:6px 2px;}
 /*PAGE 5*/
-.p5_box1{position: absolute;width: 60%;height: 30%;top: 45%;left: 20%;background-color: black;}
-.p5_box2{position: absolute;width: 40%;height: 20%;top: 15%;left: 15%;background-color: black;}
-.p5_box3{position: absolute;width: 30%;height: 15%;top: 30%;left: 60%;background-color: black;}
-.p5_box4{position: absolute;width: 20%;height: 10%;top: 40%;left: 5%;background-color: black;}
-.p5_box5{position: absolute;width: 28%;height: 14%;top: 10%;left: 62%;background-color: black;}
+.p5_box1{position: absolute;width: 60%;height: 30%;top: 45%;left: 20%;}
+.p5_box2{position: absolute;width: 40%;height: 20%;top: 15%;left: 15%;}
+.p5_box3{position: absolute;width: 38%;height: 15%;top: 28%;left: 58%;}
+.p5_box4{position: absolute;width: 20%;height: 10%;top: 40%;left: 5%;}
+.p5_box5{position: absolute;width: 28%;height: 14%;top: 10%;left: 62%;}
 .p5_1{position: absolute;width: 100%;left: 0;top: 0;}
 .p5_2{position: absolute;width: 100%;left: 0;top: 0;}
 .p5_3{position: absolute;width: 100%;left: 0;top: 0;}
@@ -202,8 +239,25 @@ body {
 .p5_5{position: absolute;width: 100%;left: 0;top: 0;}
 .p5_7{position: absolute;width: 15%;left: -15%;top: 90%;}
 .p5_8{position: absolute;width: 15%;left: 38%;top: 115%;}
+.p5_word1{position: absolute;width: 100%;top: 15%;left: 0;color: white;font-size: 24px;font-weight: bolder;}
+.p5_word2{position: absolute;width: 100%;top: 15%;left: 0;font-size: 18px;color: white;font-weight: bolder;}
+.p5_word2b{position: absolute;width: 100%;top: 15%;left: 10%;font-size: 14px;color: white;text-align: left;line-height: 1.2;}
+.p5_word3{position: absolute;width: 100%;top: 15%;left: 0;font-size: 18px;color: white;font-weight: bolder;}
+.p5_word3b{position: absolute;width: 100%;top: 30%;left: 10%;font-size: 14px;color: white;text-align: left;line-height: 1.2;}
+.p5_word4{position: absolute;width: 100%;top: -5%;left: 0;font-size: 20px;color: white;font-weight: bolder;}
+.p5_word5{position: absolute;width: 100%;top: 0;left: 0;font-size: 26px;color: white;font-weight: bolder;}
 /*PAGE 6*/
-.p6_1{position: absolute;width: 40%;left: 30%;top: 15%;}
-.p6_word{position: absolute;width: 50%;height: 50%;left: 25%;top: 27%;background-color: darkgray;}
-.p6_word p{font-size: 12px;margin: 8px;}
+.p6_1{position: absolute;width: 40%;height: 5%;left: 30%;top: 12%;}
+.p6_word{position: absolute;width: 50%;height: 50%;left: 25%;top: 27%;}
+.p6_word p{font-size: 14px;margin: 8px;font-family: "Helvetica","Arial",sans-serif;color: dodgerblue;font-weight:bold;}
 .p6_word .p6_2{width: 5%;margin: 0;}
+.p6_5{position: absolute;width: 10%;left: 10%;top: 10%;}
+.p6_3{position: absolute;width: 6%;left: 10%;top: 75%;}
+.p6_4{position: absolute;width: 5%;left: 80%;top: 15%;}
+.p6_word2{position: absolute;width: 70%;height: auto;top: 80%;left: 15%;font-size: 12px;color: #ff8000;}
+.p6_title{position: absolute;width: 100%;top: 0;left: 0;color: #ff8000;font-size: 20px;font-weight: bolder;margin: 0;}
+/*PAGE 7*/
+.p7_title{position: absolute;width: 80%;height: 15%;top: 10%;left: 10%;}
+.p7_1{font-size: 32px;margin: 8px;color: #ff8000;font-weight: bolder;}
+.p7_p1{position: absolute;width: 60%;top: 45%;left: 20%;}
+.p7_footer{position: absolute;width: 200px;top: 77%;left: 50%;margin-left: -100px;color: #ff8000;font-size: 14px;}
