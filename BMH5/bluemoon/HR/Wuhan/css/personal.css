@@ -46,6 +46,7 @@
 	position: fixed;
 	top: 1rem;
 	right: 1rem;
+	/*background-color: #00E5EE;*/
 	border: .125rem solid #fff;
 	border-radius: 50%;
 	-webkit-animation: btnMusicAni 3s infinite linear;
@@ -320,3 +321,4 @@ input::-moz-focus-inner {
 	margin-left: -20px;
 	margin-top: -9px;
 }
+/*漂浮动画*/

@@ -97,10 +97,11 @@ $(function() {
 	}
 	//全度资源加载完毕
 	function loadComplete(event) {
-		console.log("已加载完毕全部资源");
+//		console.log("已加载完毕全部资源");
 		setTimeout(function(){
-			$('#loading').css('display','none')
-		},200);
+			mySwiper.onInit;
+//			$('#loading').css('display','none')
+		},100);
 	}
 	setupManifest();
 	startPreload();
