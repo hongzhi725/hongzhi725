@@ -7,9 +7,8 @@
 		<meta name="keywords" content="关键字,页面关键字,比如,这样" />
 		<meta name="description" content="html的描述" />
 		<title>蓝月亮校园招聘·武汉站</title>
-		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
-		<link rel="stylesheet" type="text/css" href="css/animate.css" />
-		<link rel="stylesheet" type="text/css" href="css/personal.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	</head>
 	<body>
@@ -283,24 +282,23 @@
 //					swiperAnimate(swiper);
 //				},
 				onInit: function(swiper) {
-						swiperAnimateCache(swiper);
-						setTimeout(function() {
-							$("#loading").remove();
+						
+						setTimeout(function(){
+							$('#loading').css('display','none');
+							swiperAnimateCache(swiper);
 							swiperAnimate(swiper);
 							Swipercallback(swiper);
-						}, 1000);
-
+						},500)
 					},
 					onSlideChangeStart: SwipercallbackStart,
 					onSlideChangeEnd: Swipercallback,
-					onTransitionEnd: function(swiper) {
-						swiperAnimate(swiper);
-					},//				function(swiper) {
-//					swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+//					onTransitionEnd: function(swiper) {
+//						swiperAnimate(swiper);
+//					},
 //				}
 			})
 			var bgList = [
-			"img/p1/bg.png",
+			"img/p1/bg.jpg",
 			"img/bg2.jpg",
 			"img/bg2.jpg",
 			"img/bg2.jpg",

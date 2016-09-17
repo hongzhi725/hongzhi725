@@ -1,46 +1,4 @@
 $(function() {
-//	//loading样式:
-//	// progressbar.js@1.0.0 version is used
-//	// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
-//		var bar = new ProgressBar.Circle(loading_circle, {
-//		color: '#1874CD',
-//		// This has to be the same size as the maximum width to
-//		// prevent clipping
-//		strokeWidth: 4,
-//		trailWidth: 2,
-//		easing: 'easeInOut',
-//		duration: 500,
-//		text: {
-//			autoStyleContainer: false
-//		},
-//		from: {
-//			color: '#FF1493',
-//			width: 1
-//		},
-//		to: {
-//			color: '#1C86EE',
-//			width: 4
-//		},
-//		// Set default step function for all animate calls
-//		step: function(state, circle) {
-//			circle.path.setAttribute('stroke', state.color);
-//			circle.path.setAttribute('stroke-width', state.width);
-//			var value = Math.round(circle.value() * 100);
-//			if(value === 0) {
-//				circle.setText('0');
-//			} else {
-//				circle.setText(value);
-//			}
-//
-//		}
-//	});
-//	bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-//	bar.text.style.fontSize = '2rem';
-//	
-//	// Number from 0.0 to 1.0
-//	bar.animate(1);
-//	//loading样式结束.
-	
 	//----loading预加载
 	//MADE BY COOKIE
 	//1.loading预加载进度:定义变量 var nump
@@ -97,11 +55,9 @@ $(function() {
 	}
 	//全度资源加载完毕
 	function loadComplete(event) {
-//		console.log("已加载完毕全部资源");
-		setTimeout(function(){
-			mySwiper.onInit;
-//			$('#loading').css('display','none')
-		},100);
+		//		console.log("已加载完毕全部资源");
+		$('#loading').css('display', 'none');
+		mySwiper.onInit;
 	}
 	setupManifest();
 	startPreload();
