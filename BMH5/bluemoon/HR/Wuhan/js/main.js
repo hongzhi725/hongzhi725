@@ -56,8 +56,12 @@ $(function() {
 	//全度资源加载完毕
 	function loadComplete(event) {
 		//		console.log("已加载完毕全部资源");
-		$('#loading').css('display', 'none');
-		mySwiper.onInit;
+		if(nump = 100) {
+			setTimeout(function() {
+				swiperlhz();
+				$('#loading').css('display', 'none');
+			}, 200)
+		}
 	}
 	setupManifest();
 	startPreload();
@@ -78,5 +82,106 @@ $(function() {
 			$(this).addClass('paused');
 		}
 	});
+
+	function swiperlhz() {
+		var globe = false
+		var mySwiper = new Swiper('.swiper-container', {
+			direction: 'vertical', //滑动方式：竖向
+			//		    loop: true,//循环：true
+			mousewheelControl: true, //鼠标控制：true
+			// 如果需要分页器
+			pagination: '.swiper-pagination',
+			// 设置翻页方式：
+			//		    effect : 'coverflow',
+			//			slidesPerView: 1,
+			//			centeredSlides: true,
+			//			coverflow: {
+			//	            rotate: 50,
+			//	            stretch: 10,
+			//	            depth: 100,
+			//	            modifier: 1.5,
+			//	            slideShadows : true
+			//      	},
+			//onInit：
+			//				onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
+			//					swiper.myactive = 0;
+			//					swiperAnimateCache(swiper); //隐藏动画元素
+			//					swiperAnimate(swiper); //初始化完成开始动画
+			//					swiperAnimate(swiper);
+			//				},
+			onInit: function(swiper) {
+				swiperAnimateCache(swiper);
+				swiperAnimate(swiper);
+				Swipercallback(swiper);
+			},
+			onSlideChangeEnd: Swipercallback,
+		})
+		var bgList = [
+			"img/p1/bg.jpg",
+			"img/bg2.jpg",
+			"img/p3/p3_bg.jpg",
+			"img/p4/p4_bg.jpg",
+			"img/p5/p5_bg.jpg",
+			"img/p6/p6_bg.jpg",
+			"img/p7/p7_bg.jpg",
+		];
+
+		/* SlideChangeEndCallback */
+		function Swipercallback(swiper) {
+			var act = swiper.activeIndex;
+			setTimeout(function() {
+				$(".swiper-container").css("background", 'url("' + bgList[act] + '")');
+				$(".swiper-container").css("background-size", 'cover');
+			}, 500);
+			swiperAnimate(swiper);
+			switch(act) {
+				case 0:
+					setTimeout(function() {
+						$('#p1_6').addClass('newmove1');
+						setTimeout(function() {
+							$('#p1_7').addClass('newmove2');
+							setTimeout(function() {
+								$('#p1_8').addClass('newmove3');
+								setTimeout(function() {
+									$('#p1_12').addClass('newmove4');
+									$('#p1_2').addClass('shake');
+								}, 100)
+							}, 100)
+						}, 100)
+					}, 2600);
+					break;
+				case 1:
+					setTimeout(function() {
+						$('#p2_p').addClass('shake');
+					}, 4500)
+					break;
+				case 2:
+					setTimeout(function() {
+						$('#p3_1').addClass('newmovep3_1');
+						setTimeout(function() {
+							$('#p3_2').addClass('newmovep3_2');
+						}, 500)
+					}, 2300)
+					break;
+				default:
+					break;
+			}
+			if(act != 0) {
+				$('#p1_2').removeClass('shake');
+				$('#p1_6').removeClass('newmove1');
+				$('#p1_7').removeClass('newmove2');
+				$('#p1_8').removeClass('newmove3');
+				$('#p1_12').removeClass('newmove4');
+			}
+			if(act != 1) {
+				$('#p2_p').removeClass('shake');
+			}
+			if(act != 2) {
+				$('#p3_1').removeClass('newmovep3_1');
+				$('#p3_2').removeClass('newmovep3_2');
+			}
+
+		}
+	}
 
 })

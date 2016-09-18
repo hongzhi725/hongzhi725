@@ -45,7 +45,7 @@
 					</div>
 				</div>
 				<!--Slide 2-->
-				<div class="swiper-slide swiper-slide2">
+				<div class="swiper-slide">
 					<img src="img/p2/Runway.png" class="Runway ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="1.2s">
 					<div class="p2_main">
 						<img src="img/p2/Flag.png" class="flag ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
@@ -108,16 +108,16 @@
 						<img src="img/p3/p3_2.png" id="p3_2" class="p3_2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="1.75s">
 					</div>
 					<div class="p3_words">
-						<p class="p3_dec ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s">武汉的城市文明历史可追溯到3500年前的盘龙城。 这是长久流域发掘出的最古老的城池，被学者认为是长江流域文明和黄河流域文明融合的突破口。
+						<p class="p3_dec ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s">武汉的城市文明历史可追溯到3500年前的盘龙城。 这是长江流域发掘出的最古老的城池，被学者认为是长江流域文明和黄河流域文明融合的突破口。
 							<br /> 就这样，蓝月亮来到了我们历史悠久的武汉，邀请广大学子参加我们的宣讲会。
-							<br /> 为什么来我们这儿，因为你能学到：
+							<br /> 为什么来我们这儿？因为你能得到：
 							<br />
 							<span style="font-size: 1.1rem;">
-							&nbsp;&nbsp;&nbsp;&nbsp;1.快速了解消费品行业<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;2.了解势头正猛的蓝月亮公司<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;3.我司2017年校园招聘岗位、薪资及面试流程<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;4.公司高管0距离互动与经验分享<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;5.每位参加的小蓝蓝们都将获得精美小礼品！<br />
+							1.快速了解消费品行业；<br />
+							2.了解势头正猛的蓝月亮公司；<br />
+							3.我司2017年校园招聘岗位、薪资及面试流程；<br />
+							4.公司高管0距离互动与经验分享；<br />
+							5.每位参加的小蓝蓝们都将获得精美小礼品！<br />
 							</span>
 						</p>
 					</div>
@@ -156,7 +156,7 @@
 							</p>
 						</div>
 						<div class="dec_3">
-							<p class="dec_3w ani" swiper-animate-effect="flipInY" swiper-animate-duration="1s" swiper-animate-delay="4s">2016年9月21日（周日） &nbsp;&nbsp;<b>武汉大学</b><br /> 19:00 —— 20:30 <br /> 文理学部生命科学学院报告厅
+							<p class="dec_3w ani" swiper-animate-effect="flipInY" swiper-animate-duration="1s" swiper-animate-delay="4s">2016年9月21日（周三） &nbsp;&nbsp;<b>武汉大学</b><br /> 19:00 —— 20:30 <br /> 文理学部生命科学学院报告厅
 							</p>
 						</div>
 					</div>
@@ -243,131 +243,16 @@
 			<i class="icon iconfont">&#xe612;</i>
 		</button>
 		<audio loop id="music">
-			<!--<source src="audios/bgm.mp3" type="audio/mpeg"></source>-->
+			<source src="audios/bgm.mp3" type="audio/mpeg"></source>
 		</audio>
 
 		<!--JS插件-->
 		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="http://cdn.bootcss.com/progressbar.js/1.0.1/progressbar.min.js"></script>
 		<script src="https://cdn.bootcss.com/PreloadJS/0.6.0/preloadjs.min.js"></script>
-		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/swiper.animate.min.js" type="text/javascript" charset="utf-8"></script>
-
-		<script type="text/javascript">
-			var globe = false
-			var mySwiper = new Swiper('.swiper-container', {
-				direction: 'vertical', //滑动方式：竖向
-				//		    loop: true,//循环：true
-				mousewheelControl: true, //鼠标控制：true
-				// 如果需要分页器
-				pagination: '.swiper-pagination',
-				// 设置翻页方式：
-				//		    effect : 'coverflow',
-				//			slidesPerView: 1,
-				//			centeredSlides: true,
-				//			coverflow: {
-				//	            rotate: 50,
-				//	            stretch: 10,
-				//	            depth: 100,
-				//	            modifier: 1.5,
-				//	            slideShadows : true
-				//      	},
-				//onInit：
-				//				onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
-				//					swiper.myactive = 0;
-				//					swiperAnimateCache(swiper); //隐藏动画元素
-				//					swiperAnimate(swiper); //初始化完成开始动画
-				//					swiperAnimate(swiper);
-				//				},
-				onInit: function(swiper) {
-
-					setTimeout(function() {
-						$('#loading').css('display', 'none');
-						swiperAnimateCache(swiper);
-						swiperAnimate(swiper);
-						Swipercallback(swiper);
-					}, 1000)
-				},
-				onSlideChangeStart: SwipercallbackStart,
-				onSlideChangeEnd: Swipercallback,
-				//					onTransitionEnd: function(swiper) {
-				//						swiperAnimate(swiper);
-				//					},
-				//				}
-			})
-			var bgList = [
-				"img/p1/bg.jpg",
-				"img/bg2.jpg",
-				"img/p3/p3_bg.jpg",
-				"img/p4/p4_bg.jpg",
-				"img/p5/p5_bg.jpg",
-				"img/p6/p6_bg.jpg",
-				"img/p7/p7_bg.jpg",
-			];
-
-			/* SlideChangeEndCallback */
-			function Swipercallback(swiper) {
-				var act = swiper.activeIndex;
-				//			console.log(act);
-				setTimeout(function() {
-					$(".swiper-container").css("background", 'url("' + bgList[act] + '")');
-					$(".swiper-container").css("background-size", 'cover');
-				}, 500);
-				swiperAnimate(swiper);
-				switch(act) {
-					case 0:
-						setTimeout(function() {
-							$('#p1_6').addClass('newmove1');
-							setTimeout(function() {
-								$('#p1_7').addClass('newmove2');
-								setTimeout(function() {
-									$('#p1_8').addClass('newmove3');
-									setTimeout(function() {
-										$('#p1_12').addClass('newmove4');
-										$('#p1_2').addClass('shake');
-									}, 100)
-								}, 100)
-							}, 100)
-						}, 2600);
-						break;
-					case 1:
-						setTimeout(function() {
-							$('#p2_p').addClass('shake');
-						}, 4500)
-						break;
-					case 2:
-						setTimeout(function() {
-							$('#p3_1').addClass('newmovep3_1');
-							setTimeout(function() {
-								$('#p3_2').addClass('newmovep3_2');
-							}, 500)
-						}, 2300)
-						break;
-					default:
-						break;
-				}
-				if(act != 0) {
-					$('#p1_2').removeClass('shake');
-					$('#p1_6').removeClass('newmove1');
-					$('#p1_7').removeClass('newmove2');
-					$('#p1_8').removeClass('newmove3');
-					$('#p1_12').removeClass('newmove4');
-				}
-				if(act != 1) {
-					$('#p2_p').removeClass('shake');
-				}
-				if(act != 2) {
-					$('#p3_1').removeClass('newmovep3_1');
-					$('#p3_2').removeClass('newmovep3_2');
-				}
-
-			}
-
-			function SwipercallbackStart(swiper) {
-
-			}
-		</script>
+		<script src="js/main.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			document.addEventListener('touchmove', function(e) {
 				e.preventDefault()
