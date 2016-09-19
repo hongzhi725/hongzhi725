@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*#word {
+  -vendor-animation-duration: 5s;
+  -vendor-animation-delay: 2s;
+  -vendor-animation-iteration-count: infinite;
+}*/
+			
+			#word {
+				animate-duration: 1s;
+				-webkit-animation-duration: 1s;
+				-moz-animation-duration: 1s;
+				animate-delay: 0s;
+				-webkit-animation-delay: 0s;
+				-moz-animation-delay: 0s;
+				animate-iteration-count: 1;
+				-webkit-animation-iteration-count: 1;
+				-moz-animation-iteration-count: 1
+			}
+		</style>
+	</head>
+	<body>
+		<p id="word">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+		<script type="text/javascript">
+			$.fn.extend({
+				animateCss: function(animationName, duration, delay, count,play) {
+					var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+					this.css('animate-duration', duration);
+					this.css('-webkit-animation-duration', duration);
+					this.css('-moz-animation-duration', duration);
+					this.css('-o-animation-duration', duration);
+					this.css('-ms-animation-duration', duration);
+					this.css('animate-delay', delay);
+					this.css('-webkit-animation-delay', delay);
+					this.css('-moz-animation-delay', delay);
+					this.css('-o-animation-delay', delay);
+					this.css('-ms-animation-delay', delay);
+					this.css('animate-iteration-count', count);
+					this.css('-webkit-animation-iteration-count', count);
+					this.css('-moz-animation-iteration-count', count);
+					this.css('-o-animation-iteration-count', count);
+					this.css('-ms-animation-iteration-count', count);
+					this.addClass('animated ' + animationName).one(animationEnd, function() {
+						if (play==true) {
+							$(this).removeClass('animated ' + animationName);
+						} else{
+							console.log('没有撤走class')
+						}
+						
+					});
+					
+				}
+			});
+			$('#word').animateCss('zoomIn','1s','0s','1',true);
+			setTimeout(function(){
+				$('#word').animateCss('shake','1s','0s','1',true);
+				setTimeout(function(){
+					$('#word').animateCss('zoomOut','1s','0s','1',false);
+				},1000)
+			},1000)
+			
+//			$('#word').animateCss('flash', '5s', '1s', 'infinite');
+		</script>
+	</body>
+</html>
