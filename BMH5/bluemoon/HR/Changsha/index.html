@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-<html>
+<?php
+require_once "jssdk.php";
+$jssdk = new JSSDK("wx30511ac1f81afc6c", "7aac6c35d3b8f3b2234cb38513767526");
+$signPackage = $jssdk->GetSignPackage();
+?>
+	<!DOCTYPE html>
+	<html>
 	<head>
 		<!--meta标签-->
 		<meta charset="utf-8" />
@@ -73,7 +78,7 @@
 					<img src="img/p4/p4_bfor2.png" width="100%" class="abc ani" swiper-animate-effect="flipInY" swiper-animate-duration="1s" swiper-animate-delay="1s">
 					<img src="img/p4/P4_word.png" width="100%" class="abc ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="1s" swiper-animate-delay="2s">
 					<img src="img/p4/p4_4.png" class="p4_4 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="2s" swiper-animate-delay="2.5s">
-					
+
 				</div>
 				<!--Slide 5-->
 				<div class="swiper-slide">
@@ -163,7 +168,7 @@
 		<script src="https://cdn.bootcss.com/PreloadJS/0.6.0/preloadjs.min.js"></script>
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/swiper.animate.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			document.addEventListener('touchmove', function(e) {
 				e.preventDefault()
@@ -188,5 +193,52 @@
 				doc.addEventListener('DOMContentLoaded', recalc, false);
 			})(document, window);
 		</script>
+		<script type="text/javascript">
+			wx.config({
+				debug: false,
+				appId: '<?php echo $signPackage["appId"];?>',
+				timestamp: '<?php echo $signPackage["timestamp"];?>',
+				nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+				signature: '<?php echo $signPackage["signature"];?>',
+				jsApiList: [
+					// 所有要调用的 API 都要加到这个列表中
+					'onMenuShareTimeline',
+					'onMenuShareAppMessage'
+				]
+			});
+			wx.ready(function() {
+				// 在这里调用 API
+				console.log('调用成功');
+				wx.onMenuShareAppMessage({
+					title: '蓝月亮校园招聘·长沙站', // 分享标题
+					desc: '蓝月亮邀你共赴湖大中南管培招聘宣讲会！带你“月”动职场！', // 分享描述
+					link: 'http://wx.xykjg.com/hr/school/changsha/', // 分享链接
+					imgUrl: 'http://wx.xykjg.com/hr/school/changsha/img/300-300.jpg', // 分享图标
+					type: '', // 分享类型,music、video或link，不填默认为link
+					dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+					success: function() {
+						// 用户确认分享后执行的回调函数
+						console.log('分享成功');
+					},
+					cancel: function() {
+						// 用户取消分享后执行的回调函数
+						console.log('分享取消');
+					}
+				});
+				wx.onMenuShareTimeline({
+					title: '蓝月亮校园招聘·长沙站', // 分享标题
+					link: 'http://wx.xykjg.com/hr/school/changsha/', // 分享链接
+					imgUrl: 'http://wx.xykjg.com/hr/school/changsha/img/300-300.jpg', // 分享图标
+					success: function() {
+						// 用户确认分享后执行的回调函数
+						console.log('分享成功');
+					},
+					cancel: function() {
+						// 用户取消分享后执行的回调函数
+						console.log('分享取消');
+					}
+				});
+			});
+		</script>
 	</body>
-</html>
+	</html>
