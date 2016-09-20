@@ -1,5 +1,9 @@
+<?php
+require_once "jssdk.php";
+$jssdk = new JSSDK("wx30511ac1f81afc6c", "7aac6c35d3b8f3b2234cb38513767526");
+$signPackage = $jssdk->GetSignPackage();
+?>
 <!DOCTYPE html>
-
 <html>
 
 	<head>
@@ -271,6 +275,53 @@
 				}
 			}
 		</script>
-
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript">
+			wx.config({
+    debug: false,
+    appId: '<?php echo $signPackage["appId"];?>',
+    timestamp: '<?php echo $signPackage["timestamp"];?>',
+    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+    signature: '<?php echo $signPackage["signature"];?>',
+    jsApiList: [
+      // 所有要调用的 API 都要加到这个列表中
+      'onMenuShareTimeline',
+      'onMenuShareAppMessage'
+    ]
+  });
+  wx.ready(function () {
+    // 在这里调用 API
+    console.log('调用成功');
+    wx.onMenuShareAppMessage({
+    title: 'H5产品组', // 分享标题
+    desc: '蓝月亮·H5产品组：您的满意，我们的动力！', // 分享描述
+    link: 'wx.xykjg.com', // 分享链接
+    imgUrl: 'http://wx.xykjg.com/LOGO.png', // 分享图标
+    type: '', // 分享类型,music、video或link，不填默认为link
+    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+        console.log('分享成功');
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+        console.log('分享取消');
+    }
+		});
+	wx.onMenuShareTimeline({
+    title: 'H5产品组', // 分享标题
+    link: 'wx.xykjg.com', // 分享链接
+    imgUrl: 'http://wx.xykjg.com/LOGO.png', // 分享图标
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+        console.log('分享成功');
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+        console.log('分享取消');
+    }
+		});
+  });
+		</script>
 	</body>
 </html>
