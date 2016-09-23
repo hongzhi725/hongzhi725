@@ -165,7 +165,7 @@ button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 .p3_1{position:absolute;width:22.5px;height:13px;left:120%;top:30%}
 .p3_3{position:absolute;width:34px;height:20px;left:-35%;top:45%}
 .p3_circle{position:absolute;width:8px;height:8px;left:-5%;top:25%}
-.p3_words .p3_dec{position:absolute;top:0;left:0;font-size:1.3rem;color:#fff;text-align:left;line-height:1.6}
+.p3_words .p3_dec{position:absolute;top:0;left:0;font-size:1.2rem;color:#fff;text-align:left;line-height:1.6}
 .newmovep3_1{animation:newmovep3_1 5s linear 2s infinite;-webkit-animation:newmovep3_1 5s linear 2s infinite}
 .newmovep3_2{animation:newmovep3_2 5s linear 2s infinite;-webkit-animation:newmovep3_2 5s linear 2s infinite}
 @keyframes newmovep3_1{0%{left:5%}
