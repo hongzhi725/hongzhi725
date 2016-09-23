@@ -1,86 +1,357 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
-		<meta charset="UTF-8">
-		<meta name="google" value="notranslate">
-		<title>404</title>
+		<meta charset="utf-8">
+		<title>蓝月亮·H5产品组</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
 		<style>
-			/* Main styles */
-			.text {
-				fill: none;
-				stroke-width: 4;
-				stroke-linejoin: round;
-				stroke-dasharray: 70 330;
-				stroke-dashoffset: 0;
-				-webkit-animation: stroke 6s infinite linear;
-				animation: stroke 6s infinite linear;
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
 			}
-			.text:nth-child(5n+ 1) {
-				stroke: #F2385A;
-				-webkit-animation-delay: -1.2s;
-				animation-delay: -1.2s;
+			
+			.oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
 			}
-			.text:nth-child(5n+ 2) {
-				stroke: #F5A503;
-				-webkit-animation-delay: -2.4s;
-				animation-delay: -2.4s;
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
 			}
-			.text:nth-child(5n+ 3) {
-				stroke: #E9F1DF;
-				-webkit-animation-delay: -3.6s;
-				animation-delay: -3.6s;
+			
+			.oa-contact-avatar {
+				width: 75px;
 			}
-			.text:nth-child(5n+ 4) {
-				stroke: #56D9CD;
-				-webkit-animation-delay: -4.8s;
-				animation-delay: -4.8s;
+			
+			.oa-contact-avatar img {
+				border-radius: 50%;
 			}
-			.text:nth-child(5n+ 5) {
-				stroke: #3AA1BF;
-				-webkit-animation-delay: -6s;
-				animation-delay: -6s;
-			}
-			@-webkit-keyframes stroke {
-				100% {
-					stroke-dashoffset: -400;
-				}
-			}
-			@keyframes stroke {
-				100% {
-					stroke-dashoffset: -400;
-				}
-			}
-			/* Other styles */
-			html,
-			body {
-				height: 100%;
-			}
-			body {
-				background: #111;
-				background-size: .2em 100%;
-				font: 11.5em/1 Open Sans, Impact;
-				text-transform: uppercase;
-				margin: 0;
-			}
-			svg {
-				position: absolute;
+			
+			.oa-contact-content {
 				width: 100%;
-				height: 100%;
+			}
+			
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			
+			.oa-contact-name,
+			oa-contact-position {
+				float: left;
 			}
 		</style>
 	</head>
+
 	<body>
-		<svg viewBox="0 0 600 300">
-			<!-- Symbol -->
-			<symbol id="s-text">
-				<text text-anchor="middle" x="50%" y="50%" dy=".35em"> 404 </text>
-			</symbol>
-			<!-- Duplicate symbols -->
-			<use xlink:href="#s-text" class="text"></use>
-			<use xlink:href="#s-text" class="text"></use>
-			<use xlink:href="#s-text" class="text"></use>
-			<use xlink:href="#s-text" class="text"></use>
-			<use xlink:href="#s-text" class="text"></use>
-		</svg>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-bars mui-pull-left mui-plus-visible"></a>
+			<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>
+			<h1 class="mui-title" id="Ttitle"><b>Welcome</b></h1>
+		</header>-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="#tabbar" id="T1">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat" id="T2">
+				<span class="mui-icon mui-icon-email"><!--<span class="mui-badge">9</span>--></span>
+				<span class="mui-tab-label">产品</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact" id="T3">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">通讯录</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map" id="T4">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="tabbar" class="mui-control-content mui-active">
+				<!--<div class="mui-content-padded">
+						<ul>
+							<li>My name is Cookie.</li>
+							<li>欢迎品尝以下项目：</li>
+						</ul>
+				</div>-->
+				<!---->
+				<!--<ul class="mui-table-view">
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right" href="../bmschool/school.html">
+                            	★《大学浓缩升级配方》
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right" href="../Bt-school/index.html">
+                        		★《百团大战》
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right" href="../NormalH5/JXZZ">
+                            	★《机洗至尊》
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right" href="../Template-LHZ/index.html">
+                            	★《图文H5》——个人封装模板
+                            </a>
+                        </li>
+                   </ul>-->
+
+				<div class="mui-card">
+					<div class="mui-card-header mui-card-media" style="height:30vw;background-image:url(images/pd/pd_jxzz.jpg)"></div>
+					<div class="mui-card-content">
+						<div class="mui-card-content-inner">
+							<h6>Posted on September 01, 2016</h6>
+							<p style="color: #333;">蓝月亮·《机洗至尊》</p>
+						</div>
+					</div>
+					<div class="mui-card-footer">
+						<a class="mui-card-link"></a>
+						<a class="mui-card-link" href="../../NormalH5/JXZZ/index.html">Watching</a>
+					</div>
+				</div>
+				<div class="mui-card">
+					<div class="mui-card-header mui-card-media" style="height:41vw;background-image:url(images/pd/pd_hrchangsha.png)"></div>
+					<div class="mui-card-content">
+						<div class="mui-card-content-inner">
+							<h6>Posted on September 20, 2016</h6>
+							<p style="color: #333;">蓝月亮·《校园招聘·长沙站》</p>
+						</div>
+					</div>
+					<div class="mui-card-footer">
+						<a class="mui-card-link"></a>
+						<a class="mui-card-link" href="http://wx.xykjg.com/hr/school/changsha">Watching</a>
+					</div>
+				</div>
+			</div>
+			<!--第二个页面：消息页面-->
+			<div id="tabbar-with-chat" class="mui-control-content ">
+				<div class="title">H5产品目录</div>
+				<div class="mui-card">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">校园招聘</a>
+						<ul class="mui-table-view">
+						        <li class="mui-table-view-cell">
+						            <a class="mui-navigate-right">
+						            	武汉站·H5
+						            </a>
+						        </li>
+						        <li class="mui-table-view-cell">
+						            <a class="mui-navigate-right">
+						            	长沙站·H5
+						            </a>
+						        </li>
+						        <li class="mui-table-view-cell">
+						            <a class="mui-navigate-right">
+						            	厦门站·H5
+						            </a>
+						        </li>
+						    </ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">社会招聘</a>
+						<ul class="mui-table-view">
+						        <li class="mui-table-view-cell">
+						            <a class="mui-navigate-right">
+						                待更新
+						            </a>
+						        </li>
+						    </ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">市场部</a>
+						<ul class="mui-table-view">
+						        <li class="mui-table-view-cell">
+						            <a class="mui-navigate-right">
+						            	《重阳节》
+						            </a>
+						        </li>
+						    </ul>
+					</li>
+				</ul>
+			</div>
+				<div class="title">H5产品组·官网</div>
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell">
+						<a href="http://wx.xykjg.com/" class="mui-navigate-right">Here We Go</a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="tabbar-with-contact" class="mui-control-content">
+				<!--<div class="title">团队成员展示</div>-->
+				<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-cell">
+							<div class="oa-contact-cell mui-table">
+								<div class="oa-contact-avatar mui-table-cell">
+									<img src="images/tx/tx_lhz.png" width="60px"/>
+								</div>
+								<div class="oa-contact-content mui-table-cell">
+									<div class="mui-clearfix">
+										<h4 class="oa-contact-name">刘鸿志</h4>
+										<span class="oa-contact-position mui-h6">产品&前端开发</span>
+									</div>
+									<p class="oa-contact-email mui-h6">
+										liuhongzhi@bluemoon.com.cn
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="images/tx/tx_zlh.png" width="60px"/>
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">周林海</h4>
+									<span class="oa-contact-position mui-h6">交互设计师</span>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									zhoulinhai@bluemoon.com.cn
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="images/tx/tx_ymt.png" width="60px"/>
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">叶妙婷</h4>
+									<span class="oa-contact-position mui-h6">视觉设计师</span>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									yemiaoting@bluemoon.com.cn
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				</ul>
+			</div>
+			<div id="tabbar-with-map" class="mui-control-content">
+				<!--<div class="title">设置页面</div>-->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" open-type="common" href="feedback.html">
+							问题反馈
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							新消息通知
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							隐私
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							通用
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script>
+			mui.init({
+				gestureConfig: {
+					tap: true, //默认为true
+					doubletap: true, //默认为false
+					longtap: true, //默认为false
+					swipe: true, //默认为true
+					drag: true, //默认为true
+					hold: false, //默认为false，不监听
+					release: false, //默认为false，不监听
+					swipeBack: true //启用右滑关闭功能 
+				}
+			});
+			//处理右上角关于图标的点击事件；
+			//			var subWebview = null,
+			//				template = null;
+			//			document.getElementById('info').addEventListener('tap', function() {
+			//				if (!mui.os.plus) {
+			//					mui.openWindow({
+			//						url: "vip/info.html",
+			//						id: "info",
+			//						show: {
+			//							aniShow: 'zoom-fade-out',
+			//							duration: 300
+			//						}
+			//					});
+			//					return;
+			//				}
+			//				if (subWebview == null) {
+			//					//获取共用父窗体
+			//					template = plus.webview.getWebviewById("default-main");
+			//				}
+			//				if (template) {
+			//					subWebview = template.children()[0];
+			//					subWebview.loadURL('vip/info.html');
+			//					//修改共用父模板的标题
+			//					mui.fire(template, 'updateHeader', {
+			//						title: '关于',
+			//						showMenu: false
+			//					});
+			//					template.show('slide-in-right', 150);
+			//				}
+			//			});
+			//首页返回键处理
+			//1、若侧滑菜单显示，则关闭侧滑菜单
+			//2、否则，执行mui框架默认的关闭首页功能
+			var _back = mui.back;
+			mui.back = function() {
+				if(showMenu) {
+					closeMenu();
+				} else {
+					_back();
+				}
+			};
+			//			function change(){
+			//				document.getElementById('T1').addEventListener('tap',function(){
+			//					var a = document.getElementById("Ttitle");
+			//			        a.innerHTML = '主页';
+			//				});
+			//				document.getElementById('T2').addEventListener('tap',function(){
+			//					var a = document.getElementById("Ttitle");
+			//			        a.innerHTML = '人生履历';
+			//				});
+			//				document.getElementById('T3').addEventListener('tap',function(){
+			//					var a = document.getElementById("Ttitle");
+			//			        a.innerHTML = '通讯录';
+			//				});
+			//				document.getElementById('T4').addEventListener('tap',function(){
+			//					var a = document.getElementById("Ttitle");
+			//			        a.innerHTML = '设置';
+			//				});
+			//			};
+		</script>
+		<!--<script type="text/javascript">
+			document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
+	</script>-->
 	</body>
 </html>
