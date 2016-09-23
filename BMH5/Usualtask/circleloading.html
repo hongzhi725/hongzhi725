@@ -6,24 +6,25 @@
 		<title></title>
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
 		<style type="text/css">
-			#container {
+			#loading_circle {
 				margin: 20px;
 				width: 100px;
 				height: 100px;
 				position: relative;
 				font-size: 12px;
+				/*background-color:blue;*/
 			}
 		</style>
 	</head>
 	<body>
 		
-		<div id="container"></div>
+		<div id="loading_circle"></div>
 		<script src="http://cdn.bootcss.com/progressbar.js/1.0.1/progressbar.min.js"></script>
 		<script type="text/javascript">
 			// progressbar.js@1.0.0 version is used
 			// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
-			var bar = new ProgressBar.Circle(container, {
+			var bar = new ProgressBar.Circle(loading_circle, {
 				color: '#1874CD',
 				// This has to be the same size as the maximum width to
 				// prevent clipping
@@ -59,7 +60,9 @@
 			bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
 			bar.text.style.fontSize = '2rem';
 
-			bar.animate(1); // Number from 0.0 to 1.0
+			bar.animate(0.1); // Number from 0.0 to 1.0
+			bar.animate(0.2);
+			bar.animate(0.1);
 		</script>
 	</body>
 </html>

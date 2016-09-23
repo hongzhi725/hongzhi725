@@ -5,6 +5,7 @@
 		<title></title>
 	</head>
 	<body>
+		<img src="http://www.17sucai.com/preview/11/2015-01-19/svg-loader/svg-loaders/tail-spin.svg" style="background-color: black;"/>
 		<div id="area" style="background-color: orange;width: 50%;">
 			<canvas id="myCanvas" width="350" height="42"></canvas>
 
@@ -14,10 +15,19 @@
 				
 			</span>
 		</div>
+		<img src="img/p1/bg.png"/>
+		<img src="img/p1/p1_circle.png"/>
+		<img src="img/p1/p1_crown.png"/>
 		<span id="">
 			
 		</span>
 		<script src="https://cdn.bootcss.com/PreloadJS/0.6.0/preloadjs.min.js"></script>
+		<script type="text/javascript">
+//			var Imglist=document.getElementsByTagName('img');
+//			var length=Imglist.length;
+//			var a=Imglist[0].src;
+//			console.log(length);
+		</script>
 		<script type="text/javascript">
 			//MADE BY COOKIE
 			//1.loading预加载进度:定义变量 var nump
@@ -33,23 +43,21 @@
 						src: "https://cdn.bootcss.com/PreloadJS/0.6.0/preloadjs.min.js",
 						id: "preloadjs"
 					}, {
-						src: "http://www.gbtags.com/gb/networks/uploadimgthumb/4d8f3f13-89c0-455c-95f3-ba5120c2f123.jpg",
-						id: "logo"
-					}, {
-						src: "http://www.gbtags.com/tutorials/html5-tutorial/html5-demos/assets/song.ogg",
-						id: "audiofile"
-					}
-				];
-				for(var i = 1; i <= 10; i++)
+						src: "js/swiper.min.js",
+						id: "swiper"
+					}];
+			var Imglist=document.getElementsByTagName('img');
+			var length=Imglist.length;
+				for(var i = 0; i <= length-1; i++)
 					manifest.push({
-						src: "img/1.png"
+						src: Imglist[i].src
 					})
 			}
 			//开始预加载
 			function startPreload() {
 				preload = new createjs.LoadQueue(true);
 				//注意加载音频文件需要调用如下代码行
-				preload.installPlugin(createjs.Sound);
+//				preload.installPlugin(createjs.Sound);
 				preload.on("fileload", handleFileLoad);
 				preload.on("progress", handleFileProgress);
 				preload.on("complete", loadComplete);
@@ -59,9 +67,16 @@
 			}
 			//处理单个文件加载
 			function handleFileLoad(event) {
+//				alert('一个完毕');
 				console.log("文件类型: " + event.item.type);
-				if(event.item.id == "logo") {
-					console.log("logo图片已成功加载");
+				if(event.item.id == "bg") {
+					console.log("bg图片已成功加载");
+				}
+				if(event.item.id == "preloadjs") {
+					console.log("preloadjs图片已成功加载");
+				}
+				if(event.item.id == "swiper") {
+					console.log("swiper图片已成功加载");
 				}
 			}
 			//处理加载错误：大家可以修改成错误的文件地址，可在控制台看到此方法调用
@@ -72,7 +87,8 @@
 			function handleFileProgress(event) {
 				nump = preload.progress * 100 | 0;
 				document.getElementById(numpid).innerText = nump;
-//				console.log(preload.progress);
+				console.log(preload.progress);
+				console.log(nump);
 			}
 			//全度资源加载完毕
 			function loadComplete(event) {
