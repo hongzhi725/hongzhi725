@@ -85,7 +85,7 @@ $signPackage = $jssdk->GetSignPackage();
 					</div>
 
 					<div class="ani btn-01" data-swiper-parallax="-200" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
-						<a href="https://hongzhi725.github.io/hongzhi725/BMH5/H5-PG/bluemoon/" class="button button-glow button-border button-rounded button-primary" style="padding:0px 50px;">详细了解</a>
+						<a href="wx/index.html" class="button button-glow button-border button-rounded button-primary" style="padding:0px 50px;">详细了解</a>
 					</div>
 
 					<div class="ani text webfont" data-swiper-parallax="-600" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1.1s">
