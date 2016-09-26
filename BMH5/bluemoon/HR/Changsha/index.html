@@ -168,7 +168,6 @@
 			document.addEventListener('touchmove', function(e) {
 				e.preventDefault()
 			}, false);
-
 			(function(doc, win) {
 				var docEl = doc.documentElement,
 					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
@@ -188,6 +187,5 @@
 				doc.addEventListener('DOMContentLoaded', recalc, false);
 			})(document, window);
 		</script>
-
 	</body>
 </html>
