@@ -209,6 +209,21 @@
 								</li>
 							</ul>
 						</li>
+						<li class="mui-table-view-cell mui-collapse">
+							<a class="mui-navigate-right" href="#">测试ing</a>
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right" onclick="checkout()">
+										疯狂的兔子
+									</a>
+								</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right" href="http://203.195.235.76/jssdk/">
+										微信JS SDK
+									</a>
+								</li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 				<div class="title">H5产品组·官网</div>
@@ -365,6 +380,32 @@
 			//			        a.innerHTML = '设置';
 			//				});
 			//			};
+		</script>
+		<script type="text/javascript">
+			function checkout(){
+				var name=prompt("请输入密码：","")
+				if (name!=null && name!="") {
+					if (name == "000000") {
+						window.location.href='../games/moongame/index.html';
+					} else{
+						alert('别闹，瞎点啥。')
+					}
+				} else{
+					alert('逗我呢？')
+				}
+			}
+			function checkout2(){
+				var name=prompt("请输入密码：","")
+				if (name!=null && name!="") {
+					if (name == "000000") {
+						window.location.href='../lhz/weixin_jssdk/weixin.php';
+					} else{
+						alert('别闹，瞎点啥。')
+					}
+				} else{
+					alert('逗我呢？')
+				}
+			}
 		</script>
 		<!--<script type="text/javascript">
 			document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
