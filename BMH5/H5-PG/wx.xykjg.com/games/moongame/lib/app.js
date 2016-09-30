@@ -27,7 +27,7 @@
         var score=0;
         var starNum=5;
         var mainTime;//延迟数据记录;
-        var shootTime=550;//
+        var shootTime=500;//
 
         //end;
         var isShare=false;
@@ -39,8 +39,8 @@
         //gotoEnd();
 
         gotoStroy();
-        var defultW=640;
-        var defultH=1008;
+        var defultW=750;
+        var defultH=1206;
         window.onresize=resizeCanvas;
         resizeCanvas();
 
@@ -121,6 +121,7 @@
             {
                 story._mc.mc1.gotoAndPlay(14);
                 mcFrame(story._mc.mc1,33,gotoStory1)
+//gotoMain()
             }
             else
             {

@@ -26,8 +26,8 @@
         window.onresize=resizeCanvas;
         resizeCanvas();
 
-        var defultW=640;
-        var defultH=1008;
+        var defultW=750;
+        var defultH=1206;
         function resizeCanvas()
         {
             var pro=defultW/defultH;

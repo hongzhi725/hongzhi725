@@ -2260,7 +2260,7 @@ p.nominalBounds = new cjs.Rectangle(-17.5,-18.1,243.2,243.2);
 
 	// 图层 1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#FF9297").s().p("EglfA7EMAAAh2HMBK+AAAMAAAB2Hg");
+	this.shape.graphics.f("#FF9297").s().p("EglfA7EMAAAh2HMBK+AAAMAAAB2Hg");//e4bda0e5a5bd//EglfA7EMAAAh2HMBK+AAAMAAAB2Hg
 	this.shape.setTransform(240,378);
 
 	this.instance_12 = new lib.bg();
