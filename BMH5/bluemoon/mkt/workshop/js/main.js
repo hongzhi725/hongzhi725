@@ -13,20 +13,14 @@ $(function() {
 		manifest = [{
 			src: "https://cdn.bootcss.com/PreloadJS/0.6.0/preloadjs.min.js",
 			id: "preloadjs"
-		}, 
-			{id: "p1", src:"img/p1.png"},
-			{id: "p2", src:"img/p2.png"},
-			{id: "p3", src:"img/p3.png"},
-			{id: "p4", src:"img/p4.png"},
-			{id: "p5", src:"img/p5.png"},
-			{id: "p6", src:"img/p6.png"},
+		},
 		];
-//		var Imglist = document.getElementsByTagName('img');
-//		var length = Imglist.length;
-//		for(var i = 0; i <= length - 1; i++)
-//			manifest.push({
-//				src: Imglist[i].src
-//			})
+		var Imglist = document.getElementsByTagName('img');
+		var length = Imglist.length;
+		for(var i = 0; i <= length - 1; i++)
+			manifest.push({
+				src: Imglist[i].src
+			})
 	}
 	//开始预加载
 	function startPreload() {
