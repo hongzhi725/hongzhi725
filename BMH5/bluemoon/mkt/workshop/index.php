@@ -52,17 +52,17 @@ $signPackage = $jssdk->GetSignPackage();
 						<div class="one">
 							<div class="one_word ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s">2008年<br />开创中国洗衣<span style="font-size: 1.4rem;color: rgb(255,255,0);letter-spacing:1px;font-weight: bold;"> “液”时代</span><br />促进行业的升级换代</div>
 							<img src="img/p2/p2_pic11.png" class="pic_1 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
-							<img src="img/p2/line.png" style="position: absolute;top: 16rem;left: 5%;width: 90%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+							<img src="img/p2/line.png" style="position: absolute;top: 15rem;left: 5%;width: 90%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
 						</div>
 						<div class="two">
 							<div class="two_word ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="2.5s">2011年<br />推出国内首款手洗专用洗衣液<br />开创<span style="font-size: 1.4rem;color: rgb(255,255,0);letter-spacing:1px;font-weight: bold;"> 手洗新时代</span></div>
 							<img src="img/p2/p2_pic22.png" class="pic_2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
-							<img src="img/p2/line.png" style="position: absolute;top: 24rem;left: 5%;width: 90%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
+							<img src="img/p2/line.png" style="position: absolute;top: 23rem;left: 5%;width: 90%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
 						</div>
 						<div class="three">
 							<div class="three_word ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="3.5s">2013年<br />推出了无毒茶清、无毒卫诺<br /><span style="font-size: 1.4rem;color: rgb(255,255,0);letter-spacing:1px;font-weight: bold;">无毒家居清洁</span>，使用更放心</div>
 							<img src="img/p2/p2_pic33.png" class="pic_3 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="3.5s">
-							<img src="img/p2/line.png" style="position: absolute;top: 32rem;left: 5%;width: 90%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s">
+							<img src="img/p2/line.png" style="position: absolute;top: 31rem;left: 5%;width: 90%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s">
 						</div>
 						<div class="four">
 							<div class="four_word ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="4.5s">2015年<br />推出国内首款“浓缩+”洗衣液<br />引领<span style="font-size: 1.4rem;color: rgb(255,255,0);letter-spacing:1px;font-weight: bold;"> 中国浓缩时代</span></div>

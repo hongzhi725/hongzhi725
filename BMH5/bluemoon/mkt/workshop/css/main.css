@@ -432,7 +432,7 @@ input::-moz-focus-inner {
 .one_word{
 	position: absolute;
 	left: 5%;
-	top: 10rem;
+	top: 9rem;
 	text-align: left;
 	color: white;
 	font-family: "微软雅黑";
@@ -441,7 +441,7 @@ input::-moz-focus-inner {
 .two_word{
 	position: absolute;
 	left: 5%;
-	top: 18rem;
+	top: 17rem;
 	text-align: left;
 	color: white;
 	font-family: "微软雅黑";
@@ -450,7 +450,7 @@ input::-moz-focus-inner {
 .three_word{
 	position: absolute;
 	left: 5%;
-	top: 26rem;
+	top: 25rem;
 	text-align: left;
 	color: white;
 	font-family: "微软雅黑";
@@ -459,7 +459,7 @@ input::-moz-focus-inner {
 .four_word{
 	position: absolute;
 	left: 5%;
-	top: 34rem;
+	top: 33rem;
 	text-align: left;
 	color: white;
 	font-family: "微软雅黑";
@@ -467,25 +467,25 @@ input::-moz-focus-inner {
 }
 .pic_1{
 	position: absolute;
-	top: 10.5rem;/*12.2475rem*/
+	top: 9.5rem;/*12.2475rem*/
 	right: 10%;
 	width: 5rem;/*4.5rem|6.5025*/
 }
 .pic_2{
 	position: absolute;
-	top: 18.5rem;
+	top: 17.5rem;
 	right: 10%;
 	width: 5rem;
 }
 .pic_3{
 	position: absolute;
-	top: 26.5rem;
+	top: 25.5rem;
 	right: 10%;
 	width: 5rem;
 }
 .pic_4{
 	position: absolute;
-	top: 34.5rem;
+	top: 33.5rem;
 	right: 10%;
 	width: 5rem;
 }
@@ -772,19 +772,19 @@ input::-moz-focus-inner {
 }
 .slide8>.p8_1{
 	position: absolute;
-	top: 18%;
+	top: 17%;
 	left: 5%;
 	width: 90%;
 }
 .slide8>.p8_2{
 	position: absolute;
-	top: 42%;
+	top: 41%;
 	left: 5%;
 	width: 90%;
 }
 .slide8>.p8_3{
 	position: absolute;
-	top: 66%;
+	top: 65%;
 	left: 5%;
 	width: 90%;
 }
