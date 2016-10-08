@@ -39,7 +39,7 @@ $signPackage = $jssdk->GetSignPackage();
 						<!--<img src="img/p1/bm-logo-white.png" class="bmlogo ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
 						<div class="word1 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s">2016 经销商</div>-->
 						<img src="img/p1/p1_pic1.png" style="position: absolute;left: 0;top: 12%;width: 100%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
-						<img src="img/p1/p1_pic2.png" style="position: absolute;left: 0;top: 25%;width: 100%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s">
+						<img src="img/p1/p1_pic2.png" style="position: absolute;left: 0;top: 22%;width: 100%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s">
 						<!--<div class="word2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s">“销售倍增”研讨会</div>-->
 						<img src="img/p1/yaoqinghan.png" class="yqh ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s">
 						<img src="img/p1/timer.png" class="timer ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
@@ -80,9 +80,10 @@ $signPackage = $jssdk->GetSignPackage();
 						<!--<div class="p4_word1 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.25s">为更好的体验</div>
 						<div class="p4_word2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.75s">洗涤的科技，洁净的奥秘</div>
 						<div class="p4_word3 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.25s">请携带1~2件您洗不干净的衣物</div>-->
-						<div class="p4_word2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.25s">来参加研讨会时，<br />请携带1-2件您洗不干净的衣物</div>
-						<img src="img/p4/p4_pic1.png" class="p3_pic1 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
-						<div class="p4_word4 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.5s">蓝月亮洗涤科学研究院为您洗涤</div>
+						<div class="p4_word2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.25s">来参加研讨会时，</div>
+						<div class="p4_word3 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">请携带1-2件您洗不干净的衣物</div>
+						<img src="img/p4/p4_pic1.png" class="p4_pic1 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+						<div class="p4_word4 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.5s">蓝月亮洗涤科学研究院将为您洗涤</div>
 						<div class="p4_word5 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="2s">让您的衣物洁净如新！</div>
 						<img src="img/p4/p3_pic2.png" class="p3_pic2 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
 					</div>
@@ -186,8 +187,8 @@ $signPackage = $jssdk->GetSignPackage();
 				// 在这里调用 API
 				console.log('调用成功');
 				wx.onMenuShareAppMessage({
-					title: '“销售倍增”研讨会', // 分享标题
-					desc: '迎浓缩 赢未来', // 分享描述
+					title: '迎浓缩 赢未来', // 分享标题
+					desc: '蓝月亮诚邀您参加2016经销商“销售倍增”研讨会', // 分享描述
 					link: 'http://wx.xykjg.com/mkt/workshop/', // 分享链接
 					imgUrl: 'http://wx.xykjg.com/mkt/workshop/img/share.png', // 分享图标
 					type: '', // 分享类型,music、video或link，不填默认为link

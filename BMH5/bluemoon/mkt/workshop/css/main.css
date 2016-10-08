@@ -425,7 +425,7 @@ input::-moz-focus-inner {
 	top: 6%;
 	left: 0;
 	width: 100%;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: white;
 	font-family:"微软雅黑";
 }
@@ -504,13 +504,13 @@ input::-moz-focus-inner {
 	top: 6%;
 	left: 0;
 	width: 100%;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: white;
 	font-family:"微软雅黑";
 }
 .slide3>.p3_pic1{
 	position: absolute;
-	top: 15%;
+	top: 12%;
 	left: 5%;
 	width: 90%;
 }
@@ -527,7 +527,7 @@ input::-moz-focus-inner {
 .slide3>.p3_word3{
 	position: absolute;
 	color: white;
-	top: 75%;
+	top: 72%;
 	left: 2.5%;
 	width: 100%;
 	font-size: 2rem;
@@ -550,9 +550,8 @@ input::-moz-focus-inner {
 }
 .slide4>.p4_word2{
 	position: absolute;
-	top: 10%;
-	left: 6%;
-	width: 100%;
+	top: 9%;
+	left: 5%;
 	font-family: "微软雅黑";
 	font-size: 2rem;
 	color: white;
@@ -562,16 +561,15 @@ input::-moz-focus-inner {
 .slide4>.p4_word3{
 	position: absolute;
 	top: 15%;
-	left: 0;
-	width: 100%;
+	left: 5%;
 	font-family: "微软雅黑";
-	font-size: 1.5rem;
+	font-size: 2rem;
 	color: white;
 	letter-spacing:1px;
 }
-.slide4>.p3_pic1{
+.slide4>.p4_pic1{
 	position: absolute;
-	top: 25%;
+	top: 22%;
 	left: 50%;
 	width: 28rem;
 	margin-left: -14rem;
@@ -608,24 +606,24 @@ input::-moz-focus-inner {
 }
 .slide5>.bmlogo{
 	position: absolute;
-	top: 6%;
-	left: 12%;
-	width: 9.5rem;
+	top: 4rem;
+	left: 15%;
+	width: 8rem;
 }
 .slide5>.p5_word1{
 	position: absolute;
-	top: 6.8%;
+	top: 4.5rem;
 	left: 43%;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: white;
 	font-family:"微软雅黑";
 }
 .slide5>.p5_word2{
 	position: absolute;
-	top: 15%;
+	top: 16%;
 	left: 0%;
 	width: 100%;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: white;
 	border: 0;
 	padding: 0;
@@ -666,7 +664,7 @@ input::-moz-focus-inner {
 	position: absolute;
 	top: 70%;
 	left: 5%;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	color: white;
 	font-family:"微软雅黑";
 	letter-spacing:2px;
@@ -675,7 +673,7 @@ input::-moz-focus-inner {
 	position: absolute;
 	top: 75%;
 	left: 5%;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	color: white;
 	font-family:"微软雅黑";
 	letter-spacing:2px;
@@ -684,7 +682,7 @@ input::-moz-focus-inner {
 	position: absolute;
 	top: 80%;
 	left: 5%;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	color: white;
 	font-family:"微软雅黑";
 	letter-spacing:2px;
@@ -693,7 +691,7 @@ input::-moz-focus-inner {
 	position: absolute;
 	top: 85%;
 	left: 5%;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	color: white;
 	font-family:"微软雅黑";
 	letter-spacing:2px;
@@ -716,13 +714,13 @@ input::-moz-focus-inner {
 }
 .slide6>.bmlogo{
 	position: absolute;
-	top: 6.5%;
-	left: 17%;
-	width: 7rem;
+	top: 4rem;
+	left: 15%;
+	width: 8rem;
 }
 .slide6>.p6_word1{
 	position: absolute;
-	top: 6.8%;
+	top: 4.5rem;
 	left: 43%;
 	font-size: 2rem;
 	color: white;
@@ -730,7 +728,7 @@ input::-moz-focus-inner {
 }
 .slide6>.p6_word2{
 	position: absolute;
-	top: 15%;
+	top: 16%;
 	left: 0%;
 	width: 100%;
 	font-size: 2rem;
@@ -749,7 +747,7 @@ input::-moz-focus-inner {
 	top: 6%;
 	left: 0%;
 	width: 100%;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: white;
 	font-family:"微软雅黑";
 }
@@ -775,19 +773,19 @@ input::-moz-focus-inner {
 .slide8>.p8_1{
 	position: absolute;
 	top: 18%;
-	left: 6%;
+	left: 5%;
 	width: 90%;
 }
 .slide8>.p8_2{
 	position: absolute;
 	top: 42%;
-	left: 6%;
+	left: 5%;
 	width: 90%;
 }
 .slide8>.p8_3{
 	position: absolute;
 	top: 66%;
-	left: 6%;
+	left: 5%;
 	width: 90%;
 }
 .slide9 {
