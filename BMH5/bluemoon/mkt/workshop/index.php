@@ -8,21 +8,22 @@ $signPackage = $jssdk->GetSignPackage();
 	<head>
 		<!--meta标签-->
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="viewport" content="width=375, initial-scale=1, minimum-scale=1, maximum-scale=1">
 		<meta name="keywords" content="蓝月亮,市场部,销售部,销售倍增,研讨会" />
 		<meta name="description" content="蓝月亮·销售倍增研讨会" />
 		<title>“销售倍增”研讨会邀请函</title>
 		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/main.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<style type="text/css">
 			.box{
 				position: absolute;
-				width: 62.189vh;
+				width: 62.18905472636816vh;
 				height: 100vh;
+				top: 0%;
 				left: calc(50vw - 31.0945vh);
 				/*background-color:orange;*/
-				font-size: 1rem;
+				/*font-size: 1rem;*/
 			}
 		</style>
 	</head>
@@ -66,7 +67,7 @@ $signPackage = $jssdk->GetSignPackage();
 							<img src="img/p2/line.png" style="position: absolute;top: 31rem;left: 5%;width: 90%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s">
 						</div>
 						<div class="four">
-							<div class="four_word ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="4.5s">2015年<br />推出国内首款“浓缩+”洗衣液<br />引领<span style="font-size: 1.4rem;color: rgb(255,255,0);letter-spacing:1px;font-weight: bold;"> 中国浓缩时代</span></div>
+							<div class="four_word ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="4.5s">2015年<br />推出国内首款「浓缩+」洗衣液<br />引领<span style="font-size: 1.4rem;color: rgb(255,255,0);letter-spacing:1px;font-weight: bold;"> 中国浓缩时代</span></div>
 							<img src="img/p2/p2_pic44.png" class="pic_4 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="4.5s">
 						</div>
 						<img src="img/p2/bottom.png" class="bottom ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="5.5s">
@@ -159,8 +160,8 @@ $signPackage = $jssdk->GetSignPackage();
 							box.style.left = '0';
 							console.log("【box调整后宽】：" + box.clientWidth);
 						} else {
-							box.style.width = '62.189vh';
-							box.style.left = 'calc(50vw - 31.0945vh)';
+							box.style.width = '62.18905472636816vh';
+							box.style.left = 'calc(50vw - 31.09452736318408vh)';
 						}
 						docEl.style.fontSize = 12 * (boxWidth / 375) + 'px';
 						console.log("【font-size调整后】" + docEl.style.fontSize);

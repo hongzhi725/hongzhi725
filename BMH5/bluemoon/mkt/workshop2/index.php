@@ -67,7 +67,7 @@ $signPackage = $jssdk->GetSignPackage();
 							<img src="img/p2/line.png" style="position: absolute;top: 31rem;left: 5%;width: 90%;" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s">
 						</div>
 						<div class="four">
-							<div class="four_word ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="4.5s">2015年<br />推出国内首款“浓缩+”洗衣液<br />引领<span style="font-size: 1.4rem;color: rgb(255,255,0);letter-spacing:1px;font-weight: bold;"> 中国浓缩时代</span></div>
+							<div class="four_word ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="4.5s">2015年<br />推出国内首款「浓缩+」洗衣液<br />引领<span style="font-size: 1.4rem;color: rgb(255,255,0);letter-spacing:1px;font-weight: bold;"> 中国浓缩时代</span></div>
 							<img src="img/p2/p2_pic44.png" class="pic_4 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="4.5s">
 						</div>
 						<img src="img/p2/bottom.png" class="bottom ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="5.5s">
