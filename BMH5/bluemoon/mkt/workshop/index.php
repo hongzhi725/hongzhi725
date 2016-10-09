@@ -14,7 +14,7 @@ $signPackage = $jssdk->GetSignPackage();
 		<title>“销售倍增”研讨会邀请函</title>
 		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.min.css" />
 		<style type="text/css">
 			.box{
 				position: absolute;
