@@ -43,12 +43,13 @@ $signPackage = $jssdk->GetSignPackage();
 						<!--<div class="word2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s">“销售倍增”研讨会</div>-->
 						<img src="img/p1/yaoqinghan.png" class="yqh ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s">
 						<img src="img/p1/timer.png" class="timer ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
-						<div class="word3 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="2.5s">2016年10月10日</div>
+						<div class="word3 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="2.5s">会议日期：2016年10月10日</div>
 						<img src="img/p1/pos.png" class="pos ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="3.5s">
 						<div class="word4 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="3.5s">蓝月亮（中国）有限公司广州总部</div>
 					</div>
 					<div class="swiper-slide slide2">
-						<div class="title ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s">让我们一起走进蓝月亮</div>
+						<div class="title ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s">让我们一起走进</div>
+						<img src="img/p1/bm-logo-white.png" class="bmlogo ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
 						<div class="one">
 							<div class="one_word ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s">2008年<br />开创中国洗衣<span style="font-size: 1.4rem;color: rgb(255,255,0);letter-spacing:1px;font-weight: bold;"> “液”时代</span><br />促进行业的升级换代</div>
 							<img src="img/p2/p2_pic11.png" class="pic_1 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.5s">

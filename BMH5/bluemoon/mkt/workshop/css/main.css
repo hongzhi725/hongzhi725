@@ -185,14 +185,14 @@ input::-moz-focus-inner {
 
 .music {
 	position: absolute;
-	top: 1rem;
-	right: 1rem;
+	top: 1.5rem;
+	right: 1.5rem;
 	width: 2.5rem;
 	height: 2.5rem;
 	background-color:transparent;
 	border: .125rem solid #fff;
 	z-index: 99;
-	padding: 2px;
+	padding: 0.166666666667rem;
 	border-radius: 50%;
 	text-align: center;
 	-webkit-animation: musicani 5s infinite linear;
@@ -386,14 +386,14 @@ input::-moz-focus-inner {
 .slide1>.timer{
 	position: absolute;
 	left: 9%;
-	top: 73%;
-	width: 1.9rem;
+	top: 73.3%;
+	width: 1.5rem;
 }
 .slide1>.pos{
 	position: absolute;
-	left: 9.5%;
+	left: 9.3%;
 	top: 79%;
-	width: 1.5rem;
+	width: 1.3rem;
 }
 .slide1>.word3{
 	position: absolute;
@@ -403,7 +403,7 @@ input::-moz-focus-inner {
 	font-family:"微软雅黑";
 	font-size: 1.5rem;
 	letter-spacing:1px;
-	font-weight: 100;
+	/*font-weight: 100;*/
 }
 .slide1>.word4{
 	position: absolute;
@@ -413,7 +413,7 @@ input::-moz-focus-inner {
 	font-family:"微软雅黑";
 	font-size: 1.5rem;
 	letter-spacing:1px;
-	font-weight: 100;
+	/*font-weight: 100;*/
 }
 
 .slide2 {
@@ -422,12 +422,18 @@ input::-moz-focus-inner {
 }
 .slide2>.title{
 	position: absolute;
-	top: 6%;
-	left: 0;
+	top: calc(7% + 0.25rem);
+	left: -12%;
 	width: 100%;
 	font-size: 2rem;
-	color: white;
-	font-family:"微软雅黑";
+	color: #fff;
+	font-family: "微软雅黑"
+}
+.slide2>.bmlogo{
+	position: absolute;
+	top: 7%;
+	left: 61%;
+	width: 7rem
 }
 .one_word{
 	position: absolute;
@@ -795,7 +801,7 @@ input::-moz-focus-inner {
 .slide9>.bmlogo{
 	position: absolute;
 	top: 15%;
-	right: 12%;
+	right: 13.5%;
 	width: 7rem;
 }
 .slide9>.p9_word1{
