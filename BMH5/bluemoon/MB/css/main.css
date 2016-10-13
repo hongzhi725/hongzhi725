@@ -1,0 +1,37 @@
+/*说明*/
+/*Designed By Cookie：*/
+@charset "utf-8";
+#test1 {
+	animate-duration: 1s;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animate-delay: 1s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animate-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	-moz-animation-iteration-count: 1
+}
+
+#test2 {
+	-webkit-animation-duration: 1s;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-iteration-count: 1
+}
+/*项目自定义样式*/
+.slide1 {
+	position: relative;
+	background: url(../img/p1/底.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.slide1>.bm_logo{
+	background: url(../img/p1/蓝月亮logo.png) no-repeat;
+	background-size: 100% 100%;
+	width: 7.75rem;
+	height: 2.8rem;
+	position: absolute;
+	left: 1.15rem;
+	top: 1.0415rem;
+}
