@@ -78,7 +78,7 @@ $signPackage = $jssdk->GetSignPackage();
 		<div class="container">
 			<div class="ngh" data-scroll-reveal="enter top and move 50px over 0.3s">
 				<!--<img src="img/main/ngh.png" width="100%">-->
-				<div class="title1">活动时间：10月18日-10月23日</div>
+				<div class="title1">活动时间：10月19日-10月23日</div>
 				<div class="title2">活动地址：张家港曼巴特 · 海一家超市</div>
 			</div>
 			<img data-scroll-reveal="enter left and move 50px over 0.5s" src="img/main/1.png">
@@ -133,7 +133,7 @@ $signPackage = $jssdk->GetSignPackage();
 				console.log('调用成功');
 				wx.onMenuShareAppMessage({
 					title: '蓝月亮超值内购会', // 分享标题
-					desc: '蓝月亮超值内购会\n活动地址：张家港曼巴特 · 海一家超市', // 分享描述
+					desc: '蓝月亮超值内购会 \n活动地址：张家港曼巴特 · 海一家超市', // 分享描述
 					link: 'http://wx.xykjg.com/sales/ngh/4/', // 分享链接
 					imgUrl: 'http://wx.xykjg.com/sales/ngh/4/img/share.png', // 分享图标
 					type: '', // 分享类型,music、video或link，不填默认为link
