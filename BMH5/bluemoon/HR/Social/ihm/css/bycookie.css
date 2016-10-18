@@ -1,0 +1,434 @@
+/*Designed By Cookie：*/
+
+@charset "utf-8";
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: cadetblue;
+	/* text-align: center; */
+	font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+a,
+button {
+	-webkit-tap-highlight-color: transparent;
+}
+
+a:active,
+a:hover,
+button,
+input,
+select,
+div,
+textarea {
+	outline: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+	color: inherit;
+	font: inherit;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+/*禁止点击div高亮*/
+div{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	-moz-appearance: button;
+	appearance: button;
+}
+div,button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+#loading {
+	position: absolute;
+	z-index: 10000;
+	display: -webkit-box;
+	width: 101%;
+	height: 100%;
+	background: #000;
+	background-size: cover;
+	text-align: center;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+}
+
+#loading-num {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -9px;
+	margin-left: -20px;
+	padding: 0;
+	width: 40px;
+	height: 18px;
+	color: #fff;
+	text-align: center;
+	font-size: 15px;
+	font-family: arial;
+}
+
+.loader {
+	position: relative;
+	overflow: hidden;
+	margin: 20px auto;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	color: #fff;
+	text-indent: -9999em;
+	font-size: 45px;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-webkit-animation: load6 1.5s infinite ease;
+	animation: load6 1.5s infinite ease;
+}
+
+@-webkit-keyframes load6 {
+	0% {
+		box-shadow: 0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	5%,
+	95% {
+		box-shadow: 0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;
+	}
+	10%,
+	59% {
+		box-shadow: 0 -.83em 0 -.4em, -.087em -.825em 0 -.42em, -.173em -.812em 0 -.44em, -.256em -.789em 0 -.46em, -.297em -.775em 0 -.477em;
+	}
+	20% {
+		box-shadow: 0 -.83em 0 -.4em, -.338em -.758em 0 -.42em, -.555em -.617em 0 -.44em, -.671em -.488em 0 -.46em, -.749em -.34em 0 -.477em;
+	}
+	38% {
+		box-shadow: 0 -.83em 0 -.4em, -.377em -.74em 0 -.42em, -.645em -.522em 0 -.44em, -.775em -.297em 0 -.46em, -.82em -.09em 0 -.477em;
+	}
+	100% {
+		box-shadow: 0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes load6 {
+	0% {
+		box-shadow: 0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	5%,
+	95% {
+		box-shadow: 0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;
+	}
+	10%,
+	59% {
+		box-shadow: 0 -.83em 0 -.4em, -.087em -.825em 0 -.42em, -.173em -.812em 0 -.44em, -.256em -.789em 0 -.46em, -.297em -.775em 0 -.477em;
+	}
+	20% {
+		box-shadow: 0 -.83em 0 -.4em, -.338em -.758em 0 -.42em, -.555em -.617em 0 -.44em, -.671em -.488em 0 -.46em, -.749em -.34em 0 -.477em;
+	}
+	38% {
+		box-shadow: 0 -.83em 0 -.4em, -.377em -.74em 0 -.42em, -.645em -.522em 0 -.44em, -.775em -.297em 0 -.46em, -.82em -.09em 0 -.477em;
+	}
+	100% {
+		box-shadow: 0 -.83em 0 -.4em, 0 -.83em 0 -.42em, 0 -.83em 0 -.44em, 0 -.83em 0 -.46em, 0 -.83em 0 -.477em;
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+
+/*music自定义*/
+
+.music {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	z-index: 99;
+	padding: 0.166666666667rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	border: .125rem solid #fff;
+	border-radius: 50%;
+	background-color: transparent;
+	text-align: center;
+	-webkit-animation: musicani 5s infinite linear;
+	animation: musicani 5s infinite linear;
+}
+
+.music>img {
+	width: 90%;
+}
+
+@-webkit-keyframes musicani {
+	0% {
+		-webkit-transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes musicani {
+	0% {
+		-webkit-transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+.paused {
+	opacity: .4;
+	-webkit-animation: none;
+	animation: none;
+}
+
+.up-arrow {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	z-index: 2;
+	/*margin-left: -1.25rem;*/
+	width: 2.5rem;
+	height: 2.5rem;
+	-webkit-transform: translate3d(-50%, 0, 0);
+	transform: translate3d(-50%, 0, 0);
+	-webkit-animation: upArrowAni 2s infinite linear;
+	animation: upArrowAni 2s infinite linear;
+}
+
+.btn2 {
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+	width: 13.9167rem;
+	height: 2.83rem;
+}
+
+@-webkit-keyframes upArrowAni {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%, 30%, 0);
+		transform: translate3d(-50%, 30%, 0);
+	}
+	30% {
+		opacity: 1;
+		-webkit-transform: translate3d(-50%, -20%, 0);
+		transform: translate3d(-50%, -20%, 0);
+	}
+	60% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%, -35%, 0);
+		transform: translate3d(-50%, -35%, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+		transform: translate3d(-50%, -50%, 0);
+	}
+}
+
+@keyframes upArrowAni {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%, 30%, 0);
+		transform: translate3d(-50%, 30%, 0);
+	}
+	30% {
+		opacity: 1;
+		-webkit-transform: translate3d(-50%, -20%, 0);
+		transform: translate3d(-50%, -20%, 0);
+	}
+	60% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%, -35%, 0);
+		transform: translate3d(-50%, -35%, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+		transform: translate3d(-50%, -50%, 0);
+	}
+}
+
+
+/*弹窗特效*/
+
+.fadeOutOut {
+	-webkit-animation: fadeouta .4s 1 ease-in-out;
+	animation: fadeouta .4s 1 ease-in-out;
+}
+
+@keyframes fadeouta {
+	0% {}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+}
+
+@-webkit-keyframes fadeouta {
+	0% {}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+}
+
+
+/*fadeinin*/
+
+.fadeInIn {
+	-webkit-animation: fadeina .3s 1 ease-in-out;
+	animation: fadeina .3s 1 ease-in-out;
+}
+
+@keyframes fadeina {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeina {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	/* background: url(../img/bg/p1_bg.jpg); */
+	background-size: cover;
+	-webkit-transition: background 1.2s;
+	-moz-transition: background 1.2s;
+	transition: background 1.2s;
+}
+
+.swiper-wrapper {
+	-webkit-backface-visibility: hidden;
+}
+
+.swiper-slide {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	text-align: center;
+	font-size: 12px;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.xiaoren2 {
+	width: 80px;
+	height: 80px;
+	background: url(../img/bm/xiaoren.png) no-repeat 0 0;
+	-webkit-animation: run2 0.5s steps(4) infinite 0s;
+	/*position: absolute;
+	left: 0;
+	top: 0;*/
+}
+
+@-webkit-keyframes run2 {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -320px 0px;
+	}
+}
+
+
+/*自定义字体*/
+
+@font-face {
+	font-family: "webfont";
+	src: url('../fonts/webfont.eot');
+	/* IE9*/
+	src: url('../fonts/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/webfont.woff') format('woff'), /* chrome、firefox */
+	url('../fonts/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('../fonts/webfont.svg#webfont') format('svg');
+	/* iOS 4.1- */
+}
+
+.web-font {
+	font-family: "webfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fontdiy {
+	font-family: "webfont" !important;
+	font-size: 1rem;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.1px;
+	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: 0.26px;
+	line-height: 1.33rem;
+}

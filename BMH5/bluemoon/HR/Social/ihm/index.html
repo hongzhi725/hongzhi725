@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--meta标签-->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="keywords" content="蓝月亮,IT部，人力资源部,市场部,招聘H5" />
+		<meta name="description" content="蓝月亮·社会招聘H5" />
+		<title>蓝月亮社会招聘</title>
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/bycookie.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<style type="text/css">
+			.box {
+				position: absolute;
+				width: 62.18905472636816vh;
+				height: 100vh;
+				top: 0%;
+				left: calc(50vw - 31.0945vh);
+				/*background-color:orange;*/
+				/*font-size: 1rem;*/
+			}
+		</style>
+	</head>
+	<body ontouchstart>
+		<div class="box" id="mainbox">
+			<div id="loading">
+				<div class="loader"></div>
+				<span id="loading-num"></span>
+			</div>
+			<!--正文-->
+			<div class="swiper-container swiper-container-v">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide1">
+						<div class="bm_logo"></div>
+						<!--点缀开始-->
+						<div class="p1_lightning1"></div>
+						<div class="p1_lightning2"></div>
+						<div class="p1_lightning3"></div>
+						<div class="p1_star"></div>
+						<div class="p1_circle"></div>
+						<div class="p1_douya"></div>
+						<!--点缀结束-->
+						<div class="bm_xiaoren"></div>
+						<div class="bm_title"></div>
+						<div class="bm_p1btn"></div>
+						<div class="bm_cloud1"></div>
+						<div class="bm_cloud2"></div>
+					</div>
+					<div class="swiper-slide slide2">
+						<div class="bm_mkt">
+							<div class="mkt_pic"></div>
+							<div class="mkt_word"></div>
+						</div>
+						<div class="bm_hr">
+							<div class="hr_pic"></div>
+							<div class="hr_word"></div>
+						</div>
+						<div class="bm_it">
+							<div class="it_pic"></div>
+							<div class="it_word"></div>
+						</div>
+						<div class="bm_xz">
+							<div class="xz_pic"></div>
+							<div class="xz_word"></div>
+						</div>
+						<div class="bm_cloud1"></div>
+						<div class="bm_cloud2"></div>
+					</div>
+					<div class="swiper-slide slide3">
+						<div class="title"></div>
+						<div class="swiper-container swiper-container-h">
+							<div class="swiper-wrapper" id="swiper-container-a">
+								<div class="swiper-slide slide-mkt-1">
+									<div class="people"></div>
+									<div class="circle"></div>
+									<div class="job"></div>
+									<div class="btn button" id="mkt-1" num="11"></div>
+								</div>
+								<div class="swiper-slide slide-mkt-2">
+									<div class="people"></div>
+									<div class="circle"></div>
+									<div class="job"></div>
+									<div class="btn button" id="mkt-2" num="12"></div>
+								</div>
+								<div class="swiper-slide slide-mkt-3">
+									<div class="people"></div>
+									<div class="circle"></div>
+									<div class="job"></div>
+									<div class="btn button" id="mkt-3" num="13"></div>
+								</div>
+							</div>
+							<div class="swiper-pagination swiper-pagination-h"></div>
+						</div>
+						<div class="bm_cloud1"></div>
+						<div class="bm_cloud2"></div>
+					</div>
+
+				</div>
+
+				<div class="swiper-pagination swiper-pagination-v"></div>
+			</div>
+			<div class="describe" id="describe">
+				<div class="mkt_dec" id="mkt_dec" style="display: none;">
+					<div class="close button" id="close" num="99" style="display: none;"></div>
+					<div class="mkt1">
+						<div class="title"></div>
+						<div class="duty fontdiy" id="duty"></div>
+						<div class="demand"></div>
+						<div class="jobrequire fontdiy" id="jobrequire"></div>
+					</div>
+				</div>
+				<div class="mask" id="mask" style="display: none;"></div>
+			</div>
+			<button class="music">
+				<img src="img/music.svg" />
+			</button>
+			<div class="up-arrow">
+				<img src="img/up-arrow.svg" />
+			</div>
+		</div>
+		<audio loop id="music">
+			<!--<source src="audios/bgm.mp3" type="audio/mpeg"></source>-->
+		</audio>
+		<!--JS插件-->
+		
+		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.bootcss.com/PreloadJS/0.6.0/preloadjs.min.js"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script src="js/bycookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var box = document.getElementById('mainbox');
+						var clientWidth = docEl.clientWidth;
+						var clientHeight = docEl.clientHeight;
+						var boxWidth = box.clientWidth;
+						var boxHeight = box.clientHeight;
+						console.log("【设备】宽：" + clientWidth + "，" + "高：" + clientHeight);
+						console.log("【Box】：" + boxWidth + "，" + "高：" + boxHeight);
+						if(clientWidth <= 375) {
+							box.style.width = '100vw';
+							box.style.left = '0';
+							console.log("【Box调整1】宽：" + box.clientWidth + "，" + "高：" + box.clientHeight);
+						} else {
+							box.style.width = '62.18905472636816vh';
+							box.style.left = 'calc(50vw - 31.09452736318408vh)';
+						}
+						if(boxWidth > clientWidth) {
+							box.style.width = '100vw';
+							box.style.left = '0';
+							console.log("【Box调整2】宽：" + box.clientWidth + "，" + "高：" + box.clientHeight);
+						} else {
+							console.log('【注意】box宽度适合')
+						}
+						var newboxwidth=box.clientWidth;
+						docEl.style.fontSize = 12 * (newboxwidth / 375) + 'px';
+						console.log("【font-size调整】结果：" + docEl.style.fontSize);
+						
+					};
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+	</body>
+</html>
