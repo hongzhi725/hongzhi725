@@ -1,0 +1,77 @@
+{
+	"shop": [
+		{
+			"id": "0" ,
+			"time": "10月19日-11月1日",
+			"add":"重庆 · 永辉泰山大道店",
+			"demander":"匡威",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=0"
+		}, {
+			"id": "1" ,
+			"time": "10月19日-11月1日",
+			"add":"重庆 · 永辉金开大道店",
+			"demander":"匡威",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=1"
+		}, {
+			"id": "2" ,
+			"time": "10月19日-11月1日",
+			"add":"重庆 · 永辉李家沱店",
+			"demander":"匡威",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=2"
+		}, {
+			"id": "3" ,
+			"time": "10月19日-11月1日",
+			"add":"重庆 · 永辉嘉茂店",
+			"demander":"匡威",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=3"
+		}, {
+			"id": "4" ,
+			"time": "10月19日-11月1日",
+			"add":"重庆 · 永辉金源广场店",
+			"demander":"匡威",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=4"
+		}, {
+			"id": "5" ,
+			"time": "10月19日-11月1日",
+			"add":"福州 · 沃尔玛大利嘉店",
+			"demander":"匡威",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=5"
+		}, {
+			"id": "6" ,
+			"time": "10月29日-10月30日",
+			"add":"金鹰购物广场 · 金鹰超市",
+			"demander":"王艳",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=6"
+		}, {
+			"id": "7" ,
+			"time": "10月21日-10月30日",
+			"add":"镇江 · 八佰伴大统华超市",
+			"demander":"王艳",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=7"
+		}, {
+			"id": "8" ,
+			"time": "10月26日-10月31日",
+			"add":"镇江 · 大统华大港店",
+			"demander":"王艳",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=8"
+		}, {
+			"id": "9" ,
+			"time": "10月28日-10月30日",
+			"add":"世纪联华扬中城东店",
+			"demander":"王艳",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=9"
+		}, {
+			"id": "10" ,
+			"time": "10月22日-10月30日",
+			"add":"扬中商城超市",
+			"demander":"王艳",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=10"
+		}, {
+			"id": "11" ,
+			"time": "10月25日-10月30日",
+			"add":"苏州 · 永旺超市湖东店",
+			"demander":"周梦",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=11"
+		}
+	]
+}

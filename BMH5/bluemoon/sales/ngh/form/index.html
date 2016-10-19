@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>蓝月亮超值内购会详情表</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<link href="css/prettify.css" rel="stylesheet">
+		<link href="css/hemisu-light.css" rel="stylesheet">
+		<link href="css/screen.css" rel="stylesheet" media="screen">
+		<link id="style" href="css/classic.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+		<header>
+			<h1>蓝月亮超值内购会H5详情表</h1>
+		</header>
+		<section>
+			<label>Change Theme:</label>
+			<select id="theme">
+				<option value="classic.css">Classic</option>
+				<option value="clean.css">Clean</option>
+			</select>
+			<div id="example1"></div>
+		</section>
+		<script src="js/jquery.min.js"></script>
+		<script src="plugins/gotopage.js"></script>
+		<script src="plugins/ajaxpaging.js"></script>
+		<script src="js/jquery.columns.min.js"></script>
+		<script>
+            $.ajax({
+                url:'../information2.json',
+                dataType: 'json', 
+                success: function(json) { 
+                    example2 = $('#example1').columns({
+                        data:json
+                    }); 
+                }
+            }); 
+			$('#theme').change(function() {
+				$('#style').attr('href', 'css/' + $(this).val());
+			})
+		</script>
+	</body>
+</html>
