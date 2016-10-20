@@ -4,10 +4,12 @@
 //});
 
 //微信分享api
+//alert(decodeURI(location.href.split('#')[0]))
 function setJSAPI() {
-	$.getJSON('http://wx.xykjg.com/sign/?url=' + encodeURIComponent(location.href.split('#')[0]), function(res) {
+	$.getJSON('http://wx.xykjg.com/sign/?url=' + encodeURIComponent(location.href.split('#')[0]) +'&kind=hr&id=0', function(res) {
+//		alert(res.appid);
 		wx.config({
-			//			beta: true,
+			//beta: true,
 			debug: false,
 			appId: res.appid,
 			timestamp: res.timestamp,
@@ -29,15 +31,15 @@ function setJSAPI() {
 			//				'footerBounceColor': '#F8F8F8'
 			//			});
 			wx.onMenuShareAppMessage({
-				title: '有理想，创未来！',
-				desc: '蓝月亮社会招聘-首发起航！——蓝月亮应用设计中心',
+				title: res.title,
+				desc: res.describe,
 				link: location.href,
-				imgUrl: 'http://wx.xykjg.com/dist/img/share.png'
+				imgUrl: res.imgUrl
 			});
 			wx.onMenuShareTimeline({
-				title: '有理想，创未来！',
-				link: "https://weui.io",
-				imgUrl: 'http://wx.xykjg.com/dist/img/share.png'
+				title: res.title,
+				link: location.href,
+				imgUrl: res.imgUrl
 			});
 			//wx.onMenuShareQQ(option);
 		});

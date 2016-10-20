@@ -1173,7 +1173,7 @@
 	height: 2.7083rem;
 	position: absolute;
 	top: 4.31%;
-	left: 28.15%;
+	left: calc(50% - 6.835rem);
 }
 .slide7>.title2{
 	width: 100%;
@@ -1301,7 +1301,7 @@
 }
 .des_box>.jobrequire{
 	position: absolute;
-	top: 39.90%;
+	top: 42.5%;
 	left: 2.96%;
 	width: 94.08%;
 	/*height: 19.167rem;*/
@@ -1323,7 +1323,7 @@
 	width: 8.33rem;
 	height: 1.67rem;
 	position: absolute;
-	top: 33.925%;
+	top: 35%;
 	left: 50%;
 	margin-left: -4.165rem;
 }
@@ -1343,7 +1343,7 @@
 	width: 8.33rem;
 	height: 1.67rem;
 	position: absolute;
-	top: 33.925%;
+	top: 37%;
 	left: 50%;
 	margin-left: -4.165rem;
 }
@@ -1363,7 +1363,7 @@
 	width: 8.33rem;
 	height: 1.67rem;
 	position: absolute;
-	top: 33.925%;
+	top: 37%;
 	left: 50%;
 	margin-left: -4.165rem;
 }
@@ -1383,7 +1383,7 @@
 	width: 8.33rem;
 	height: 1.67rem;
 	position: absolute;
-	top: 33.925%;
+	top: 37%;
 	left: 50%;
 	margin-left: -4.165rem;
 }
