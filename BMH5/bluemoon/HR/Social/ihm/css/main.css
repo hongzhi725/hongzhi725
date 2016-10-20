@@ -461,6 +461,761 @@
 	margin-left: -6.95835rem;
 	z-index: 3;
 }
+/*slide4*/
+.slide4 {
+	/*position: relative;*/
+	background: url(../img/p4/bg.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.slide4>.bm_cloud1{
+	background: url(../img/p1/bm_cloud1.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 9.041rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.slide4>.bm_cloud2{
+	background: url(../img/p1/bm_cloud2.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: bottom;
+	width: 100%;
+	height: 10.2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.slide4>.title{
+	background: url(../img/p4/title.png) no-repeat;
+	background-size: 100% 100%;
+	width:16.875rem;
+	height: 5rem;
+	position: absolute;
+	top: 1.25rem;
+	left: calc(50% - 8.4375rem);
+}
+.slide-hr-1>.people{
+	background: url(../img/p4/1/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 9.167rem;
+	height: 21.375rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 3.5rem);
+	z-index: 1;
+}
+.slide-hr-1>.circle{
+	background: url(../img/p4/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-hr-1>.job{
+	background: url(../img/p4/1/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-hr-1>.btn{
+	background: url(../img/p4/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-hr-2>.people{
+	background: url(../img/p4/2/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 6.75rem;
+	height: 21.625rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 3.9rem);
+	z-index: 1;
+}
+.slide-hr-2>.circle{
+	background: url(../img/p4/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-hr-2>.job{
+	background: url(../img/p4/2/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-hr-2>.btn{
+	background: url(../img/p4/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-hr-3>.people{
+	background: url(../img/p4/3/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 7.67rem;
+	height: 20.83rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 3.75rem);
+	z-index: 1;
+}
+.slide-hr-3>.circle{
+	background: url(../img/p4/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-hr-3>.job{
+	background: url(../img/p4/3/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-hr-3>.btn{
+	background: url(../img/p3/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-hr-4>.people{
+	background: url(../img/p4/4/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 6.75rem;
+	height: 22.54rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 3.9rem);
+	z-index: 1;
+}
+.slide-hr-4>.circle{
+	background: url(../img/p4/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-hr-4>.job{
+	background: url(../img/p4/4/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-hr-4>.btn{
+	background: url(../img/p4/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+/*slide5*/
+.slide5 {
+	/*position: relative;*/
+	background: url(../img/p5/bg.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.slide5>.bm_cloud1{
+	background: url(../img/p1/bm_cloud1.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 9.041rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.slide5>.bm_cloud2{
+	background: url(../img/p1/bm_cloud2.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: bottom;
+	width: 100%;
+	height: 10.2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.slide5>.title{
+	background: url(../img/p5/title.png) no-repeat;
+	background-size: 100% 100%;
+	width:16.875rem;
+	height: 5rem;
+	position: absolute;
+	top: 1.25rem;
+	left: calc(50% - 8.4375rem);
+}
+.slide-it-1>.people{
+	background: url(../img/p5/1/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.67rem;
+	height: 22rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 4.3rem);
+	z-index: 1;
+}
+.slide-it-1>.circle{
+	background: url(../img/p5/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-it-1>.job{
+	background: url(../img/p5/1/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-it-1>.btn{
+	background: url(../img/p5/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-it-2>.people{
+	background: url(../img/p5/2/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 7.91rem;
+	height: 22.75rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 4rem);
+	z-index: 1;
+}
+.slide-it-2>.circle{
+	background: url(../img/p5/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-it-2>.job{
+	background: url(../img/p5/2/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-it-2>.btn{
+	background: url(../img/p5/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-it-3>.people{
+	background: url(../img/p5/3/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.75rem;
+	height: 22.54rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 4.3rem);
+	z-index: 1;
+}
+.slide-it-3>.circle{
+	background: url(../img/p5/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-it-3>.job{
+	background: url(../img/p5/3/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-it-3>.btn{
+	background: url(../img/p5/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-it-4>.people{
+	background: url(../img/p5/4/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 6.875rem;
+	height: 23.67rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 3.9rem);
+	z-index: 1;
+}
+.slide-it-4>.circle{
+	background: url(../img/p5/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-it-4>.job{
+	background: url(../img/p5/4/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-it-4>.btn{
+	background: url(../img/p5/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-it-5>.people{
+	background: url(../img/p5/5/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.54rem;
+	height: 22.375rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 4.25rem);
+	z-index: 1;
+}
+.slide-it-5>.circle{
+	background: url(../img/p5/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-it-5>.job{
+	background: url(../img/p5/5/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-it-5>.btn{
+	background: url(../img/p5/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-it-6>.people{
+	background: url(../img/p5/6/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.16rem;
+	height: 22.33rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 4.05rem);
+	z-index: 1;
+}
+.slide-it-6>.circle{
+	background: url(../img/p5/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-it-6>.job{
+	background: url(../img/p5/6/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-it-6>.btn{
+	background: url(../img/p5/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+/*行政部*/
+/*slide5*/
+.slide6 {
+	/*position: relative;*/
+	background: url(../img/p6/bg.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.slide6>.bm_cloud1{
+	background: url(../img/p1/bm_cloud1.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 9.041rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.slide6>.bm_cloud2{
+	background: url(../img/p1/bm_cloud2.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: bottom;
+	width: 100%;
+	height: 10.2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.slide6>.title{
+	background: url(../img/p6/title.png) no-repeat;
+	background-size: 100% 100%;
+	width:16.875rem;
+	height: 5rem;
+	position: absolute;
+	top: 1.25rem;
+	left: calc(50% - 8.4375rem);
+}
+.slide-xz-1>.people{
+	background: url(../img/p6/1/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 7.6rem;
+	height: 20.83rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 3.8rem);
+	z-index: 1;
+}
+.slide-xz-1>.circle{
+	background: url(../img/p6/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-xz-1>.job{
+	background: url(../img/p6/1/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-xz-1>.btn{
+	background: url(../img/p5/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-xz-2>.people{
+	background: url(../img/p6/2/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 9.083rem;
+	height: 21.9167rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 3.6rem);
+	z-index: 1;
+}
+.slide-xz-2>.circle{
+	background: url(../img/p6/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-xz-2>.job{
+	background: url(../img/p6/2/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-xz-2>.btn{
+	background: url(../img/p5/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-xz-3>.people{
+	background: url(../img/p6/3/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.4167rem;
+	height: 20.9167rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 4.1rem);
+	z-index: 1;
+}
+.slide-xz-3>.circle{
+	background: url(../img/p6/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-xz-3>.job{
+	background: url(../img/p6/3/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-xz-3>.btn{
+	background: url(../img/p5/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+.slide-xz-4>.people{
+	background: url(../img/p6/4/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.7916rem;
+	height: 20.75rem;
+	position: absolute;
+	top: 0.5rem;
+	left: calc(50% - 3.6rem);
+	z-index: 1;
+}
+.slide-xz-4>.circle{
+	background: url(../img/p6/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 17.625rem;
+	height: 17.625rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	margin-left: -8.8125rem;
+}
+.slide-xz-4>.job{
+	background: url(../img/p6/4/job.png) no-repeat;
+	background-size: 100% 100%;
+	width: 29.79167rem;
+	height: 8.375rem;
+	position: absolute;
+	top: 18.4583rem;
+	left: 50%;
+	margin-left: -14.895835rem;
+	z-index: 3;
+}
+.slide-xz-4>.btn{
+	background: url(../img/p5/btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.9167rem;
+	height: 2.83rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	margin-left: -6.95835rem;
+	z-index: 3;
+}
+/*尾页*/
+.slide7 {
+	position: relative;
+	background: url(../img/p1/bg.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.slide7>.title{
+	background: url(../img/p7/joinus.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.67rem;
+	height: 2.7083rem;
+	position: absolute;
+	top: 4.31%;
+	left: 28.15%;
+}
+.slide7>.title2{
+	width: 100%;
+	height: 10.44%;
+	/*background: blue;*/
+	position: absolute;
+	top: 12.76%;
+	left: 0;
+	font-size: 1.25rem;
+	line-height: 1.2;
+	color: rgb(255,252,167);
+}
+.slide7>.title3{
+	background: url(../img/p7/tongtong.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.5rem;
+	height: 1.625rem;
+	position: absolute;
+	top: 23.21%;
+	left: calc(50% - 6.75rem);
+}
+.slide7>.people{
+	background: url(../img/p7/people.png) no-repeat;
+	background-size: 100% 100%;
+	width: 22.625rem;
+	height: 24rem;
+	position: absolute;
+	top: 33.16%;
+	left: calc(50% - 11.3125rem);
+}
+.slide7>.lastword{
+	width: 100%;
+	height: 8%;
+	position: absolute;
+	bottom: 7.46%;
+	left: 0;
+	/*background: blue;*/
+	font-size: 1rem;
+	line-height: 1.5;
+	font-weight:600;
+	letter-spacing: 0.1px;
+}
 /*mask*/
 .mask{
 	position: absolute;
@@ -480,9 +1235,39 @@
 	left: 0;
 	display: flex;
 }
-.mkt_dec{
+.mkt_des{
 	position: relative;
 	background: url(../img/p3/dec/bg.png) no-repeat;
+	background-size: 100% 100%;
+	width: 85.6%;
+	height: 88.72%;
+	/*background-color: black;*/
+	z-index: 2;
+	margin: auto;
+}
+.hr_des{
+	position: relative;
+	background: url(../img/p4/dec/bg.png) no-repeat;
+	background-size: 100% 100%;
+	width: 85.6%;
+	height: 88.72%;
+	/*background-color: black;*/
+	z-index: 2;
+	margin: auto;
+}
+.it_des{
+	position: relative;
+	background: url(../img/p5/dec/bg.png) no-repeat;
+	background-size: 100% 100%;
+	width: 85.6%;
+	height: 88.72%;
+	/*background-color: black;*/
+	z-index: 2;
+	margin: auto;
+}
+.xz_des{
+	position: relative;
+	background: url(../img/p6/dec/bg.png) no-repeat;
 	background-size: 100% 100%;
 	width: 85.6%;
 	height: 88.72%;
@@ -500,12 +1285,29 @@
 	left: calc(50% - 1.2915rem);
 	z-index: 3;
 }
-.mkt1{
+.des_box{
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
-.mkt1>.title{
+.des_box>.duty{
+	position: absolute;
+	top: 4.5rem;
+	left: 0.79167rem;
+	width: 94.08%;
+	height: 10.625rem;
+	/*background: red;*/
+	/*word-wrap:break-word;*/
+}
+.des_box>.jobrequire{
+	position: absolute;
+	top: 39.90%;
+	left: 2.96%;
+	width: 94.08%;
+	/*height: 19.167rem;*/
+	/*background: red;*/
+}
+.mkt_title{
 	background: url(../img/p3/dec/title.png) no-repeat;
 	background-size: 100% 100%;
 	width: 8.33rem;
@@ -515,17 +1317,7 @@
 	left: 50%;
 	margin-left: -4.165rem;
 }
-
-.mkt1>.duty{
-	position: absolute;
-	top: 4.5rem;
-	left: 0.79167rem;
-	width: 94.08%;
-	height: 10.625rem;
-	/*background: red;*/
-	/*word-wrap:break-word;*/
-}
-.mkt1>.demand{
+.mkt_demand{
 	background: url(../img/p3/dec/demand.png) no-repeat;
 	background-size: 100% 100%;
 	width: 8.33rem;
@@ -535,11 +1327,63 @@
 	left: 50%;
 	margin-left: -4.165rem;
 }
-.mkt1>.jobrequire{
+.hr_title{
+	background: url(../img/p4/dec/title.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.33rem;
+	height: 1.67rem;
 	position: absolute;
-	top: 39.90%;
-	left: 2.96%;
-	width: 94.08%;
-	/*height: 19.167rem;*/
-	/*background: red;*/
+	top: 1.83rem;
+	left: 50%;
+	margin-left: -4.165rem;
+}
+.hr_demand{
+	background: url(../img/p4/dec/demand.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.33rem;
+	height: 1.67rem;
+	position: absolute;
+	top: 33.925%;
+	left: 50%;
+	margin-left: -4.165rem;
+}
+.it_title{
+	background: url(../img/p5/dec/title.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.33rem;
+	height: 1.67rem;
+	position: absolute;
+	top: 1.83rem;
+	left: 50%;
+	margin-left: -4.165rem;
+}
+.it_demand{
+	background: url(../img/p5/dec/demand.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.33rem;
+	height: 1.67rem;
+	position: absolute;
+	top: 33.925%;
+	left: 50%;
+	margin-left: -4.165rem;
+}
+.xz_title{
+	background: url(../img/p6/dec/title.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.33rem;
+	height: 1.67rem;
+	position: absolute;
+	top: 1.83rem;
+	left: 50%;
+	margin-left: -4.165rem;
+}
+.xz_demand{
+	background: url(../img/p6/dec/demand.png) no-repeat;
+	background-size: 100% 100%;
+	width: 8.33rem;
+	height: 1.67rem;
+	position: absolute;
+	top: 33.925%;
+	left: 50%;
+	margin-left: -4.165rem;
 }

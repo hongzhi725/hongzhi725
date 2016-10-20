@@ -2,6 +2,7 @@
 //document.querySelector('body').addEventListener('touchstart', function(ev) {
 //	event.preventDefault();
 //});
+
 //微信分享api
 function setJSAPI() {
 	$.getJSON('http://wx.xykjg.com/sign/?url=' + encodeURIComponent(location.href.split('#')[0]), function(res) {

@@ -186,80 +186,170 @@ function init() {
 		['策划主任：岗位职责'],
 		['电商运营经理：岗位职责'],
 	];
-	var b=[
+	var b = [
 		['1.热爱生活，乐观自信；<br />2.有扎实的文字功底，具有良好的语言和文字表达能力；<br />3.有较高的文学鉴赏能力和有良好的传统文学和艺术修养；<br />4.有清晰的逻辑思维清晰，良好的沟通能力；<br />5.学习能力与理解力强；<br />6.有创新意识，对生活环境有敏锐的感知能力。<br />具备以下能力者优先：<br />1.文案写作与文字编辑能力；<br />2.创作文章能力；<br />3.专业：新闻传播/新闻评论/编辑出版学/中国文学/汉语言文学/中文文秘/心理学等相关文科专业；<br />4.在公关传播、市场活动、广告等方面具有文案策划实施经验，有优秀作品或出版作品者优先。'],
 		['策划主任：任职要求'],
 		['电商运营经理：任职要求'],
 	];
-	function buttonS(e){
+
+	function buttonS(e) {
 		console.log(e);
-		switch (e){
-			case 11:
-				showup(e);
-				$('#close').css('display', 'block');
-				$('#mkt_dec').css('display', 'block');
-				$('#mask').css('display', 'block');
-				$('#mkt_dec').addClass('fadeInIn');
-				$('.up-arrow').css('display', 'none');
-				setTimeout(function(){
-					$('#mkt_dec').removeClass('fadeInIn');
-				},300)
-				break;
-			case 12:
-				showup(e);
-				$('#close').css('display', 'block');
-				$('#mkt_dec').css('display', 'block');
-				$('#mask').css('display', 'block');
-				$('#mkt_dec').addClass('fadeInIn');
-				$('.up-arrow').css('display', 'none');
-				setTimeout(function(){
-					$('#mkt_dec').removeClass('fadeInIn');
-				},300)
-				break;
-			case 13:
-				showup(e);
-				$('#close').css('display', 'block');
-				$('#mkt_dec').css('display', 'block');
-				$('#mask').css('display', 'block');
-				$('#mkt_dec').addClass('fadeInIn');
-				$('.up-arrow').css('display', 'none');
-				setTimeout(function(){
-					$('#mkt_dec').removeClass('fadeInIn');
-				},300)
-				break;
-			case 99:
-				$('#mkt_dec').addClass('fadeOutOut');
-				setTimeout(function() {
-					$('#mkt_dec').css('display', 'none');
-					$('#mkt_dec').removeClass('fadeOutOut');
-				}, 300)
-				$('#close').css('display', 'none');
-				$('#mask').css('display', 'none');
-				$('.up-arrow').css('display', 'block');
-				break;
-			default:
-				break;
+		if(e == 99) {
+			$('#des_bg').addClass('fadeOutOut');
+			setTimeout(function() {
+				$('#des_bg').css('display', 'none');
+				$('#des_bg').removeClass();
+				$('#des_title').removeClass();
+				$('#des_demand').removeClass();
+			}, 300)
+			$('#close').css('display', 'none');
+			$('#mask').css('display', 'none');
+			$('.up-arrow').css('display', 'block');
+			$('.music').css('display', 'block');
+		} else {
+			switch(e) {
+				case 0:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('mkt_des');
+					$('#des_title').addClass('mkt_title');
+					$('#des_demand').addClass('mkt_demand');
+					break;
+				case 1:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('mkt_des');
+					$('#des_title').addClass('mkt_title');
+					$('#des_demand').addClass('mkt_demand');
+					break;
+				case 2:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('mkt_des');
+					$('#des_title').addClass('mkt_title');
+					$('#des_demand').addClass('mkt_demand');
+					break;
+				case 3:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('hr_des');
+					$('#des_title').addClass('hr_title');
+					$('#des_demand').addClass('hr_demand');
+					break;
+				case 4:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('hr_des');
+					$('#des_title').addClass('hr_title');
+					$('#des_demand').addClass('hr_demand');
+					break;
+				case 5:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('hr_des');
+					$('#des_title').addClass('hr_title');
+					$('#des_demand').addClass('hr_demand');
+					break;
+				case 6:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('hr_des');
+					$('#des_title').addClass('hr_title');
+					$('#des_demand').addClass('hr_demand');
+					break;
+				case 7:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('it_des');
+					$('#des_title').addClass('it_title');
+					$('#des_demand').addClass('it_demand');
+					break;
+				case 8:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('it_des');
+					$('#des_title').addClass('it_title');
+					$('#des_demand').addClass('it_demand');
+					break;
+				case 9:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('it_des');
+					$('#des_title').addClass('it_title');
+					$('#des_demand').addClass('it_demand');
+					break;
+				case 10:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('it_des');
+					$('#des_title').addClass('it_title');
+					$('#des_demand').addClass('it_demand');
+					break;
+				case 11:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('it_des');
+					$('#des_title').addClass('it_title');
+					$('#des_demand').addClass('it_demand');
+					break;
+				case 12:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('it_des');
+					$('#des_title').addClass('it_title');
+					$('#des_demand').addClass('it_demand');
+					break;
+				case 13:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('xz_des');
+					$('#des_title').addClass('xz_title');
+					$('#des_demand').addClass('xz_demand');
+					break;
+				case 14:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('xz_des');
+					$('#des_title').addClass('xz_title');
+					$('#des_demand').addClass('xz_demand');
+					break;
+				case 15:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('xz_des');
+					$('#des_title').addClass('xz_title');
+					$('#des_demand').addClass('xz_demand');
+					break;
+				case 16:
+					showup(e);
+					/*add class.start*/
+					$('#des_bg').addClass('xz_des');
+					$('#des_title').addClass('xz_title');
+					$('#des_demand').addClass('xz_demand');
+					break;
+				default:
+					break;
+			}
+			/*add class.end*/
+			$('#close').css('display', 'block');
+			$('#des_bg').css('display', 'block');
+			$('#mask').css('display', 'block');
+			$('#des_bg').addClass('fadeInIn');
+			$('.up-arrow').css('display', 'none');
+			$('.music').css('display', 'none');
+			setTimeout(function() {
+				$('#des_bg').removeClass('fadeInIn');
+			}, 300)
 		}
+
 	}
-	function showup(e){
-		switch (e){
-			case 11:
-				$("#duty").html(a[0]).show();
-				$("#jobrequire").html(b[0]).show();
-				break;
-			case 12:
-				$("#duty").html(a[1]).show();
-				$("#jobrequire").html(b[1]).show();
-				break;
-			case 13:
-				$("#duty").html(a[2]).show();
-				$("#jobrequire").html(b[2]).show();
-				break;
-			default:
-				break;
-		}
+	function showup(e) {
+		var duty = $("#des_duty");
+		var job = $("#des_jobrequire");
+		duty.html(a[e]).show();
+		job.html(b[e]).show();
 	}
-	$('.button').on('click',function(){
+	$('.button').on('click', function() {
 		buttonS(parseInt($(this).attr('num')));
 	})
 }

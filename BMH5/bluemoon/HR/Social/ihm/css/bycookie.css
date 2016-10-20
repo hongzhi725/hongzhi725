@@ -72,7 +72,7 @@ input::-moz-focus-inner {
 	position: absolute;
 	z-index: 10000;
 	display: -webkit-box;
-	width: 101%;
+	width: 100%;
 	height: 100%;
 	background: #000;
 	background-size: cover;
@@ -172,8 +172,8 @@ input::-moz-focus-inner {
 
 .music {
 	position: absolute;
-	top: 0.5rem;
-	right: 0.5rem;
+	top: 1.5rem;
+	right: 1.5rem;
 	z-index: 99;
 	padding: 0.166666666667rem;
 	width: 2.5rem;
