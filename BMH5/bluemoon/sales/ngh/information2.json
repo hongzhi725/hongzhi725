@@ -71,5 +71,17 @@
 		"add": "苏州 · 永旺超市湖东店",
 		"demander": "周梦",
 		"url": "http://wx.xykjg.com/sales/ngh/beta/?id=11"
-	}
+	}, {
+			"id": "12" ,
+			"time": "10月21日-10月23日",
+			"add":"赣州 · 新华都购物广场店",
+			"demander":"樊军军",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=12"
+		}, {
+			"id": "13" ,
+			"time": "10月21日-10月23日",
+			"add":"赣州 · 国光购物大楼店",
+			"demander":"樊军军",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=13"
+		}
 ]
