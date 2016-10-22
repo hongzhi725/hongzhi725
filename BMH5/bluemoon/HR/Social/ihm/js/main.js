@@ -105,7 +105,6 @@ $(function() {
 				} else {
 					console.log('没有撤走class')
 				}
-
 			});
 
 		}
@@ -119,75 +118,215 @@ $(function() {
 			mousewheelControl: true, //鼠标控制：true
 			// 如果需要分页器
 			pagination: '.swiper-pagination-v',
-			// 设置翻页方式：
-			//		    effect : 'coverflow',
-			//			slidesPerView: 1,
-			//			centeredSlides: true,
-			//			coverflow: {
-			//	            rotate: 50,
-			//	            stretch: 10,
-			//	            depth: 100,
-			//	            modifier: 1.5,
-			//	            slideShadows : true
-			//      	},
 			onInit: function(swiper) {
 				swiperAnimateCache(swiper);
 				swiperAnimate(swiper);
 				Swipercallback(swiper);
+				//				firstcatoon();
 			},
-			onSlideChangeEnd: Swipercallback,
+			onSlideChangeEnd: function(swiper){
+				Swipercallback(swiper);
+			},
+			
 		})
-		var swiperV = new Swiper('.swiper-container-h', {
+		var swiperH = new Swiper('.swiper-container-h', {
 			pagination: '.swiper-pagination-h',
 			paginationClickable: true,
 			slidesPerView: "auto", //slide痕迹
 			centeredSlides: true,
+//			initialSlide :0,
+			nested:true,
 			//	        spaceBetween: 30,
 			onInit: function(swiper) {
 				swiperAnimateCache(swiper);
 				swiperAnimate(swiper);
-				Swipercallback(swiper);
+				Swipercallback2(swiper);
 			},
-			onSlideChangeEnd: Swipercallback,
+			onSlideChangeEnd: function(swiper){ 
+				Swipercallback2(swiper);
+			},
+			onTouchMove:function(swiper){
+				Swipercallback2(swiper);
+			}
 		});
 		/*设置按钮交互*/
-		$('.bm_mkt').click(function(){
-			mySwiper.slideTo(2);//切换到第3个slide，速度为1秒
+		$('.bm_mkt').click(function() {
+			mySwiper.slideTo(2); //切换到第3个slide，速度为1秒
 		})
-		$('.bm_hr').click(function(){
-			mySwiper.slideTo(3);//切换到第3个slide，速度为1秒
+		$('.bm_hr').click(function() {
+			mySwiper.slideTo(3); //切换到第3个slide，速度为1秒
 		})
-		$('.bm_it').click(function(){
-			mySwiper.slideTo(4);//切换到第3个slide，速度为1秒
+		$('.bm_it').click(function() {
+			mySwiper.slideTo(4); //切换到第3个slide，速度为1秒
 		})
-		$('.bm_xz').click(function(){
-			mySwiper.slideTo(5);//切换到第3个slide，速度为1秒
+		$('.bm_xz').click(function() {
+			mySwiper.slideTo(5); //切换到第3个slide，速度为1秒
 		})
 		/* SlideChangeEndCallback */
 		function Swipercallback(swiper) {
 			var act = swiper.activeIndex;
 			swiperAnimate(swiper);
-			//			console.log(act);
+			console.log(act);
 			switch(act) {
 				case 0:
+					//设置显示
+					$('.bm_title').css('display', 'block');
+					$('.bm_xiaoren').css('display', 'block');
+					$('.bm_p1btn').css('display', 'block');
+					$('.p1_star').css('display', 'block');
+					$('.p1_circle').css('display', 'block');
+					$('.p1_douya').css('display', 'block');
+					$('.p1_lightning1').css('display', 'none');
+					$('.p1_lightning2').css('display', 'none');
+					$('.p1_lightning3').css('display', 'none');
+
+					$('.bm_title').animateCss('bounceInDown', '0.8s', '0s', '1', true);
+					$('.bm_xiaoren').animateCss('zoomIn', '0.2s', '1s', '1', true);
+					$('.bm_p1btn').animateCss('bounceIn', '0.5s', '1.5s', '1', true);
+
+					$('.p1_star').animateCss('fadeIn', '2s', '1s', '1', true);
+					$('.p1_star').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$('.p1_star').animateCss('star-diy', '2s', '0s', 'infinite', true);
+					});
+					$('.p1_circle').animateCss('fadeIn', '2s', '1s', '1', true);
+					$('.p1_circle').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$('.p1_circle').animateCss('rubberBand', '2s', '0s', 'infinite', true);
+					});
+					$('.p1_douya').animateCss('fadeIn', '2s', '1s', '1', true);
+					$('.p1_douya').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$('.p1_douya').animateCss('tada', '2s', '0s', 'infinite', true);
+					});
+					//第1个light
+					$('.bm_xiaoren').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$('.p1_lightning1').css('display', 'block');
+						$('.p1_lightning2').css('display', 'block');
+						$('.p1_lightning3').css('display', 'block');
+						$('.p1_lightning1').animateCss('lightmovediy1', '0.5s', '0.5s', '1', true);
+						$('.p1_lightning1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+							$('.p1_lightning1').css({
+								'left': '5%',
+								'top': '30%'
+							});
+							$('.p1_lightning1').animateCss('lightining-diy', '2.2s', '0.5s', 'infinite', true);
+						});
+						$('.p1_lightning2').animateCss('lightmovediy2', '0.5s', '0.5s', '1', true);
+						$('.p1_lightning2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+							$('.p1_lightning2').css({
+								'left': '10.4%',
+								'top': '15.7%'
+							});
+							$('.p1_lightning2').animateCss('lightining-diy2', '2.2s', '0.8s', 'infinite', true);
+						});
+						$('.p1_lightning3').animateCss('lightmovediy3', '0.5s', '0.5s', '1', true);
+						$('.p1_lightning3').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+							$('.p1_lightning3').css({
+								'left': '38%',
+								'top': '13.93%'
+							});
+							$('.p1_lightning3').animateCss('lightining-diy3', '2.2s', '0.2s', 'infinite', true);
+							$('.bm_p1btn').animateCss('pulse', '1s', '1s', 'infinite', true);
+						});
+					});
 					break;
 				case 1:
+					$('.bm_mkt').css('display', 'block');
+					$('.bm_hr').css('display', 'block');
+					$('.bm_it').css('display', 'block');
+					$('.bm_xz').css('display', 'block');
+					$('.bm_mkt').animateCss('fadeInLeft', '0.5s', '0s', '1', true);
+					$('.mkt_pic').animateCss('zoomInDown', '1.5s', '0s', '1', true);
+					$('.mkt_word').animateCss('zoomInDown', '1.5s', '0s', '1', true);
+					$('.bm_hr').animateCss('fadeInLeft', '0.5s', '0.75s', '1', true);
+					$('.hr_pic').animateCss('zoomInDown', '1.5s', '0.75s', '1', true);
+					$('.hr_word').animateCss('zoomInDown', '1.5s', '0.75s', '1', true);
+					$('.bm_it').animateCss('fadeInLeft', '0.5s', '1.5s', '1', true);
+					$('.it_pic').animateCss('zoomInDown', '1.5s', '1.5s', '1', true);
+					$('.it_word').animateCss('zoomInDown', '1.5s', '1.5s', '1', true);
+					$('.bm_xz').animateCss('fadeInLeft', '0.5s', '2.25s', '1', true);
+					$('.xz_pic').animateCss('zoomInDown', '1.5s', '2.25s', '1', true);
+					$('.xz_word').animateCss('zoomInDown', '1.5s', '2.25s', '1', true);
 					break;
 				case 2:
+					$('.slide3 .title').css('display', 'block');
+					$('.slide3 .title').animateCss('zoomIn', '0.5s', '0s', '1', true);
 					break;
+				case 3:
+					$('.slide4 .title').css('display', 'block');
+					$('.slide4 .title').animateCss('zoomIn', '0.5s', '0s', '1', true);
+					break;
+				case 4:
+					$('.slide5 .title').css('display', 'block');
+					$('.slide5 .title').animateCss('zoomIn', '0.5s', '0s', '1', true);
+					break;
+				case 5:
+					$('.slide6 .title').css('display', 'block');
+					$('.slide6 .title').animateCss('zoomIn', '0.5s', '0s', '1', true);
+					break;
+				case 6:
+					$('.bmh5logo').css('display', 'block');
+					$('.bmh5logo').animateCss('tada', '1.8s', '1.9s', 'infinite', true);
+					$('.up-arrow').css('display', 'none');
 				default:
 					break;
 			}
 			if(act != 0) {
-
+				$('.bm_title').css('display', 'none');
+				$('.bm_xiaoren').css('display', 'none');
+				$('.bm_p1btn').css('display', 'none');
+				$('.p1_star').css('display', 'none');
+				$('.p1_circle').css('display', 'none');
+				$('.p1_douya').css('display', 'none');
+				$('.p1_lightning1').css({
+					'left': '30%',
+					'top': '40%'
+				});
+				$('.p1_lightning2').css({
+					'left': '30%',
+					'top': '40%'
+				});
+				$('.p1_lightning3').css({
+					'left': '30%',
+					'top': '40%'
+				});
+				$('.p1_lightning1').css('display', 'none');
+				$('.p1_lightning2').css('display', 'none');
+				$('.p1_lightning3').css('display', 'none');
+				$('.p1_star').removeClass('star-diy');
+				$('.p1_circle').removeClass('rubberBand');
+				$('.p1_douya').removeClass('tada');
+				$('.p1_lightning1').removeClass('lightining-diy');
+				$('.p1_lightning2').removeClass('lightining-diy2');
+				$('.p1_lightning2').removeClass('lightining-diy3');
 			}
 			if(act != 1) {
-
+				$('.bm_mkt').css('display', 'none');
+				$('.bm_hr').css('display', 'none');
+				$('.bm_it').css('display', 'none');
+				$('.bm_xz').css('display', 'none');
 			}
 			if(act != 2) {
-
+				$('.slide3 .title').css('display', 'none');
 			}
-
+			if(act != 3) {
+				$('.slide4 .title').css('display', 'none');
+			}
+			if(act != 4) {
+				$('.slide5 .title').css('display', 'none');
+			}
+			if(act != 5) {
+				$('.slide6 .title').css('display', 'none');
+			}
+			if(act != 6) {
+				$('.bmh5logo').css('display', 'none');
+				if($('.up-arrow').css('display') == 'none') {
+					$('.up-arrow').css('display', 'block');
+				}
+			}
+		}
+		function Swipercallback2(swiper){
+			var act = swiper.activeIndex;
+			swiperAnimate(swiper);
+			console.log('第二个swiper'+act);
 		}
 	}
 
@@ -384,6 +523,7 @@ function init() {
 		}
 
 	}
+
 	function showup(e) {
 		var duty = $("#des_duty");
 		var job = $("#des_jobrequire");

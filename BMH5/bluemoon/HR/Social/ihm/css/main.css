@@ -32,8 +32,8 @@
 	width: 7.75rem;
 	height: 2.8rem;
 	position: absolute;
-	left: 1.15rem;
-	top: 1.0415rem;
+	left: 3.68%;
+	top: 2.07%;
 }
 .slide1>.bm_xiaoren{
 	background: url(../img/p1/bm_xiaoren.png) no-repeat;
@@ -41,8 +41,9 @@
 	width: 20.58rem;
 	height: 22.67rem;
 	position: absolute;
-	left: 3.2rem;
-	top: 7.4167rem;
+	left: calc(50% - 12.5rem);
+	top: 14.76%;
+	z-index: 0;
 }
 .slide1>.bm_title{
 	background: url(../img/p1/bm_title.png) no-repeat;
@@ -50,8 +51,9 @@
 	width: 28.91rem;
 	height: 13.3rem;
 	position: absolute;
-	left: 1rem;
-	top: 23.3rem;
+	left: calc(50% - 14.55rem);
+	top: 46.36%;
+	z-index: 9;
 }
 .slide1>.bm_p1btn{
 	background: url(../img/p1/bm_p1btn.png) no-repeat;
@@ -59,9 +61,8 @@
 	width: 13.625rem;
 	height: 3.2rem;
 	position: absolute;
-	left: 50%;
-	margin-left: -6.83rem;
-	top: 38.625rem;
+	left: calc(50% - 6.8125rem);
+	top: 76.86%;
 }
 .slide1>.bm_cloud1{
 	background: url(../img/p1/bm_cloud1.png) no-repeat;
@@ -87,11 +88,11 @@
 	width: 1.58rem;
 	height: 2.2rem;
 	position: absolute;
-	left: 2.4167rem;
-	top: 13.167rem;
-	transform: rotate(-15deg);
-	-ms-transform: rotate(-15deg); /* IE 9 */
-	-webkit-transform: rotate(-15deg); /* Safari and Chrome */
+	left: 30%;
+	top: 40%;
+	/*transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);*/
 }
 .slide1>.p1_lightning2{
 	background: url(../img/p1/lightning.png) no-repeat;
@@ -99,8 +100,8 @@
 	width: 1.58rem;
 	height: 2.2rem;
 	position: absolute;
-	left: 3.25rem;
-	top: 7.91rem;
+	left: 30%;
+	top: 40%;
 }
 .slide1>.p1_lightning3{
 	background: url(../img/p1/lightning.png) no-repeat;
@@ -108,11 +109,11 @@
 	width: 1.58rem;
 	height: 2.2rem;
 	position: absolute;
-	left: 11.875rem;
-	top: 7rem;
-	transform: rotate(15deg);
-	-ms-transform: rotate(15deg); /* IE 9 */
-	-webkit-transform: rotate(15deg); /* Safari and Chrome */
+	left: 30%;
+	top: 40%;
+	/*transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+	-webkit-transform: rotate(15deg);*/
 }
 .slide1>.p1_star{
 	background: url(../img/p1/star.png) no-repeat;
@@ -325,6 +326,17 @@
 	left: calc(50% - 8.4375rem);
 }
 .swiper-container-h {
+	/*float: left;*/
+	height: 72vh;
+	width: 100%;
+	position: absolute;
+	top: 13.93vh;
+	left: 0;
+	/*background: grey;*/
+	/*border-top: 5px solid #76428e;
+	border-radius: 5px 5px 0 0;*/
+}
+.swiper-container-h1 {
 	/*float: left;*/
 	height: 72vh;
 	width: 100%;
@@ -1216,6 +1228,15 @@
 	font-weight:600;
 	letter-spacing: 0.1px;
 }
+.slide7>.bmh5logo{
+	background: url(../img/bm/logo.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 1%;
+	right: 4.5%;
+	width: 8.61rem;
+	height: 1.5169rem;
+}
 /*mask*/
 .mask{
 	position: absolute;
@@ -1301,7 +1322,7 @@
 }
 .des_box>.jobrequire{
 	position: absolute;
-	top: 42.5%;
+	top: 43%;
 	left: 2.96%;
 	width: 94.08%;
 	/*height: 19.167rem;*/
