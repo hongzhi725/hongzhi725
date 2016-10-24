@@ -162,14 +162,19 @@ $(function() {
 		$('.bm_xz').click(function() {
 			mySwiper.slideTo(5); //切换到第3个slide，速度为1秒
 		})
+		$('#p1btn').click(function() {
+			mySwiper.slideTo(1); //切换到第3个slide，速度为1秒
+		})
+		
 		/* SlideChangeEndCallback */
 		function Swipercallback(swiper) {
 			var act = swiper.activeIndex;
 			swiperAnimate(swiper);
-			console.log(act);
+			console.log('当前页面：'+act);
 			switch(act) {
 				case 0:
 					//设置显示
+					$('.up-arrow').css('display', 'none');
 					$('.bm_title').css('display', 'block');
 					$('.bm_xiaoren').css('display', 'block');
 					$('.bm_p1btn').css('display', 'block');
@@ -229,6 +234,7 @@ $(function() {
 					});
 					break;
 				case 1:
+					$('.up-arrow').css('display', 'block');
 					$('.bm_mkt').css('display', 'block');
 					$('.bm_hr').css('display', 'block');
 					$('.bm_it').css('display', 'block');
@@ -318,8 +324,10 @@ $(function() {
 			}
 			if(act != 6) {
 				$('.bmh5logo').css('display', 'none');
-				if($('.up-arrow').css('display') == 'none') {
+				if (act != 0) {
+					if($('.up-arrow').css('display') == 'none') {
 					$('.up-arrow').css('display', 'block');
+					}
 				}
 			}
 		}
