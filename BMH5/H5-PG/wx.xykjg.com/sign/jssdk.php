@@ -2,10 +2,12 @@
 class JSSDK {
   private $appId;
   private $appSecret;
-
-  public function __construct($appId, $appSecret) {
+  private $urlnew;
+	
+  public function __construct($appId, $appSecret,$urlnew) {
     $this->appId = $appId;
     $this->appSecret = $appSecret;
+		$this->url = $urlnew;
   }
 
   public function getSignPackage() {
@@ -13,14 +15,16 @@ class JSSDK {
 
     // 注意 URL 一定要动态获取，不能 hardcode.
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-    $url = "$protocol$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
+//  $url = "$protocol$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+//		$url = "$protocol$_SERVER[SERVER_NAME]$_SERVER[REQUEST_URI]";
+//		$url = "http://wx.xykjg.com/sign/test.html";
+		$url=$this->url;
     $timestamp = time();
     $nonceStr = $this->createNonceStr();
 
     // 这里参数的顺序要按照 key 值 ASCII 码升序排序
     $string = "jsapi_ticket=$jsapiTicket&noncestr=$nonceStr&timestamp=$timestamp&url=$url";
-
+		
     $signature = sha1($string);
 
     $signPackage = array(
@@ -64,7 +68,29 @@ class JSSDK {
 
     return $ticket;
   }
+	private function getApiTicket() {
+    // api_ticket 应该全局存储与更新，以下代码以写入到文件中做示例
+    $data = json_decode($this->get_php_file("api_ticket.php"));
+    if ($data->expire_time < time()) {
+      $accessToken = $this->getAccessToken();
+      // 如果是企业号用以下 URL 获取 ticket
+      // $url = "https://qyapi.weixin.qq.com/cgi-bin/get_jsapi_ticket?access_token=$accessToken";
+//    $url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=$accessToken";
+	  	$url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=$accessToken&type=wx_card";
+	  
+      $res = json_decode($this->httpGet($url));
+      $ticket = $res->ticket;
+      if ($ticket) {
+        $data->expire_time = time() + 7000;
+        $data->api_ticket = $ticket;
+        $this->set_php_file("api_ticket.php", json_encode($data));
+      }
+    } else {
+      $ticket = $data->api_ticket;
+    }
 
+    return $ticket;
+  }
   private function getAccessToken() {
     // access_token 应该全局存储与更新，以下代码以写入到文件中做示例
     $data = json_decode($this->get_php_file("access_token.php"));
