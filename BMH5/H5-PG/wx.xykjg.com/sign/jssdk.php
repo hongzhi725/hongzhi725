@@ -8,6 +8,7 @@ class JSSDK {
     $this->appId = $appId;
     $this->appSecret = $appSecret;
 		$this->url = $urlnew;
+//		$this->cardId = $cardId;
   }
 
   public function getSignPackage() {
@@ -37,7 +38,46 @@ class JSSDK {
     );
     return $signPackage; 
   }
-
+  //微信卡券的签名
+  public function getCardSign() {
+    $apiTicket = $this->getApiTicket();
+		$card_id="";
+		$code="";
+		$card_type="";
+		$location_id="";
+    $timestamp = time();
+    $nonceStr = $this->createNonceStr();
+	
+		$arrdata = array("api_ticket" => $apiTicket,"app_id" => $this->appid,"card_id" => $card_id,"code" => $code,"card_type" => $card_type,"location_id" => $location_id,"timestamp" => $timestamp, "noncestr" => $noncestr );
+    $sign = $this->getTicketSignature($arrdata);
+    if (!$sign)
+            return false;
+    $signPackage = array(
+            "cardType"     => $card_type,
+            "cardId"       => $card_id,
+            "shopId"       => $location_id,         //location_id就是shopId
+            "nonceStr"  	 => $noncestr,
+            "timestamp" 	 => $timestamp,
+            "cardSign" 	 	 => $sign
+    );
+    return $signPackage;
+  }
+	/**
+	 * 获取微信卡券签名
+	 * @param array $arrdata 签名数组
+	 * @param string $method 签名方法
+	 * @return boolean|string 签名值
+	 */
+	public function getTicketSignature($arrdata,$method="sha1") {
+		if (!function_exists($method)) return false;
+		$newArray = array();
+		foreach($arrdata as $key => $value)
+		{
+			array_push($newArray,(string)$value);
+		}
+		sort($newArray,SORT_STRING);
+		return $method(implode($newArray));
+	}
   private function createNonceStr($length = 16) {
     $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     $str = "";
