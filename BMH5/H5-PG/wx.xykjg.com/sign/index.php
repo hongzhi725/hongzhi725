@@ -7,8 +7,10 @@ $id = $_GET['id'];
 if ($url == "") {
     $url = "undefined";
 }
-$jssdk = new JSSDK("wx30511ac1f81afc6c", "7aac6c35d3b8f3b2234cb38513767526", $url);
-$signPackage = $jssdk->GetSignPackage();
+$appid="wx30511ac1f81afc6c";
+$appsecret="7aac6c35d3b8f3b2234cb38513767526";
+$jssdk = new JSSDK($appid,$appsecret);
+$signPackage = $jssdk->GetSignPackage($url);
 //微信范围
 $nonceStr = "\"nonceStr\":\"" . $signPackage["nonceStr"] . "\",";
 $timestamp = "\"timestamp\":\"" . $signPackage["timestamp"] . "\",";
@@ -31,6 +33,14 @@ if ($kind == "") {
         $imgUrl = "\"imgUrl\":\"" . $data[$kind][$id]['imgUrl'] . "\"";
         $bmh5 = "{" . $nonceStr . $timestamp . $url . $signature . $appid . "," . $title . $describe . $link . $imgUrl . "}";
     }
+	if ($kind == 'card') {
+		$res = $jssdk->getCardSign($id);
+		$cardId = "\"cardId\":\"" . $res["cardId"] . "\",";
+		$cardtime = "\"cardtime\":\"" . $res["timestamp"] . "\",";
+		$cardSign = "\"cardSign\":\"" . $res["cardSign"] . "\"";
+		$bmh5 = "{" . $nonceStr . $timestamp . $url . $signature . $appid . "," . $cardId . $cardtime . $cardSign . "}";
+		
+	}
 }
 //echo "<div style=\"word-wrap: break-word; white-space: pre-wrap;\">".$bmh5."</pre>";
 echo $bmh5;

@@ -2,24 +2,24 @@
 class JSSDK {
   private $appId;
   private $appSecret;
-  private $urlnew;
+//private $urlnew;
 	
-  public function __construct($appId, $appSecret,$urlnew) {
+  public function __construct($appId, $appSecret) {
     $this->appId = $appId;
     $this->appSecret = $appSecret;
-		$this->url = $urlnew;
+//		$this->url = $urlnew;
 //		$this->cardId = $cardId;
   }
 
-  public function getSignPackage() {
+  public function getSignPackage($url="") {
     $jsapiTicket = $this->getJsApiTicket();
-
+//		$url='http://wx.xykjg.com/sign/test/index.php';
     // 注意 URL 一定要动态获取，不能 hardcode.
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-//  $url = "$protocol$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-//		$url = "$protocol$_SERVER[SERVER_NAME]$_SERVER[REQUEST_URI]";
-//		$url = "http://wx.xykjg.com/sign/test.html";
-		$url=$this->url;
+//  $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+//		if ($url = "") {
+//			$url = "$protocol$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+//		}
+		
     $timestamp = time();
     $nonceStr = $this->createNonceStr();
 
@@ -39,16 +39,15 @@ class JSSDK {
     return $signPackage; 
   }
   //微信卡券的签名
-  public function getCardSign() {
+  public function getCardSign($card_id='',$code='',$card_type='',$location_id='') {
     $apiTicket = $this->getApiTicket();
-		$card_id="";
-		$code="";
-		$card_type="";
-		$location_id="";
+//		$code="";
+//		$card_type="GENERAL_COUPON";
+//		$location_id="";
     $timestamp = time();
     $nonceStr = $this->createNonceStr();
 	
-		$arrdata = array("api_ticket" => $apiTicket,"app_id" => $this->appid,"card_id" => $card_id,"code" => $code,"card_type" => $card_type,"location_id" => $location_id,"timestamp" => $timestamp, "noncestr" => $noncestr );
+		$arrdata = array("api_ticket" => $apiTicket,"app_id" => $this->appid,"card_id" => $card_id,"code" => $code,"card_type" => $card_type,"location_id" => $location_id,"noncestr" => $noncestr,"timestamp" => $timestamp );
     $sign = $this->getTicketSignature($arrdata);
     if (!$sign)
             return false;
@@ -78,6 +77,7 @@ class JSSDK {
 		sort($newArray,SORT_STRING);
 		return $method(implode($newArray));
 	}
+	
   private function createNonceStr($length = 16) {
     $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     $str = "";
@@ -87,64 +87,67 @@ class JSSDK {
     return $str;
   }
 
-  private function getJsApiTicket() {
+  public function getJsApiTicket() {
     // jsapi_ticket 应该全局存储与更新，以下代码以写入到文件中做示例
-    $data = json_decode($this->get_php_file("jsapi_ticket.php"));
-    if ($data->expire_time < time()) {
+    $data = json_decode(file_get_contents("./jsapi_ticket.json"));
+    if ($data->expires_time < time()) {
       $accessToken = $this->getAccessToken();
-      // 如果是企业号用以下 URL 获取 ticket
-      // $url = "https://qyapi.weixin.qq.com/cgi-bin/get_jsapi_ticket?access_token=$accessToken";
       $url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=$accessToken";
       $res = json_decode($this->httpGet($url));
       $ticket = $res->ticket;
       if ($ticket) {
-        $data->expire_time = time() + 7000;
-        $data->jsapi_ticket = $ticket;
-        $this->set_php_file("jsapi_ticket.php", json_encode($data));
+      	$data->ticket = $ticket;
+        $data->expires_time = time() + 7000;
+				$fp=fopen("./jsapi_ticket.json", "w");
+				fwrite($fp, json_encode($data));
+				fclose($fp);
+        //$this->set_php_file("jsapi_ticket.php", json_encode($data));
       }
     } else {
-      $ticket = $data->jsapi_ticket;
+      $ticket = $data->ticket;
     }
-
     return $ticket;
   }
-	private function getApiTicket() {
-    // api_ticket 应该全局存储与更新，以下代码以写入到文件中做示例
-    $data = json_decode($this->get_php_file("api_ticket.php"));
-    if ($data->expire_time < time()) {
+	public function getApiTicket() {
+		// api_ticket 应该全局存储与更新，以下代码以写入到文件中做示例
+    $data = json_decode(file_get_contents("./api_ticket.json"));
+    if ($data->expires_time < time()) {
       $accessToken = $this->getAccessToken();
-      // 如果是企业号用以下 URL 获取 ticket
-      // $url = "https://qyapi.weixin.qq.com/cgi-bin/get_jsapi_ticket?access_token=$accessToken";
-//    $url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=$accessToken";
-	  	$url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=$accessToken&type=wx_card";
-	  
+      $url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=$accessToken&type=wx_card";
       $res = json_decode($this->httpGet($url));
       $ticket = $res->ticket;
       if ($ticket) {
-        $data->expire_time = time() + 7000;
-        $data->api_ticket = $ticket;
-        $this->set_php_file("api_ticket.php", json_encode($data));
+      	$data->ticket = $ticket;
+        $data->expires_time = time() + 7000;
+				$fp=fopen("./api_ticket.json", "w");
+				fwrite($fp, json_encode($data));
+				fclose($fp);
       }
     } else {
-      $ticket = $data->api_ticket;
+      $ticket = $data->ticket;
     }
-
     return $ticket;
   }
-  private function getAccessToken() {
+  public function getAccessToken() {
     // access_token 应该全局存储与更新，以下代码以写入到文件中做示例
-    $data = json_decode($this->get_php_file("access_token.php"));
-    if ($data->expire_time < time()) {
+    $data = json_decode(file_get_contents("./access_token.json"));
+    if ($data->expires_time < time()) {
       // 如果是企业号用以下URL获取access_token
       // $url = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=$this->appId&corpsecret=$this->appSecret";
       $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=$this->appId&secret=$this->appSecret";
       $res = json_decode($this->httpGet($url));
       $access_token = $res->access_token;
-      if ($access_token) {
-        $data->expire_time = time() + 7000;
-        $data->access_token = $access_token;
-        $this->set_php_file("access_token.php", json_encode($data));
-      }
+//    if ($access_token) {
+//      $data->expire_time = time() + 7000;
+//      $data->access_token = $access_token;
+//      $this->set_php_file("access_token.php", json_encode($data));
+//    }
+			//文件写入json
+			$data->access_token=$access_token;
+			$data->expires_time=time()+7000;
+			$fp=fopen("./access_token.json", "w");
+			fwrite($fp, json_encode($data));
+			fclose($fp);
     } else {
       $access_token = $data->access_token;
     }
