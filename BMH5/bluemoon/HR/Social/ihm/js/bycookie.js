@@ -1,6 +1,6 @@
 //监听微信touchstart,禁止页面上下滑动
-//document.querySelector('body').addEventListener('touchstart', function(ev) {
-//	event.preventDefault();
+//document.querySelector('.box').addEventListener('touchstart', function(ev) {
+//	ev.preventDefault();
 //});
 
 //微信分享api

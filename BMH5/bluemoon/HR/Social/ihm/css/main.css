@@ -1,23 +1,6 @@
 /*说明*/
 /*Designed By Cookie：*/
 @charset "utf-8";
-#test1 {
-	animate-duration: 1s;
-	-webkit-animation-duration: 1s;
-	-moz-animation-duration: 1s;
-	animate-delay: 1s;
-	-webkit-animation-delay: 1s;
-	-moz-animation-delay: 1s;
-	animate-iteration-count: 1;
-	-webkit-animation-iteration-count: 1;
-	-moz-animation-iteration-count: 1
-}
-
-#test2 {
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 1s;
-	-webkit-animation-iteration-count: 1
-}
 /*项目自定义样式*/
 .slide1 {
 	position: relative;
@@ -714,13 +697,13 @@
 	left: calc(50% - 8.4375rem);
 }
 .slide-it-1>.people{
-	background: url(../img/p5/1/people.png) no-repeat;
+	background: url(../img/p5/2/people.png) no-repeat;
 	background-size: 100% 100%;
-	width: 8.67rem;
-	height: 22rem;
+	width: 7.91rem;
+	height: 22.75rem;
 	position: absolute;
 	top: 0.5rem;
-	left: calc(50% - 4.3rem);
+	left: calc(50% - 4rem);
 	z-index: 1;
 }
 .slide-it-1>.circle{
@@ -1322,7 +1305,7 @@
 }
 .des_box>.jobrequire{
 	position: absolute;
-	top: 43%;
+	top: 41.5%;
 	left: 2.96%;
 	width: 94.08%;
 	/*height: 19.167rem;*/
@@ -1364,7 +1347,7 @@
 	width: 8.33rem;
 	height: 1.67rem;
 	position: absolute;
-	top: 37%;
+	top: 35%;
 	left: 50%;
 	margin-left: -4.165rem;
 }
@@ -1384,7 +1367,7 @@
 	width: 8.33rem;
 	height: 1.67rem;
 	position: absolute;
-	top: 37%;
+	top: 35%;
 	left: 50%;
 	margin-left: -4.165rem;
 }
@@ -1404,7 +1387,47 @@
 	width: 8.33rem;
 	height: 1.67rem;
 	position: absolute;
-	top: 37%;
+	top: 35%;
 	left: 50%;
 	margin-left: -4.165rem;
+}
+.tips_f1{
+	background: url(../img/tips/f1.png) no-repeat;
+	background-size: 100% 100%;
+	width: 2.583rem;
+	height: 4.583rem;
+	position: absolute;
+	top: calc(40% - 2.2915rem);
+	right: 2%;
+	z-index: 9;
+}
+.tips_f2{
+	background: url(../img/tips/f2.png) no-repeat;
+	background-size: 100% 100%;
+	width: 2.583rem;
+	height: 4.583rem;
+	position: absolute;
+	top: calc(40% - 2.2915rem);
+	right: 2%;
+	z-index: 9;
+}
+.tips_f3{
+	background: url(../img/tips/f3.png) no-repeat;
+	background-size: 100% 100%;
+	width: 2.583rem;
+	height: 4.583rem;
+	position: absolute;
+	top: calc(40% - 2.2915rem);
+	right: 2%;
+	z-index: 9;
+}
+.tips_f4{
+	background: url(../img/tips/f4.png) no-repeat;
+	background-size: 100% 100%;
+	width: 2.583rem;
+	height: 4.583rem;
+	position: absolute;
+	top: calc(40% - 2.2915rem);
+	right: 2%;
+	z-index: 9;
 }
