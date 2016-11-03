@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			html,body{
+				position: relative;
+				background: black;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+			}
+			.box1{
+				background: cyan;
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 50px;
+				left: 50px;
+			}
+			.box2{
+				background: red;
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 50px;
+				left: 150px;
+			}
+			.box3{
+				background: pink;
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 50px;
+				left: 250px;
+			}
+			.btn{
+				position: absolute;
+				top: 80%;
+				left: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1 box" num="1"></div>
+		<div class="box2 box" num="2"></div>
+		<div class="box3 box" num="3"></div>
+		<!--<button class="btn_dw">定位</button>-->
+		<button class="btn" id="btn">开始</button>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			function move(a,b){
+				var x1,y1,x2,y2;
+				x1=a.css('top');
+				y1=a.css('left');
+				x2=b.css('top');
+				y2=b.css('left');
+				a.animate({top:x2,left:y2},500);
+				b.animate({top:x1,left:y1},500);
+			}
+			//取范围内的随机数
+			function getRandomNum(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			//取2个范围内的随机数
+			function get2RandomNum(min,max){
+				var a,b;
+				a=getRandomNum(min,max);
+				b=getRandomNum(min,max);
+				while (b == a){
+					b=getRandomNum(min,max);
+				}
+				var back=new Array(a,b);
+				return back;//数组
+			}
+			function rdmove(object,time){
+				//1.处理参数1，识别传入对象数组个数
+				var obj=object;
+				var i=object.length;
+				var times=time;
+				for (a=0;a<times;a++) {
+					setTimeout(function(){
+						var num=get2RandomNum(1,i);
+						console.log('第一个：'+num[0]+'| 第二个：'+num[1])
+						move(obj[num[0]-1],obj[num[1]-1]);
+					},0 + a*550)
+				}
+			}
+			var A=$('.box1');
+			var B=$('.box2');
+			var C=$('.box3');
+			var dx=new Array(A,B,C);
+			$('.btn_dw').click(function(){
+				var num=getRandomNum(1,3);
+				console.log(num);
+				dx[num-1].text(num);
+				setTimeout(function(){
+					dx[num-1].text("");
+				},1000)
+			})
+			$('.btn').click(function(){
+				$('#btn').DISABLED=true;
+				var num=getRandomNum(1,3);
+				console.log(num);
+				dx[num-1].text(num);
+				setTimeout(function(){
+					dx[num-1].text("");
+					rdmove(dx,1);
+				},1000)
+				
+				$('.box').bind("click",function(){
+//					alert($(this).attr('num'));
+					if ($(this).attr('num') == num) {
+						alert('选对啦');
+						$('.box').unbind();
+					}else{
+						alert('真笨');
+						$('.box').unbind();
+					}
+				})
+			})
+//			console.log(dx.length);
+		</script>
+	</body>
+</html>
