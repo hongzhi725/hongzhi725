@@ -74,16 +74,70 @@
 			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=11"
 		}, {
 			"id": "12" ,
-			"time": "10月21日-10月23日",
-			"add":"赣州 · 新华都购物广场店",
-			"demander":"樊军军",
+			"time": "10月28日-10月30日",
+			"add":"福州· 沃尔玛鼓山店",
+			"demander":"刘彬",
 			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=12"
 		}, {
 			"id": "13" ,
-			"time": "10月21日-10月23日",
-			"add":"赣州 · 国光购物大楼店",
-			"demander":"樊军军",
+			"time": "11月9日-11月15日",
+			"add":"合肥 · 永辉金源店",
+			"demander":"吴大云",
 			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=13"
+		}, {
+			"id": "14" ,
+			"time": "11月9日-11月15日",
+			"add":"合肥 · 永辉肥东店",
+			"demander":"吴大云",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=14"
+		}, {
+			"id": "15" ,
+			"time": "11月9日-11月15日",
+			"add":"合肥 · 永辉肥西水晶城店",
+			"demander":"吴大云",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=15"
+		}, {
+			"id": "16" ,
+			"time": "11月9日-11月15日",
+			"add":"合肥 · 永辉铜陵路店",
+			"demander":"吴大云",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=16"
+		}, {
+			"id": "17" ,
+			"time": "11月9日-11月15日",
+			"add":"合肥 · 永辉大溪地店",
+			"demander":"吴大云",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=17"
+		}, {
+			"id": "18" ,
+			"time": "11月9日-11月15日",
+			"add":"合肥 · 永辉四里河店",
+			"demander":"吴大云",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=18"
+		}, {
+			"id": "19" ,
+			"time": "11月9日-11月15日",
+			"add":"合肥 · 永辉新地中心店",
+			"demander":"吴大云",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=19"
+		}, {
+			"id": "20" ,
+			"time": "11月9日-11月15日",
+			"add":"合肥 · 永辉北城二店",
+			"demander":"吴大云",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=20"
+		}, {
+			"id": "21" ,
+			"time": "11月9日-11月15日",
+			"add":"合肥 · 永辉万达文旅城店",
+			"demander":"吴大云",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=21"
+		}, {
+			"id": "22" ,
+			"time": "11月9日-11月15日",
+			"add":"合肥 · 永辉瑶海万达店",
+			"demander":"吴大云",
+			"url":"http://wx.xykjg.com/sales/ngh/beta/?id=22"
 		}
 	]
 }
