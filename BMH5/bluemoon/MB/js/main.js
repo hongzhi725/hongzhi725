@@ -19,8 +19,12 @@ $(function() {
 		var length = Imglist.length;
 		for(var i = 0; i <= length - 1; i++)
 			manifest.push({
-				src: Imglist[i].src
-			})
+			src: Imglist[i].src
+		});
+		for(var i=1;i<=50;i++)
+        	manifest.push({
+        	src:"http://www.gbtags.com/gb/laitu/200x200"
+        })
 	}
 	//开始预加载
 	function startPreload() {
@@ -166,5 +170,5 @@ $(function() {
 
 		}
 	}
-
+	
 })

@@ -149,5 +149,143 @@
 	height: 100%;
 }
 .slide2>.bm_mkt{
+	background: url(../img/p2/bm_group.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 20.875rem;
+	height: 6.125rem;
+	top: 15.67vh;/*7.875rem;*/
+	left: 50%;
+	margin-left: -10.4375rem;
+}
+.bm_mkt>.mkt_pic{
+	background: url(../img/p2/mkt_pic.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 3rem;
+	height: 1.75rem;
+	top: 50%;
+	left: 1.4rem;
+	margin-top: -0.875rem;
+	
+}
+.bm_mkt>.mkt_word{
+	background: url(../img/p2/mkt_word.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 6.9167rem;
+	height: 2.25rem;
+	top: 50%;
+	right: 5.5rem;
+	margin-top: -1.125rem;
+}
+.slide2>.bm_hr{
+	background: url(../img/p2/bm_group.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 20.875rem;
+	height: 6.125rem;
+	top: 34.82587vh;/*17.5rem;*/
+	left: 50%;
+	margin-left: -10.4375rem;
+}
+.bm_hr>.hr_pic{
+	background: url(../img/p2/hr_pic.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 2.75rem;
+	height: 2.75rem;
+	top: 50%;
+	left: 1.5rem;
+	margin-top: -1.3rem;
+}
+.bm_hr>.hr_word{
+	background: url(../img/p2/hr_word.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 11.708rem;
+	height: 2.25rem;
+	top: 50%;
+	right: 3rem;
+	margin-top: -1.125rem;
+}
+.slide2>.bm_it{
+	background: url(../img/p2/bm_group.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 20.875rem;
+	height: 6.125rem;
+	top: 53.98174vh;/*27.125rem;*/
+	left: 50%;
+	margin-left: -10.4375rem;
+}
+.bm_it>.it_pic{
+	background: url(../img/p2/it_pic.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 2.83rem;
+	height: 2.95rem;
+	top: 50%;
+	left: 1.5rem;
+	margin-top: -1.4rem;
+}
+.bm_it>.it_word{
+	background: url(../img/p2/it_word.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 4.83rem;
+	height: 2.25rem;
+	top: 50%;
+	right: 6.475rem;
+	margin-top: -1.125rem;
+}
+.slide2>.bm_xz{
+	background: url(../img/p2/bm_group.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 20.875rem;
+	height: 6.125rem;
+	top: 73.13761vh;/*36.75rem;*/
+	left: 50%;
+	margin-left: -10.4375rem;
+}
+.bm_xz>.xz_pic{
+	background: url(../img/p2/xz_pic.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 2.79rem;
+	height: 2.67rem;
+	top: 50%;
+	left: 1.8rem;
+	margin-top: -1.335rem;
+}
+.bm_xz>.xz_word{
+	background: url(../img/p2/xz_word.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 6.9167rem;
+	height: 2.25rem;
+	top: 50%;
+	right: 5.5rem;
+	margin-top: -1.125rem;
+}
+.slide2>.bm_cloud1{
+	background: url(../img/p1/bm_cloud1.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 9.041rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.slide2>.bm_cloud2{
+	background: url(../img/p1/bm_cloud2.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: bottom;
+	width: 100%;
+	/*height: 10.2rem;*/
+	/*position: absolute;*/
+	/*left: 0;
+	bottom: 0;*/
 	
 }
