@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function getRandomNum(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			var a, b, c;
+			for(i = 1; i <= 3; i++) {
+				if(i = 1) {
+					a = getRandomNum(1, 8)
+				}
+				if(i = 2) {
+					b = getRandomNum(1, 8)
+						//					console.log(b)
+					while(b == a) {
+						b = getRandomNum(1, 8)
+					}
+				}
+				if(i = 3) {
+					c = getRandomNum(1, 8)
+					while(c == a || c == b) {
+						c = getRandomNum(1, 8)
+					}
+				}
+			}
+			console.log(a + "," + b + "," + c)
+		</script>
+	</body>
+</html>

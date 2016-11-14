@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width">
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				auth();
+
+			});
+
+			function auth() {
+				$.getJSON('http://hw.mashupcloud.cn/mcloud/developer/auth.do', {
+						appkey: 'GxXovSqGcukECpEkyZFfSjQFimtzFVxZ',
+						appsecret: 'mfvvxzvqeZqtkQbmKMFfzcdZuuDkZfLG'
+					}, function(json) {
+						console.log("json==" + json);
+					})
+			}
+		</script>
+
+		<title>mashupcloud demo</title>
+
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

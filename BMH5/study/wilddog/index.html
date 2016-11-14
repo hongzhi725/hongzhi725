@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.wilddog.com/sdk/js/2.1.2/wilddog.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var config = {
+				syncURL: "https://bm-2016.wilddogio.com" //输入节点 URL
+			};
+			wilddog.initializeApp(config);
+			var ref = wilddog.sync().ref();
+			var postsRef = ref.child("KAH5");
+			postsRef.push({
+				"phone": "18520480725",
+				"name": "刘鸿志"
+			});
+		</script>
+	</body>
+</html>
