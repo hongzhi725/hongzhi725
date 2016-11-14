@@ -6,7 +6,7 @@
 //微信分享api
 //alert(decodeURI(location.href.split('#')[0]))
 function setJSAPI() {
-	$.getJSON('http://wx.xykjg.com/sign/bmkxxy/?url=' + encodeURIComponent(location.href.split('#')[0]) + '&kind=card&id=pABzSjklNnndAocVQ5SG8ZROuYWY', function(res) {
+	$.getJSON('http://wx.xykjg.com/sign/?url=' + encodeURIComponent(location.href.split('#')[0]) + '&kind=mkt&id=0', function(res) {
 		//		alert(res.appid);
 		wx.config({
 			//beta: true,
@@ -21,33 +21,27 @@ function setJSAPI() {
 				'onMenuShareQQ',
 				'onMenuShareWeibo',
 				'onMenuShareQZone',
-				'addCard'
+				// 'setNavigationBarColor',
+				'setBounceBackground'
 			]
 		});
 		wx.ready(function() {
+			//			wx.invoke('setBounceBackground', {
+			//				'backgroundColor': '#F8F8F8',
+			//				'footerBounceColor': '#F8F8F8'
+			//			});
 			wx.onMenuShareAppMessage({
-				title: "标题",
-				desc: "描述",
+				title: res.title,
+				desc: res.describe,
 				link: location.href,
-				imgUrl: "http://wx.xykjg.com/dist/img/share.png"
+				imgUrl: res.imgUrl
 			});
 			wx.onMenuShareTimeline({
-				title: "标题",
+				title: res.title,
 				link: location.href,
-				imgUrl: "http://wx.xykjg.com/dist/img/share.png"
+				imgUrl: res.imgUrl
 			});
-			document.querySelector('#btn').onclick = function() {
-				wx.addCard({
-					cardList: [{
-						cardId: res.cardId,
-						cardExt: '{"code": "", "openid": "", "timestamp":"' + res.cardtime + '","signature":"' + res.cardSign + '"}'
-//						cardExt: '{"code": "", "openid": "", "timestamp":,"signature":}'
-					}],
-					success: function(res) {
-						alert('已添加卡券：' + JSON.stringify(res.cardList));
-					}
-				});
-			};
+			//wx.onMenuShareQQ(option);
 		});
 	});
 }
@@ -95,19 +89,16 @@ function preload() {
 	var preload;
 	//定义相关JSON格式文件列表
 	function setupManifest() {
-		manifest = [{
-			src: "https://cdn.bootcss.com/PreloadJS/0.6.0/preloadjs.min.js",
-			id: "preloadjs"
-		}, {
-			src: "js/clipboard.min.js",
-			id: "clipboard"
-		}, ];
-		//		var Imglist = document.getElementsByTagName('img');
-		//		var length = Imglist.length;
-		//		for(var i = 0; i <= length - 1; i++)
-		//			manifest.push({
-		//				src: Imglist[i].src
-		//		})
+		manifest = [
+			{src: "https://cdn.bootcss.com/PreloadJS/0.6.0/preloadjs.min.js",id: "preloadjs"}, 
+			{src:"js/clipboard.min.js",id:"clipboard"}, 
+		];
+//		var Imglist = document.getElementsByTagName('img');
+//		var length = Imglist.length;
+//		for(var i = 0; i <= length - 1; i++)
+//			manifest.push({
+//				src: Imglist[i].src
+//		})
 	}
 	//开始预加载
 	function startPreload() {
@@ -124,7 +115,7 @@ function preload() {
 	//处理单个文件加载
 	function handleFileLoad(event) {
 		//	bar.animate(nump / 100);
-		console.log("文件类型: " + event.item.type + "文件名称：" + event.item.id);
+			console.log("文件类型: " + event.item.type + "文件名称：" + event.item.id);
 	}
 	//处理加载错误：大家可以修改成错误的文件地址，可在控制台看到此方法调用
 	function loadError(evt) {

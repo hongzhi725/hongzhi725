@@ -1,6 +1,6 @@
 <?php
 header('content-type:text/html; charset=utf-8');
-require_once "jssdk.php";
+require "./jssdk.php";
 $url = $_GET['url'];
 $kind = $_GET['kind'];
 $id = $_GET['id'];
@@ -22,9 +22,9 @@ if ($kind == "") {
     //	$kind = "undefined";
     $bmh5 = "{" . $nonceStr . $timestamp . $url . $signature . $appid . "}";
 } else {
-    if ($kind == "sales" || $kind == "hr" || $kind == "mkt" || $kind == "H5PG") {
+    if ($kind == "sales" || $kind == "hr" || $kind == "mkt") {
         //		$html = file_get_contents('bluemoon/'.$kind."/share.json");
-        $html = file_get_contents("bluemoon/share.json");
+        $html = file_get_contents("../bluemoon/share.json");
         $data = json_decode($html, true);
         // 把JSON字符串转成PHP数组
         $title = "\"title\":\"" . $data[$kind][$id]['title'] . "\",";

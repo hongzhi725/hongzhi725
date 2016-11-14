@@ -193,8 +193,8 @@
 							<a class="mui-navigate-right" href="#">社会招聘</a>
 							<ul class="mui-table-view">
 								<li class="mui-table-view-cell">
-									<a class="mui-navigate-right">
-										待更新
+									<a class="mui-navigate-right" href="http://wx.xykjg.com/hr/social/ihm">
+										《蓝色梦想，共创未来！》
 									</a>
 								</li>
 							</ul>
@@ -203,8 +203,8 @@
 							<a class="mui-navigate-right" href="#">市场部</a>
 							<ul class="mui-table-view">
 								<li class="mui-table-view-cell">
-									<a class="mui-navigate-right">
-										《重阳节》
+									<a class="mui-navigate-right" href="http://wx.xykjg.com/mkt/1111/">
+										《蓝月亮双11 嗨翻全场》
 									</a>
 								</li>
 							</ul>
@@ -430,6 +430,34 @@
 					}
 				})
 			}
+		</script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script src="js/bycookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function parseUA() {
+            var u = navigator.userAgent;
+            var u2 = navigator.userAgent.toLowerCase();
+            return { //移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+                iosv: u.substr(u.indexOf('iPhone OS') + 9, 3),
+                weixin: u2.match(/MicroMessenger/i) == "micromessenger",
+                ali: u.indexOf('AliApp') > -1,
+            };
+        }
+        var ua = parseUA();
+		console.log(ua.mobile);
+        if (!ua.mobile) {
+            location.href = 'http://wx.xykjg.com';
+        }
 		</script>
 		<!--<script type="text/javascript">
 			document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
