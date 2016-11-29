@@ -301,12 +301,12 @@ $(function() {
 			title: sharetitle,
 			desc: "通关大挑战！快来抓我呀！",
 			link: location.href,
-			imgUrl: "http://wx.xykjg.com/mkt/game/zzz/zzz.png"
+			imgUrl: "http://wx.xykjg.com/games/zzz/zzz.png"
 		});
 		wx.onMenuShareTimeline({
 			title: sharetitle,
 			link: location.href,
-			imgUrl: "http://wx.xykjg.com/mkt/game/zzz/zzz.png"
+			imgUrl: "http://wx.xykjg.com/games/zzz/zzz.png"
 		});
 	}
 	//	function move3d
@@ -499,7 +499,6 @@ $(function() {
 
 function setJSAPI() {
 	$.getJSON('http://wx.xykjg.com/sign/?url=' + encodeURIComponent(location.href.split('#')[0]) + '&kind=mkt&id=2', function(res) {
-
 		wx.config({
 			//beta: true,
 			debug: false,
