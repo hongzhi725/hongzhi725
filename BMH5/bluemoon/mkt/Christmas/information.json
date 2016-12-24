@@ -1,0 +1,37 @@
+{
+	"shop": [
+		{
+			"id": "0" ,
+			"time": "12月22日-12月25日",
+			"add":"深圳 · 电力花园北门",
+			"demander":"胡鑫",
+			"bg":"url(img/main/showword0.png) no-repeat",
+			"bottomlogo":"url(img/main/logo0.png) no-repeat",
+			"url":"http://wx.xykjg.com/mkt/Christmas/beta/?id=0"
+		}, {
+			"id": "1" ,
+			"time": "12月22日-12月25日",
+			"add":"深圳 · 宝能太古城北区广场",
+			"demander":"胡鑫",
+			"bg":"url(img/main/showword1.png) no-repeat",
+			"bottomlogo":"url(img/main/logo1.png) no-repeat",
+			"url":""
+		}, {
+			"id": "2" ,
+			"time": "12月22日-2017年1月1日",
+			"add":"深圳 · 阳光棕榈园东门广场",
+			"demander":"胡鑫",
+			"bg":"url(img/main/showword2.png) no-repeat",
+			"bottomlogo":"",
+			"url":""
+		}, {
+			"id": "3" ,
+			"time": "12月24日-12月25日",
+			"add":"深圳 · 佳嘉豪苑正门",
+			"demander":"胡鑫",
+			"bg":"url(img/main/showword3.png) no-repeat",
+			"bottomlogo":"",
+			"url":""
+		}
+	]
+}
