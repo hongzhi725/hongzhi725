@@ -12,6 +12,12 @@
 			"describe": "蓝月亮·H5产品组：您的满意，我们的动力！",
 			"link":"location.href",
 			"imgUrl":"http://wx.xykjg.com/dist/img/share.png"
+		}, {
+			"id":"2",
+			"title": "蓝月亮邀您共享年货盛宴",
+			"describe": "让洁净先回家！",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/h5/festival_miu/share.jpg"
 		}
 	],
 	"hr": [
