@@ -1,7 +1,0 @@
-<appwizard><introduction><name></name><author>test</author><icon></icon><homepage></homepage><description><![CDATA[测试开发口]]></description></introduction><platform><services><service></service><service>Mysql</service></services><appconfig><tpl><![CDATA[
-name: <<appname>>
-version: <<version>>
-version: 1
-...
-
-]]></tpl></appconfig></platform><code><initScript>index.php</initScript></code></appwizard>
