@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>mashupcloud demo</title>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta charset="UTF-8">
+		<meta name="description" content="mashupcloud Template" />
+		<meta name="keywords" content="mashupcloud" />
+		<meta name="author" content="helingyun" />
+		<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+	</head>
+	<body>
+		<div id="result"></div>
+	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//获取token，调用API服务
+			auth();
+		});
+
+		function auth() {
+			$.getJSON('http://hw.mashupcloud.cn/mcloud/developer/auth.do', {
+				appkey: 'GxXovSqGcukECpEkyZFfSjQFimtzFVxZ',
+				appsecret: 'mfvvxzvqeZqtkQbmKMFfzcdZuuDkZfLG'
+			}, function(json) {
+				var jo = eval(json);
+				console.log("json==" + jo[1]);
+				var token = jo[1];
+				//列出所有用户
+				user_list(token);
+			})
+		}
+		//查看一个联系人
+		//列出所有用户
+		function user_list(token) {
+			$.getJSON('http://hw.mashupcloud.cn/JS/listUser/',{token:token,name:'ListUser'},function(json){
+				var jo = eval(json);
+					var userListObj = jo[1];
+					var users = userListObj[2];
+					//console.log("users=="+users);
+					for(var i in users) {
+						var user = users[i];
+						$("#result").append("<ul>");
+						$("#result").append("<li>id:" + user.id + "</li>");
+						$("#result").append("<li>name:" + user.name + "</li>");
+						$("#result").append("<li>phone:" + user.phone + "</li>");
+						$("#result").append("</ul>");
+						$("#result").text();
+					}
+			})
+		}
+	</script>
+
+</html>

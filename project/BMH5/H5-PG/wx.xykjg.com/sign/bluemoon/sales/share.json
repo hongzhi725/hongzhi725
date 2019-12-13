@@ -1,0 +1,15 @@
+{
+	"sales": [
+		{
+			"title": "标题1" ,
+			"describe": "描述",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/sales/ngh/5/img/share.png"
+		}, {
+			"title": "标题1" ,
+			"describe": "描述",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/sales/ngh/5/img/share.png"
+		}
+	]
+}

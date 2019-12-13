@@ -1,0 +1,72 @@
+{
+	"H5PG": [
+		{
+			"id":"0",
+			"title": "蓝月亮·H5产品组" ,
+			"describe": "公司：蓝月亮（中国）有线公司 \\n隶属：蓝月亮-IT部 \\n规划：应用设计中心",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/dist/img/share.png"
+		}, {
+			"id":"1",
+			"title": "H5产品组",
+			"describe": "蓝月亮·H5产品组：您的满意，我们的动力！",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/dist/img/share.png"
+		}, {
+			"id":"2",
+			"title": "蓝月亮邀您共享年货盛宴",
+			"describe": "让洁净先回家！",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/h5/festival_miu/share.jpg"
+		}
+	],
+	"hr": [
+		{
+			"id":"0",
+			"title": "蓝色梦想，共创未来！" ,
+			"describe": "蓝月亮社会招聘迎风起航：\\n有你从此与众不同！",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/dist/img/share.png"
+		}, {
+			"title": "标题1",
+			"describe": "描述",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/dist/img/share.png"
+		}
+	],
+	"sales": [
+		{
+			"id":"0",
+			"title": "迎浓缩，赢未来！" ,
+			"describe": "蓝月亮诚邀您参加“浓缩升级、生意倍增”研讨会。",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/dist/img/share.png"
+		}, {
+			"title": "标题1",
+			"describe": "描述",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/sales/ngh/5/img/share.png"
+		}
+	],
+	"mkt": [
+		{
+			"id":"0",
+			"title": "蓝月亮双11 嗨翻全场",
+			"describe": "双11刷爆朋友圈的技能！别跟我说你还不知道！！",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/sales/ngh/5/img/share.png"
+		}, {
+			"id":"1",
+			"title": "双11蓝月亮收藏加购流程",
+			"describe": "双11蓝月亮收藏加购流程",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/sales/ngh/5/img/share.png"
+		}, {
+			"id":"2",
+			"title": "元旦到了，有一些话想对你说……",
+			"describe": "看过别哭，只为你说。",
+			"link":"location.href",
+			"imgUrl":"http://wx.xykjg.com/mkt/newyearsday/logo.png"
+		}
+	]
+}

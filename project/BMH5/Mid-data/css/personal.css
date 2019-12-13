@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/*加载图标*/
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.eot?t=1470707498'); /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1470707498#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff?t=1470707498') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf?t=1470707498') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?t=1470707498#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-music:before { content: "\e606"; }
+.icon-zui28x28icon25:before { content: "\e612"; }
+
+/*H5页面角落音乐符号动画*/
+.btn-music,.btn-music i,.up-arrow,.up-arrow i {
+	width: 2rem;
+	height: 2rem
+}
+
+.btn-music {
+	background-color: transparent;
+	position: fixed;
+	top: 1.5rem;
+	right: 1.5rem;
+	border: .125rem solid #fff;
+	border-radius: 50%;
+	-webkit-animation: btnMusicAni 3s infinite linear;
+	animation: btnMusicAni 3s infinite linear
+}
+
+.btn-music i {
+	line-height: 2rem;
+	font-size: 1rem;
+	position: absolute;
+	top: -.125rem;
+	left: -.125rem
+}
+
+.btn-music.paused {
+	opacity: .4;
+	-webkit-animation: none;
+	animation: none
+}
+.btn-music,.up-arrow {
+	z-index: 999;
+	padding: 0
+}
+@-webkit-keyframes btnMusicAni {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0)
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+@keyframes btnMusicAni {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0)
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+.up-arrow {
+	position: fixed;
+	bottom: 2rem;
+	z-index: 999;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,0,0);
+	transform: translate3d(-50%,0,0);
+	background: 0 0;
+	border: none;
+	-webkit-animation: upArrowAni 2s infinite linear;
+	animation: upArrowAni 2s infinite linear
+}
+
+.up-arrow i {
+	line-height: 2rem;
+	font-size: 1.5rem
+}
+
+@-webkit-keyframes upArrowAni {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%,30%,0);
+		transform: translate3d(-50%,30%,0)
+	}
+
+	30% {
+		opacity: 1;
+		-webkit-transform: translate3d(-50%,-20%,0);
+		transform: translate3d(-50%,-20%,0)
+	}
+
+	60% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%,-35%,0);
+		transform: translate3d(-50%,-35%,0)
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%,-50%,0);
+		transform: translate3d(-50%,-50%,0)
+	}
+}
+
+@keyframes upArrowAni {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%,30%,0);
+		transform: translate3d(-50%,30%,0)
+	}
+
+	30% {
+		opacity: 1;
+		-webkit-transform: translate3d(-50%,-20%,0);
+		transform: translate3d(-50%,-20%,0)
+	}
+
+	60% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%,-35%,0);
+		transform: translate3d(-50%,-35%,0)
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%,-50%,0);
+		transform: translate3d(-50%,-50%,0)
+	}
+}
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}
+a:active,a:hover,button,input,select,textarea{
+	outline: 0;
+}
+button,input,optgroup,select,textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0
+}
+
+.btn-music i,.up-arrow i {
+	text-align: center;
+	color: #fff
+}
+
+button {
+	overflow: visible
+}
+
+button,select {
+	text-transform: none
+}
+
+button,html input[type=button],input[type=reset],input[type=submit] {
+	-webkit-appearance: button;
+	-moz-appearance:button;
+	appearance:button;
+	cursor: pointer
+}
+
+button[disabled],html input[disabled] {
+	cursor: default
+}
+
+button::-moz-focus-inner,input::-moz-focus-inner {
+	border: 0;
+	padding: 0
+}

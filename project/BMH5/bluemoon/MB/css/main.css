@@ -1,0 +1,291 @@
+/*说明*/
+/*Designed By Cookie：*/
+@charset "utf-8";
+#test1 {
+	animate-duration: 1s;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animate-delay: 1s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animate-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	-moz-animation-iteration-count: 1
+}
+
+#test2 {
+	-webkit-animation-duration: 1s;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-iteration-count: 1
+}
+/*项目自定义样式*/
+.slide1 {
+	position: relative;
+	background: url(../img/p1/bg.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.slide1>.bm_logo{
+	background: url(../img/p1/bm_logo.png) no-repeat;
+	background-size: 100% 100%;
+	width: 7.75rem;
+	height: 2.8rem;
+	position: absolute;
+	left: 1.15rem;
+	top: 1.0415rem;
+}
+.slide1>.bm_xiaoren{
+	background: url(../img/p1/bm_xiaoren.png) no-repeat;
+	background-size: 100% 100%;
+	width: 20.58rem;
+	height: 22.67rem;
+	position: absolute;
+	left: 3.2rem;
+	top: 7.4167rem;
+}
+.slide1>.bm_title{
+	background: url(../img/p1/bm_title.png) no-repeat;
+	background-size: 100% 100%;
+	width: 28.91rem;
+	height: 13.3rem;
+	position: absolute;
+	left: 1rem;
+	top: 23.3rem;
+}
+.slide1>.bm_p1btn{
+	background: url(../img/p1/bm_p1btn.png) no-repeat;
+	background-size: 100% 100%;
+	width: 13.625rem;
+	height: 3.2rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -6.83rem;
+	top: 38.625rem;
+}
+.slide1>.bm_cloud1{
+	background: url(../img/p1/bm_cloud1.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 9.041rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.slide1>.bm_cloud2{
+	background: url(../img/p1/bm_cloud2.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 10.2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.slide1>.p1_lightning1{
+	background: url(../img/p1/lightning.png) no-repeat;
+	background-size: 100% 100%;
+	width: 1.58rem;
+	height: 2.2rem;
+	position: absolute;
+	left: 2.4167rem;
+	top: 13.167rem;
+	transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg); /* IE 9 */
+	-webkit-transform: rotate(-15deg); /* Safari and Chrome */
+}
+.slide1>.p1_lightning2{
+	background: url(../img/p1/lightning.png) no-repeat;
+	background-size: 100% 100%;
+	width: 1.58rem;
+	height: 2.2rem;
+	position: absolute;
+	left: 3.25rem;
+	top: 7.91rem;
+}
+.slide1>.p1_lightning3{
+	background: url(../img/p1/lightning.png) no-repeat;
+	background-size: 100% 100%;
+	width: 1.58rem;
+	height: 2.2rem;
+	position: absolute;
+	left: 11.875rem;
+	top: 7rem;
+	transform: rotate(15deg);
+	-ms-transform: rotate(15deg); /* IE 9 */
+	-webkit-transform: rotate(15deg); /* Safari and Chrome */
+}
+.slide1>.p1_star{
+	background: url(../img/p1/star.png) no-repeat;
+	background-size: 100% 100%;
+	width: 5.375rem;
+	height: 5.958rem;
+	position: absolute;
+	left: 22.625rem;
+	top: 4.54rem;
+}
+.slide1>.p1_circle{
+	background: url(../img/p1/circle.png) no-repeat;
+	background-size: 100% 100%;
+	width: 0.54167rem;
+	height: 0.54167rem;
+	position: absolute;
+	left: 26.79rem;
+	top: 9.79rem;
+}
+.slide1>.p1_douya{
+	background: url(../img/p1/douya.png) no-repeat;
+	background-size: 100% 100%;
+	width: 1.7916rem;
+	height: 1.9167rem;
+	position: absolute;
+	left: 26.9583rem;
+	top: 10.5416rem;
+}
+.slide2 {
+	/*position: relative;*/
+	background: url(../img/p1/bg.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.slide2>.bm_mkt{
+	background: url(../img/p2/bm_group.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 20.875rem;
+	height: 6.125rem;
+	top: 15.67vh;/*7.875rem;*/
+	left: 50%;
+	margin-left: -10.4375rem;
+}
+.bm_mkt>.mkt_pic{
+	background: url(../img/p2/mkt_pic.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 3rem;
+	height: 1.75rem;
+	top: 50%;
+	left: 1.4rem;
+	margin-top: -0.875rem;
+	
+}
+.bm_mkt>.mkt_word{
+	background: url(../img/p2/mkt_word.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 6.9167rem;
+	height: 2.25rem;
+	top: 50%;
+	right: 5.5rem;
+	margin-top: -1.125rem;
+}
+.slide2>.bm_hr{
+	background: url(../img/p2/bm_group.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 20.875rem;
+	height: 6.125rem;
+	top: 34.82587vh;/*17.5rem;*/
+	left: 50%;
+	margin-left: -10.4375rem;
+}
+.bm_hr>.hr_pic{
+	background: url(../img/p2/hr_pic.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 2.75rem;
+	height: 2.75rem;
+	top: 50%;
+	left: 1.5rem;
+	margin-top: -1.3rem;
+}
+.bm_hr>.hr_word{
+	background: url(../img/p2/hr_word.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 11.708rem;
+	height: 2.25rem;
+	top: 50%;
+	right: 3rem;
+	margin-top: -1.125rem;
+}
+.slide2>.bm_it{
+	background: url(../img/p2/bm_group.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 20.875rem;
+	height: 6.125rem;
+	top: 53.98174vh;/*27.125rem;*/
+	left: 50%;
+	margin-left: -10.4375rem;
+}
+.bm_it>.it_pic{
+	background: url(../img/p2/it_pic.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 2.83rem;
+	height: 2.95rem;
+	top: 50%;
+	left: 1.5rem;
+	margin-top: -1.4rem;
+}
+.bm_it>.it_word{
+	background: url(../img/p2/it_word.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 4.83rem;
+	height: 2.25rem;
+	top: 50%;
+	right: 6.475rem;
+	margin-top: -1.125rem;
+}
+.slide2>.bm_xz{
+	background: url(../img/p2/bm_group.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 20.875rem;
+	height: 6.125rem;
+	top: 73.13761vh;/*36.75rem;*/
+	left: 50%;
+	margin-left: -10.4375rem;
+}
+.bm_xz>.xz_pic{
+	background: url(../img/p2/xz_pic.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 2.79rem;
+	height: 2.67rem;
+	top: 50%;
+	left: 1.8rem;
+	margin-top: -1.335rem;
+}
+.bm_xz>.xz_word{
+	background: url(../img/p2/xz_word.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 6.9167rem;
+	height: 2.25rem;
+	top: 50%;
+	right: 5.5rem;
+	margin-top: -1.125rem;
+}
+.slide2>.bm_cloud1{
+	background: url(../img/p1/bm_cloud1.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 9.041rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.slide2>.bm_cloud2{
+	background: url(../img/p1/bm_cloud2.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: bottom;
+	width: 100%;
+	/*height: 10.2rem;*/
+	/*position: absolute;*/
+	/*left: 0;
+	bottom: 0;*/
+	
+}

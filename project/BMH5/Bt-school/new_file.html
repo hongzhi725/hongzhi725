@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style type="text/css">
+    .button img:nth-child(1){
+    	display: block
+    }
+    
+    .button img:nth-child(2) {
+    	display: none
+    }
+    .button:hover img:nth-child(1) {
+    	display: none
+    }
+    .button:hover img:nth-child(2){
+    	display: block
+    }
+    /*.button:active img:nth-child(1),
+    .buttonF:active img:nth-child(1) {
+    	display: none
+    }*/
+    /*.button:active img:nth-child(2),
+    .buttonF:active img:nth-child(2) {
+    	display: block
+    }*/
+   /*.mytest{
+   		height: 100px;
+   		width: 100px;
+   		background: url(img/abcdefg.png) no-repeat;
+   }*/
+  .mytest{
+  	display: block;
+  	position: fixed;
+  width: 200px;
+  height:62px;
+  top: 50%;
+  left: 50%;
+  text-indent: -5000px;
+  overflow: hidden;
+  background: url(img/200x62.png) no-repeat;
+  }
+   .mytest:hover{
+   		background: url(img/abcdefg.png) no-repeat;
+   }
+.button1 {
+	position: absolute;
+	bottom: 15%;
+	left: 35%;
+	width: 30%
+}
+   </style>
+</head>
+<body>
+	
+	<div class="button">
+						<img src="http://usr.im/150x65?bg=3498CB&text=Next" />
+						<img src="http://usr.im/150x65?bg=3498FB&text=Next" />
+	</div>
+		<div class="mytest">123</div>
+		
+<!--<button class="btn">hehhe</button>-->
+</body>
+</html>

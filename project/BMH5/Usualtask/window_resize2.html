@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+			html,body{
+				/*text-align: center;*/
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				background-color: black;
+				font-size: 12px;
+			}
+			.box{
+				position: absolute;
+				width: 62.189vh;
+				height: 100vh;
+				left: calc(50vw - 31.0945vh);
+				/*top: 25vh;*/
+				background-color:orange;
+				font-size: 1rem;
+			}
+			.logo{
+				position: absolute;
+				left: 12.5vw;
+				top: 40%;
+				width: 9.25vw;
+				height: 3.4vw;
+			}
+		</style>
+		<img src="img/p1/logo_bm-white.png" class="logo">
+		<div id="mainbox" class="box">
+			自适应区域，低于375px宽度的窗口，自适应全屏。
+		</div>
+		<script type="text/javascript">
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var box=document.getElementById('mainbox');
+						var clientWidth = docEl.clientWidth;
+						var clientHeight = docEl.clientHeight;
+						var boxWidth = box.clientWidth;
+						var boxHeight = box.clientHeight;
+						console.log("【设备】宽：" + clientWidth+"，"+"高：" + clientHeight);
+						console.log("【box】：" + boxWidth + "，"+ "高：" + boxHeight);
+						if (clientWidth <= 375) {
+							box.style.width = '100vw';
+							box.style.left = '0';
+							console.log("【box调整后宽】："+box.clientWidth); 
+						}
+						else{
+							box.style.width = '62.189vh';
+							box.style.left = 'calc(50vw - 31.0945vh)';
+						}
+						docEl.style.fontSize = 12 * (boxWidth / 375) + 'px';
+						console.log("【font-size调整后】"+docEl.style.fontSize);
+					};
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+	</body>
+</html>

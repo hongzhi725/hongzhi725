@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>刘鸿志</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<style>
+			p {
+				text-indent: 22px;
+				padding: 5px 8px;
+			}
+			
+			html,
+			body,
+			.mui-content {
+				background-color: #fff;
+			}
+			
+			h4 {
+				margin-left: 5px;
+			}
+			
+			.mui-plus header.mui-bar {
+				display: none;
+			}
+			
+			.mui-plus .mui-bar-nav~.mui-content {
+				padding: 0;
+			}
+			
+			.qrcode {
+				/*position: absolute;*/
+				top: 50px;
+				/*left: 50%;*/
+				width: 100%;
+				/*-webkit-transform: translate(-50%, 0);
+				transform: translate(-50%, 0);*/
+				text-align: center;
+			}
+			
+			.qrcode img {
+				margin: 0 auto;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">关于作者</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<div class="qrcode">
+					<img id="qrcode" src="../images/boy.jpg" width="60%" style="float:right" />
+					<a id="shortcut" style="width: 60%;margin: 15px auto;padding: 5px;" class="mui-hidden mui-btn mui-btn-block mui-btn-red">创建桌面图标</a>
+				</div>
+				<h4 style="margin-top:20px;">讲个故事：</h4>
+				<p>1992年的7月，有一天，天降大雨，雷电交加，依稀记得那日是25号，就在下午14点XX分（多少分我忘记了），我，诞生了。</p>
+				<p>2015年6月毕业，随后来到蓝月亮（中国）有限公司工作，先后在销售部、市场部、IT部工作，现任职于IT部产品专员。</p>
+				<p>由于从小爱好计算机语言，大学期间就写过PC端、手机端游戏脚本，还编写过PC端数据与网络验证软件，以至于现在开始自学前端开发，开始负责公司的几个H5开发。</p>
+				<p>所谓~多多益善，乐于学习，望各位多多指点~</p>
+				<p style="width:359px;height:30px;position:absolute;top:95%;left:50%;margin-top:-20px;margin-left:-179px;color: #ccc;text-indent: 0;">(c) Copyright 2016 Administrator. All Rights Reserved.</p>	
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+				gestureConfig: {
+					longtap: true
+				},
+				swipeBack: true //启用右滑关闭功能
+			});
+			//处理点击事件，需要打开原生浏览器
+			mui('body').on('tap', 'a', function(e) {
+				var href = this.getAttribute('href');
+				if (href) {
+					if (window.plus) {
+						plus.runtime.openURL(href);
+					} else {
+						location.href = href;
+					}
+				}
+			});
+
+			var qrcodeEl = document.getElementById("qrcode");
+			qrcodeEl.addEventListener('longtap', function() {
+				plus.nativeUI.actionSheet({
+					cancel: '取消',
+					buttons: [{
+						title: '保存到相册'
+					}]
+				}, function(e) {
+					var index = e.index;
+					if (e.index === 1) {
+						plus.gallery.save(qrcodeEl.src, function() {
+							mui.toast('保存成功');
+						}, function() {
+							mui.toast('保存失败，请重试！');
+						});
+					}
+				});
+			});
+			if (mui.os.android&&mui.os.stream) { //创建快捷方式
+				var shortcutElem = document.getElementById("shortcut");
+				shortcutElem.classList.remove('mui-hidden');
+				shortcutElem.addEventListener('tap', function() {
+					plus.navigator.createShortcut({
+						name: "hello-mui",
+						icon: "images/logo.png"
+					});
+				});
+			}
+
+
+		</script>
+	</body>
+
+</html>
