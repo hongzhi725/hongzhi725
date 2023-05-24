@@ -4,6 +4,7 @@ Hi, I'm Cookie, a product manager & a self-taught developer from China.
 * Product design: <img src="https://img.shields.io/badge/Axure-black?style=for-the-badge&logo=academia" /> <img src="https://img.shields.io/badge/Figma-black?style=for-the-badge&logo=figma" /> <img src="https://img.shields.io/badge/Photoshop-black?style=for-the-badge&logo=adobephotoshop" /> <img src="https://img.shields.io/badge/Xmind-black?style=for-the-badge&logo=expertsexchange" /> <img src="https://img.shields.io/badge/Drawio-black?style=for-the-badge&logo=diagramsdotnet" />
 * FrontEnd Develop: <img src="https://img.shields.io/badge/Vue-black?style=for-the-badge&logo=vue.js" /> <img src="https://img.shields.io/badge/Html-black?style=for-the-badge&logo=html5" /> <img src="https://img.shields.io/badge/Javascript-black?style=for-the-badge&logo=javascript" /> <img src="https://img.shields.io/badge/css-black?style=for-the-badge&logo=css3" />
 * BackEnd Develop: <img src="https://img.shields.io/badge/Python-black?style=for-the-badge&logo=python" />
+* Game Develop: <img src="https://img.shields.io/badge/Cocos Creator-black?style=for-the-badge&logo=cocos" /> <img src="https://img.shields.io/badge/Aseprite-black?style=for-the-badge&logo=Aseprite" /> <img src="https://img.shields.io/badge/Typescript-black?style=for-the-badge&logo=Typescript" />
 ## Record
 * 2022.06 —— 至今：Great Wall Motor | 长城汽车
 * 2021.09 —— 2022.03：Xpeng Motor | 小鹏汽车
